@@ -1,0 +1,1016 @@
+<mxfile host="65bd71144e">
+    <diagram id="yxrgfrVKO03SnxysbyA-" name="user-journeys">
+        <mxGraphModel dx="3100" dy="2434" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="160" value="(optionally) &lt;br&gt;set up poll&amp;nbsp; for date choices&lt;br&gt;&lt;font style=&quot;font-size: 34px&quot;&gt;+&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#008a00;arcSize=22;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+                    <mxGeometry x="1038.5" y="63" width="120" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Log in to app" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#ffffff;strokeColor=#432D57;direction=south;" parent="1" vertex="1">
+                    <mxGeometry x="-1417" y="57.5" width="110" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" style="edgeStyle=none;html=1;fontSize=14;fontColor=#FFFF66;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="3" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="ellipse;whiteSpace=wrap;html=1;rounded=1;fillColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="158.5" y="38.5" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Create new event" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#432D57;fillColor=#76608a;fontSize=19;fontStyle=4;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="85" y="3" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="391" value="" style="edgeStyle=none;html=1;fontSize=11;fontColor=#FFFF33;" parent="1" source="9" target="48" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="(Event)&amp;nbsp;Organiser &lt;br style=&quot;font-size: 14px&quot;&gt;(e.g. Belinda etc)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#36393d;fillColor=#cce5ff;fontSize=14;fontStyle=0;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="-680" y="-460" width="130" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="(Event) Invitee&lt;br style=&quot;font-size: 14px&quot;&gt;(lifecycle role could go through invitee - maybeee - attendeee - cancelleee)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#36393d;fillColor=#cce5ff;fontSize=14;fontStyle=0;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="-680" y="-395" width="480" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Site/ App&lt;br style=&quot;font-size: 14px;&quot;&gt;Administrator" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#36393d;fillColor=#cce5ff;fontSize=14;fontStyle=0;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="-685" y="-260" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;u&gt;(FYI - some of these are outside MVP)&lt;br&gt;&lt;/u&gt;- logging in&lt;br&gt;- logging out&lt;br&gt;- managing my profile&lt;br&gt;- adding friends to my friends list&lt;br&gt;- inviting new friends into the app&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;- starting/creating a new event&lt;br&gt;&lt;/b&gt;- navigating to an existing event (to do something)&lt;br&gt;&lt;br&gt;- (beyond MVP - event org can choose to allow invitees to invite more people)&lt;br&gt;- adding people to an event (either new or existing event)&lt;br&gt;- accept or decline an event&amp;nbsp;&lt;br&gt;&lt;br&gt;- view what currently decided about the event (dashboard)&lt;br&gt;- update the dashboard (either manual or auto)&lt;br&gt;&lt;u&gt;&lt;br&gt;within an event:&lt;/u&gt;&lt;br&gt;- start a conversation&lt;br&gt;- reply to an existing conversation/topic&lt;br&gt;(Q: would it be visible to whole group? say yes, and conversation with smaller&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; groups is extra functionality -eg DMs)&lt;br&gt;&lt;br&gt;&lt;u&gt;when decisions are needed&lt;/u&gt;&lt;br&gt;- creating a poll to agree a date/time?&lt;br&gt;- creating a poll to agree a location?&lt;br&gt;- respond to a poll - giving your answer&lt;br&gt;- agreeing the poll result&lt;br&gt;&lt;br&gt;reschedule (postpone) or cancel an event" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#36393d;fillColor=#cce5ff;fontSize=15;fontStyle=0;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="-1390" y="-650" width="530" height="550" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=14;fontColor=#FFFF66;" parent="1" source="14" target="33" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="enter event title" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="592" y="23.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=14;fontColor=#FFFF66;" parent="1" source="15" target="14" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="652.5" y="151"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" value="(optional) select an event template" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="468.5" y="121" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" style="edgeStyle=none;html=1;fontSize=14;fontColor=#FFFF66;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="4" target="15" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="443.5" y="151"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="29" style="edgeStyle=none;html=1;fontSize=14;fontColor=#FFFF66;startArrow=none;" parent="1" source="4" target="14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="start new event&amp;nbsp; (reword this)" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="232" y="23.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=14;fontColor=#FFFF66;" parent="1" source="17" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="993.5" y="66" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="993.5" y="126"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="(optional) enter date(s) (and time?) sugggestions" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="797.5" y="96" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="(optional) enter activity suggestion" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="797.5" y="166" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="(optional) enter location suggestion" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="797.5" y="241" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="217" style="edgeStyle=none;html=1;fontSize=14;fontColor=#FFFF33;" parent="1" source="23" target="15" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Could have templates based on type of event being organised, e.g pub crawl, group dinner, knitting circle etc :-)" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=11;verticalAlign=top;align=left;rounded=1;fontSize=13;fontColor=#FFFF66;fontStyle=2" parent="1" vertex="1">
+                    <mxGeometry x="405.5" y="201" width="133" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="428.5" y="38.5" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="" style="edgeStyle=none;html=1;fontSize=14;fontColor=#FFFF66;endArrow=none;" parent="1" source="16" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="423.5" y="51" as="sourcePoint"/>
+                        <mxPoint x="603.5" y="51" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="39" style="edgeStyle=none;html=1;fontSize=14;fontColor=#FFFF66;startArrow=none;" parent="1" source="49" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="978.5000000000264" y="51" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="40" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=14;fontColor=#FFFF66;" parent="1" source="33" target="17" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="753.5" y="126"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" value="" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="738.5" y="36" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=14;fontColor=#FFFF66;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="21" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="898.5" y="141" as="sourcePoint"/>
+                        <mxPoint x="993.5" y="66" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="993.5" y="196"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="37" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=14;fontColor=#FFFF66;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="22" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="928.5" y="271" as="sourcePoint"/>
+                        <mxPoint x="993.5" y="66" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="993.5" y="271"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="41" value="Possible User Journey Roles" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#36393d;fillColor=#cce5ff;fontSize=19;fontStyle=4;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="-680" y="-705" width="260" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="what activites can we think of - see User Epics in miroboard" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#36393d;fillColor=#cce5ff;fontSize=19;fontStyle=4;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="-1390" y="-705" width="520" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="(Event)&lt;br&gt;Organiser" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="28.5" y="24" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=14;fontColor=#FFFF66;exitX=0.5;exitY=1;exitDx=0;exitDy=0;startArrow=none;" parent="1" source="33" target="21" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="779.25" y="304" as="sourcePoint"/>
+                        <mxPoint x="772.4999999999998" y="196" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="753.5" y="196"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="45" style="edgeStyle=none;html=1;entryX=0.008;entryY=0.607;entryDx=0;entryDy=0;fontSize=14;fontColor=#FFFF66;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryPerimeter=0;" parent="1" source="33" target="22" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="763.5" y="76" as="sourcePoint"/>
+                        <mxPoint x="782.4999999999998" y="206" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="753.5" y="277"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="46" value="Chatting about event" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#A50040;fillColor=#d80073;fontSize=19;fontStyle=4;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="4600" y="12.5" width="190" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="User Journey - voting on stuff (polls)&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#005700;fillColor=#008a00;fontSize=19;fontStyle=4;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="6820" y="10" width="330" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="Event Admin?&lt;br style=&quot;font-size: 14px;&quot;&gt;(this role could be only the organsier, but maybe also the attendees?" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#36393d;fillColor=#cce5ff;fontSize=14;fontStyle=0;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="-685" y="-330" width="440" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=34;fontColor=#FFFF66;startArrow=none;" parent="1" source="163" target="54" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="978.5" y="36" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="" style="edgeStyle=none;html=1;fontSize=14;fontColor=#FFFF66;endArrow=none;" parent="1" source="33" target="49" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="768.5" y="51" as="sourcePoint"/>
+                        <mxPoint x="978.5000000000264" y="51" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="51" value="Invite people (to a new or existing event)&amp;nbsp;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#001DBC;fillColor=#0050ef;fontSize=19;fontStyle=4;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="2050" y="9" width="360" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="165" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=23;fontColor=#FFFFFF;" parent="1" source="52" target="163" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1383.5" y="131"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="52" value="(optionally) &lt;br&gt;Invite people&lt;br&gt;&lt;font style=&quot;font-size: 34px&quot;&gt;+&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="1238.5" y="86" width="120" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="END" style="ellipse;whiteSpace=wrap;html=1;rounded=1;fillColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1600" y="33" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="(Event)&lt;br&gt;Organiser" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="2056" y="105" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="(optionally) select people from my friends list" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="2470" y="224" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="(optionally) enter new people (emails?)" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="2470" y="144" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="User Journey - adding people to our friends list&amp;nbsp;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#314354;fillColor=#647687;fontSize=19;fontStyle=4;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="-1080" y="12.5" width="410" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="click new friend" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" parent="1" vertex="1">
+                    <mxGeometry x="-930" y="68" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="App &lt;br&gt;user&amp;nbsp;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="-1080" y="55.5" width="60" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="App user&amp;nbsp;&lt;br style=&quot;font-size: 14px&quot;&gt;(everyone that is an event org or an event guest)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#36393d;fillColor=#cce5ff;fontSize=14;fontStyle=0;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="-680" y="-570" width="320" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="" style="ellipse;whiteSpace=wrap;html=1;rounded=1;fillColor=#000000;spacingRight=15;" parent="1" vertex="1">
+                    <mxGeometry x="2390" y="74" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" style="edgeStyle=none;html=1;exitX=0;exitY=0;exitDx=55.5;exitDy=0;exitPerimeter=0;fontSize=34;fontColor=#FFFF66;" parent="1" source="69" target="57" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="QUESTION:&lt;br&gt;consider - could an event invitee also invite other people, maybe if event organiser allows this?&amp;nbsp; Beyond MVP" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=9;verticalAlign=top;align=left;rounded=1;fontSize=13;fontColor=#FFFF66;fontStyle=2" parent="1" vertex="1">
+                    <mxGeometry x="2020" y="185" width="120" height="135" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="enter event title" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="468.5" y="495" width="110" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="(optional) select an event template" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="345" y="495" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="start new event&amp;nbsp; (reword this)" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="215" y="496" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="97" style="edgeStyle=none;html=1;fontSize=11;fontColor=#FFFF66;" parent="1" source="96" target="277" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" value="&lt;font style=&quot;font-size: 12px&quot;&gt;might trigger a new event by adding a title all just in one step&lt;/font&gt;" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=9;verticalAlign=top;align=center;rounded=1;fontSize=13;fontColor=#FFFF66;fontStyle=2;spacing=0;labelBorderColor=default;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="1612.5" width="133" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="98" style="edgeStyle=none;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.001;entryY=0.671;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=11;fontColor=#FFFF66;" parent="1" source="96" target="96" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" value="User Journey - login and logout process&amp;nbsp;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#314354;fillColor=#647687;fontSize=19;fontStyle=4;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="-1517" y="12.5" width="360" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="345" style="edgeStyle=none;html=1;fontSize=11;fontColor=#FFFFFF;" parent="1" source="108" target="67" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="108" value="Assume the relelvant event is already known or has just been selected" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=9;verticalAlign=middle;align=right;rounded=1;fontSize=13;fontColor=#FFFF66;fontStyle=2" parent="1" vertex="1">
+                    <mxGeometry x="2230" y="60" width="120" height="87.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="142" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=23;fontColor=#FFFFFF;exitX=1;exitY=0.5;exitDx=0;exitDy=0;startArrow=none;" parent="1" source="112" target="141" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="3360" y="89"/>
+                            <mxPoint x="3360" y="429"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="112" value="send the invitations (link?)" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="3200" y="59" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="137" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=23;fontColor=#FFFFFF;" parent="1" source="113" target="334" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="3155" y="195"/>
+                            <mxPoint x="3155" y="180"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="113" value="(optionally) add a personalised message" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="2950" y="157.5" width="120" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="128" style="edgeStyle=none;html=1;fontSize=23;fontColor=#FFFF66;" parent="1" source="114" target="334" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2957.26" y="89.30000000000018" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="114" value="create the invite" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="2641" y="59" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="117" style="edgeStyle=none;html=1;fontSize=11;fontColor=#FFFF66;" parent="1" source="116" target="114" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" value="&lt;p style=&quot;line-height: 1&quot;&gt;e.g. event name&lt;br&gt;and, if completed,&amp;nbsp;&lt;br&gt;event date, location, activity&lt;/p&gt;" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=9;verticalAlign=middle;align=left;rounded=1;fontSize=13;fontColor=#FFFF66;fontStyle=2" parent="1" vertex="1">
+                    <mxGeometry x="2620" y="157.5" width="120" height="82.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="120" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=11;fontColor=#FFFF66;exitX=1;exitY=0.5;exitDx=0;exitDy=0;startArrow=none;" parent="1" source="135" target="114" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2411.6176470588243" y="107.38235294117612" as="sourcePoint"/>
+                        <mxPoint x="2480" y="194" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="123" value="system adds identifiers for new people?" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="2790" y="372.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="125" value="(optionally) edit event&lt;br&gt;&lt;font style=&quot;font-size: 34px&quot;&gt;+&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="2810" y="159.5" width="120" height="81" as="geometry"/>
+                </mxCell>
+                <mxCell id="129" value="" style="edgeStyle=none;html=1;fontSize=11;fontColor=#FFFF66;endArrow=none;" parent="1" source="114" target="125" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2790.708737864077" y="119" as="sourcePoint"/>
+                        <mxPoint x="2910" y="192" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="2791" y="204"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="131" style="edgeStyle=none;html=1;fontSize=23;fontColor=#FFFF66;" parent="1" source="130" target="125" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="130" value="e.g. Belinda has realised she forgot to add a 'date poll' into her event" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=9;verticalAlign=middle;align=left;rounded=1;fontSize=13;fontColor=#FFFF66;fontStyle=2" parent="1" vertex="1">
+                    <mxGeometry x="2770" y="265" width="120" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="134" style="edgeStyle=none;html=1;fontSize=23;fontColor=#FFFFFF;" parent="1" source="132" target="133" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="132" value="" style="ellipse;whiteSpace=wrap;html=1;rounded=1;fontColor=#FFFFFF;fillColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="3460" y="84" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="133" value="Next would be&lt;br&gt;(a) Event Organiser - seeing (or&amp;nbsp; being notified of?) the event invitee responses" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=9;verticalAlign=top;align=left;rounded=1;fontSize=13;fontColor=#FFFF66;fontStyle=2" parent="1" vertex="1">
+                    <mxGeometry x="3530" y="49" width="120" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="135" value="Add people to invite" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="2470" y="59" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="136" value="" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=11;fontColor=#FFFF66;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;" parent="1" source="67" target="135" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2410" y="89" as="sourcePoint"/>
+                        <mxPoint x="2731" y="89" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="140" value="(Event)&lt;br&gt;Invitee" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="2070" y="389" width="80" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="141" value="receive the invitation" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="3390" y="399" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="143" value="" style="whiteSpace=wrap;html=1;rounded=0;fontSize=34;fontColor=#ffffff;fillColor=#0050ef;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="2070" y="359" width="1940" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="146" value="" style="whiteSpace=wrap;html=1;rounded=0;fontSize=34;fontColor=#ffffff;fillColor=#0050ef;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="2164" y="39" width="16" height="591" as="geometry"/>
+                </mxCell>
+                <mxCell id="147" value="(optionally) opens the invite" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="3550" y="399" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="149" style="edgeStyle=none;html=1;fontSize=23;fontColor=#FFFFFF;" parent="1" source="148" target="147" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="148" value="implementation - could be clicking on a link?&amp;nbsp;&lt;br&gt;Issue with people thinking it's malware or spam?" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=9;verticalAlign=top;align=left;rounded=1;fontSize=13;fontColor=#FFFF66;fontStyle=2" parent="1" vertex="1">
+                    <mxGeometry x="3540" y="501.5" width="140" height="88.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="150" value="(optionally) responds to the invite" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="3720" y="399" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="151" value="(optionally) answers the poll(s)&lt;br&gt;&lt;br&gt;&lt;font style=&quot;font-size: 48px&quot;&gt;+&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="3940" y="404" width="120" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="153" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=23;fontColor=#FFFFFF;" parent="1" source="152" target="151" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="3895" y="524"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="152" value="" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="3880" y="424" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="156" style="edgeStyle=none;html=1;fontSize=23;fontColor=#FFFFFF;" parent="1" source="155" target="150" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="155" value="Accept, Decline, Maybe?" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=9;verticalAlign=top;align=left;rounded=1;fontSize=13;fontColor=#FFFF66;fontStyle=2" parent="1" vertex="1">
+                    <mxGeometry x="3720" y="501.5" width="120" height="38.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="161" value="User Journey - poll setup" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#005700;fillColor=#008a00;fontSize=19;fontStyle=4;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="5995" y="2.5" width="230" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="162" value="see doodle poll - should be better :-)&lt;br&gt;&lt;br&gt;Event organiser might want to set up one or more polls associated with an event.&lt;br&gt;1. the poll topic&amp;nbsp;&lt;br&gt;eg to select a date or dates&lt;br&gt;eg to say if they're attending (yes, no, mayvbe)&lt;br&gt;to select/vote on a location or activiy etc&amp;nbsp;&lt;br&gt;&lt;br&gt;2. organiser enters poll list of values&amp;nbsp;&lt;br&gt;&lt;br&gt;3. organiser decides if Invitees could be able to choose multiple options , e.g. is a this date yes or no, or is it best date - pick one, or is it here's a range of dates, pick all that suit, or is it freeform - enter the dates you can make (not MVP)&lt;br&gt;&lt;br&gt;4. organiser might add a time limit/ countdown per poll (not MVP)" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=9;verticalAlign=top;align=left;rounded=1;fontSize=13;fontColor=#FFFF66;fontStyle=2" parent="1" vertex="1">
+                    <mxGeometry x="5990" y="52.5" width="485" height="317.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="163" value="" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="1368.5" y="36" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="164" value="" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=34;fontColor=#FFFF66;endArrow=none;startArrow=none;" parent="1" source="166" target="163" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1008.5" y="51" as="sourcePoint"/>
+                        <mxPoint x="1448.49999999988" y="51" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="169" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=23;fontColor=#FFFFFF;" parent="1" target="52" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1208.5" y="51" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="1208.5" y="131"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="166" value="" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="1178.5" y="36" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="168" value="" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=34;fontColor=#FFFF66;endArrow=none;" parent="1" source="49" target="166" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1008.5" y="51" as="sourcePoint"/>
+                        <mxPoint x="1368.5" y="51" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="175" value="" style="whiteSpace=wrap;html=1;rounded=0;fontSize=34;fontColor=#FFFF66;fillColor=#FFFF00;" parent="1" vertex="1">
+                    <mxGeometry x="4560" y="-10" width="16" height="1180" as="geometry"/>
+                </mxCell>
+                <mxCell id="176" value="Event&lt;br&gt;Created" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#001DBC;fillColor=#FFFF00;fontSize=60;fontStyle=0;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1840" y="-206" width="230" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="177" value="Event has &lt;br&gt;invitees" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#001DBC;fillColor=#FFFF00;fontSize=60;fontStyle=0;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="4440" y="-180" width="280" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="178" value="" style="whiteSpace=wrap;html=1;rounded=0;fontSize=34;fontColor=#FFFF66;fillColor=#FFFF00;" parent="1" vertex="1">
+                    <mxGeometry x="1966" y="-1" width="16" height="1180" as="geometry"/>
+                </mxCell>
+                <mxCell id="179" value="" style="whiteSpace=wrap;html=1;rounded=0;fontSize=34;fontColor=#FFFF66;fillColor=#FFFF00;" parent="1" vertex="1">
+                    <mxGeometry x="-90" width="16" height="1490" as="geometry"/>
+                </mxCell>
+                <mxCell id="180" value="User logged &lt;br&gt;in &amp;amp; set up" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#001DBC;fillColor=#FFFF00;fontSize=60;fontStyle=0;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="-252" y="-200" width="340" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="181" value="Implementation&amp;nbsp;Notes:&lt;br&gt;At this point, the Event Organiser&amp;nbsp;&lt;br&gt;- might get a notification of who's voted for what / who's attending etc&lt;br&gt;- they might get a page in the app of who's voted for what&lt;br&gt;- they might get a unique interactive page for the event" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=9;verticalAlign=top;align=left;rounded=1;fontSize=13;fontColor=#FFFF66;fontStyle=2" parent="1" vertex="1">
+                    <mxGeometry x="3710" y="44" width="210" height="146" as="geometry"/>
+                </mxCell>
+                <mxCell id="182" value="chatting inside the event&lt;br&gt;- would need to be able to edit Event Details at this point&lt;br&gt;-&amp;nbsp; dates&lt;br&gt;&lt;br&gt;- would expect to see the event summary change (or be editable)&lt;br&gt;&lt;br&gt;- would also need to be able to add people&lt;br&gt;&lt;br&gt;- would also need to be able to add polls&lt;br&gt;" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=9;verticalAlign=top;align=left;rounded=1;fontSize=13;fontColor=#FFFF66;fontStyle=2" parent="1" vertex="1">
+                    <mxGeometry x="4630" y="65" width="390" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="183" value="" style="whiteSpace=wrap;html=1;rounded=0;fontSize=34;fontColor=#FFFF66;fillColor=#FFFF00;" parent="1" vertex="1">
+                    <mxGeometry x="5910" width="16" height="1180" as="geometry"/>
+                </mxCell>
+                <mxCell id="184" value="" style="whiteSpace=wrap;html=1;rounded=0;fontSize=34;fontColor=#FFFF66;fillColor=#FFFF00;" parent="1" vertex="1">
+                    <mxGeometry x="7450" y="-17.5" width="16" height="1180" as="geometry"/>
+                </mxCell>
+                <mxCell id="185" value="voting on polls&lt;br&gt;- some notes on the 'what activitires involved in voting on polls" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=9;verticalAlign=top;align=left;rounded=1;fontSize=13;fontColor=#FFFF66;fontStyle=2" parent="1" vertex="1">
+                    <mxGeometry x="6820" y="50" width="350" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="186" value="Invitee vote on a poll" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+                    <mxGeometry x="6799" y="1551" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="187" value="MVP" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="5900" y="1688.5" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="190" value="TASKS" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="5900" y="1556" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="191" value="USER STORIES" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="5900" y="1641" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="192" value="" style="whiteSpace=wrap;html=1;rounded=0;fontSize=34;fontColor=#FFFF66;fillColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="5955" y="480" width="1405" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="193" value="" style="whiteSpace=wrap;html=1;rounded=0;fontSize=34;fontColor=#FFFF66;fillColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="5900" y="1621" width="1405" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="202" value="Organiser sets up a new poll for a given event" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+                    <mxGeometry x="6047.5" y="1545" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="203" value="Organiser&amp;nbsp; sets the poll topic" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+                    <mxGeometry x="6210" y="1546" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="204" value="Next" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="5905" y="1868.5" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="206" value="Sometime" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="5890" y="2099.5" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="210" value="Organiser&amp;nbsp; enters list of values/options for poll" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+                    <mxGeometry x="6375" y="1546" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="215" style="edgeStyle=none;html=1;fontSize=21;fontColor=#333333;" parent="1" source="214" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="216" style="edgeStyle=none;html=1;fontSize=21;fontColor=#333333;" parent="1" source="214" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="214" value="Remember - Belinda will have an Event Organiser role AND an Event Invitee role" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=9;verticalAlign=top;align=center;rounded=1;fontSize=13;fontColor=#FFFF33;fontStyle=2" parent="1" vertex="1">
+                    <mxGeometry x="-520" y="-500" width="180" height="67.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="219" style="edgeStyle=none;html=1;fontSize=14;fontColor=#FFFF33;" parent="1" source="218" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="218" value="Note: event organiser may or may not need to be logged in before this user journey starts" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=9;verticalAlign=top;align=left;rounded=1;fontSize=13;fontColor=#FFFF66;fontStyle=2" parent="1" vertex="1">
+                    <mxGeometry x="33.5" y="99" width="120" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="220" value="(Event)&lt;br&gt;Organiser" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="-1517" y="72.5" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="227" value="Log in to app" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#ffffff;strokeColor=#432D57;direction=south;" parent="1" vertex="1">
+                    <mxGeometry x="-1417" y="415" width="110" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="231" value="Event needs&lt;br&gt;&amp;nbsp;decisions" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#001DBC;fillColor=#FFFF00;fontSize=60;fontStyle=0;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="5760" y="-167.5" width="350" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="232" value="Event details&lt;br&gt;&amp;nbsp;decided" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#001DBC;fillColor=#FFFF00;fontSize=60;fontStyle=0;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="7278" y="-180" width="360" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="234" value="MVP" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="4580" y="1612.5" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="235" value="TASKS" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="4580" y="1480" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="236" value="USER STORIES" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="4580" y="1565" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="237" value="" style="whiteSpace=wrap;html=1;rounded=0;fontSize=34;fontColor=#FFFF66;fillColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="4610" y="480" width="1200" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="238" value="" style="whiteSpace=wrap;html=1;rounded=0;fontSize=34;fontColor=#FFFF66;fillColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="4580" y="1545" width="1200" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="239" value="Next" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="4580" y="1855" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="240" value="Sometime" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="4570" y="2075" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="249" value="MVP" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="2032" y="1531.5" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="250" value="TASKS" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="2030" y="1385" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="251" value="USER STORIES" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="2032" y="1484" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="252" value="" style="whiteSpace=wrap;html=1;rounded=0;fontSize=34;fontColor=#FFFF66;fillColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2074" y="638.75" width="2056" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="253" value="" style="whiteSpace=wrap;html=1;rounded=0;fontSize=34;fontColor=#FFFF66;fillColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2030" y="1451" width="2056" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="254" value="Next" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="2036" y="1666" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="255" value="Sometime" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="2030" y="1843.5" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="256" value="MVP" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="-1.5" y="1535" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="257" value="TASKS" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="18.5" y="510" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="258" value="Tickets" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="3.5" y="640" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="259" value="" style="whiteSpace=wrap;html=1;rounded=0;fontSize=34;fontColor=#FFFF66;fillColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="18.5" y="395" width="1911.5" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="260" value="" style="whiteSpace=wrap;html=1;rounded=0;fontSize=34;fontColor=#FFFF66;fillColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="28.5" y="572" width="1911.5" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="261" value="Next" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="-1.5" y="1777.5" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="262" value="Sometime" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="-11.5" y="1997.5" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="263" value="MVP" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="-1465" y="1337.5" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="264" value="TASKS" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="-1520" y="432.5" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="265" value="USER STORIES" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="-1465" y="1290" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="266" value="" style="whiteSpace=wrap;html=1;rounded=0;fontSize=34;fontColor=#FFFF66;fillColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="-1520" y="387.5" width="1380" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="267" value="" style="whiteSpace=wrap;html=1;rounded=0;fontSize=34;fontColor=#FFFF66;fillColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="-1520" y="497.5" width="1400" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="268" value="Next" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="-1465" y="1580" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="269" value="Sometime" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="-1475" y="1800" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="273" value="(optional) enter date(s) (and time?) sugggestions" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="633" y="490" width="120" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="274" value="(optional) enter activity suggestion" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="490" width="120" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="275" value="(optional) enter location suggestion" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="895.75" y="490" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="277" value="&lt;span style=&quot;font-size: 11px&quot;&gt;AS AN Event Organiser&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;I WANT TO quickly add a title&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;SO THAT i don't waste time&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="1521.25" width="130" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="278" value="&lt;span style=&quot;font-size: 11px&quot;&gt;AS AN Event Organiser&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;I WANT TO give my new even a unique title&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;SO THAT i and my event invitees get confused about which event is which&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="492" y="1772.5" width="140" height="115" as="geometry"/>
+                </mxCell>
+                <mxCell id="279" value="&lt;span style=&quot;font-size: 11px&quot;&gt;AS AN Event Organiser&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;I WANT TO easily start a new event&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;SO THAT i don't waste time&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="185" y="1521.25" width="140" height="82.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="280" value="&lt;span style=&quot;font-size: 11px&quot;&gt;N/A - no event templates for MVP&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#B3FF66;strokeColor=#432D57;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="355" y="1523.75" width="115" height="48.75" as="geometry"/>
+                </mxCell>
+                <mxCell id="281" value="&lt;span style=&quot;font-size: 11px&quot;&gt;AS AN Event Organiser&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;I WANT TO add the dates i already know i am available&lt;br&gt;SO THAT my friends don't waste time suggesting dates i can't make&lt;br&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="632" y="1521.25" width="130" height="131.25" as="geometry"/>
+                </mxCell>
+                <mxCell id="282" value="&lt;span style=&quot;font-size: 11px&quot;&gt;N/A - hard-coding a single activity option forr MVP&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#B3FF66;strokeColor=#432D57;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="775" y="1523.75" width="115" height="66.87" as="geometry"/>
+                </mxCell>
+                <mxCell id="283" value="&lt;span style=&quot;font-size: 11px&quot;&gt;N/A - hard-coding a single location option forr MVP&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#B3FF66;strokeColor=#432D57;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="899" y="1522.13" width="115" height="66.87" as="geometry"/>
+                </mxCell>
+                <mxCell id="284" value="&lt;span style=&quot;font-size: 11px&quot;&gt;AS AN Event Organiser&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;I WANT TO have option of using a 'starter' template for my new event&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;SO THAT i can save time&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="1772.5" width="140" height="92.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="285" value="&lt;span style=&quot;font-size: 11px&quot;&gt;AS AN Event Organiser&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;I WANT TO have option of duplicating one of my previous events&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;SO THAT i can save time&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="333.5" y="1872.5" width="140" height="92.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="286" value="&lt;span style=&quot;font-size: 11px&quot;&gt;AS AN Event Organiser&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;I WANT TO have option of custom-creating my own event templates&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;SO THAT i can save time&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="333.5" y="1997.5" width="140" height="92.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="287" value="&lt;span style=&quot;font-size: 11px&quot;&gt;N/A - we will assume the event organiser is already loggged in for the MVP&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#B3FF66;strokeColor=#432D57;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="-1362" y="1337.5" width="237" height="51.25" as="geometry"/>
+                </mxCell>
+                <mxCell id="288" value="&lt;span style=&quot;font-size: 11px&quot;&gt;N/A - we will mock up an existing friends list for the event organiser for the MVP&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#B3FF66;strokeColor=#432D57;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="-1015" y="1337.5" width="555" height="47.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="289" value="&lt;span style=&quot;font-size: 11px&quot;&gt;TBC&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#FFFFFF;strokeColor=#432D57;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="-1025" y="1570" width="115" height="82.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="291" value="(optional?) Log in to app" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#ffffff;strokeColor=#432D57;direction=south;" parent="1" vertex="1">
+                    <mxGeometry x="-1417" y="232.5" width="110" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="292" value="(Event)&lt;br&gt;Invitee" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="-1517" y="247.5" width="80" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="293" value="&lt;span style=&quot;font-size: 11px&quot;&gt;TBC - Implement Auth0 for login maybe?&amp;nbsp;&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#FFFFFF;strokeColor=#432D57;align=left;verticalAlign=top;fontStyle=0" parent="1" vertex="1">
+                    <mxGeometry x="-1315" y="1577.5" width="115" height="82.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="294" value="(optional?) enter friend 's email" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" parent="1" vertex="1">
+                    <mxGeometry x="-785" y="145" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="295" value="save new friend to profile" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" parent="1" vertex="1">
+                    <mxGeometry x="-650" y="67.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="303" style="edgeStyle=none;html=1;entryX=0;entryY=1;entryDx=0;entryDy=0;fontSize=12;fontColor=#FFFFFF;" parent="1" source="296" target="302" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="296" value="Assume &lt;br&gt;- Already logged in&lt;br&gt;- could be event organiser OR event attendee - anyone can keep a friends list" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=9;verticalAlign=top;align=left;rounded=1;fontSize=13;fontColor=#FFFF66;fontStyle=2" parent="1" vertex="1">
+                    <mxGeometry x="-1080" y="155" width="120" height="125" as="geometry"/>
+                </mxCell>
+                <mxCell id="299" value="Log out from App" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#ffffff;strokeColor=#432D57;direction=south;" parent="1" vertex="1">
+                    <mxGeometry x="-1290" y="55" width="110" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="300" value="Log out from App" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#ffffff;strokeColor=#432D57;direction=south;" parent="1" vertex="1">
+                    <mxGeometry x="-1290" y="232.5" width="110" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="301" value="Log out from App" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#ffffff;strokeColor=#432D57;direction=south;" parent="1" vertex="1">
+                    <mxGeometry x="-1290" y="415" width="110" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="302" value="" style="ellipse;whiteSpace=wrap;html=1;rounded=1;fillColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="-980" y="80" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="304" value="click new friend" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" parent="1" vertex="1">
+                    <mxGeometry x="-1070" y="415" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="306" value="save new friend to profile" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" parent="1" vertex="1">
+                    <mxGeometry x="-600" y="415" width="90" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="308" value="(optional?) enter friend 's mobile&amp;nbsp;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" parent="1" vertex="1">
+                    <mxGeometry x="-785" y="222.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="309" value="enter friend's name" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" parent="1" vertex="1">
+                    <mxGeometry x="-785" y="70" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="310" value="(optional?) enter friend 's email" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" parent="1" vertex="1">
+                    <mxGeometry x="-825" y="417.5" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="311" value="(optional?) enter friend 's mobile&amp;nbsp;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" parent="1" vertex="1">
+                    <mxGeometry x="-710" y="417.5" width="90" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="312" value="enter friend's name" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" parent="1" vertex="1">
+                    <mxGeometry x="-930" y="417.5" width="90" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="313" value="&lt;span style=&quot;font-size: 11px&quot;&gt;TBC&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#FFFFFF;strokeColor=#432D57;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="-785" y="1570" width="115" height="82.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="314" value="&lt;span style=&quot;font-size: 11px&quot;&gt;TBC&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#FFFFFF;strokeColor=#432D57;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="-900" y="1571.25" width="115" height="82.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="315" value="&lt;span style=&quot;font-size: 11px&quot;&gt;TBC&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#FFFFFF;strokeColor=#432D57;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="-660" y="1571.25" width="115" height="82.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="316" value="&lt;span style=&quot;font-size: 11px&quot;&gt;Save to object in memory? or to a front end .js file?&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#FFFFFF;strokeColor=#432D57;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="-535" y="1571.25" width="115" height="82.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="317" value="&lt;span style=&quot;font-size: 11px&quot;&gt;save to database - will need to create a database table, foreign key to user, a model to insert and select, and routes to insert and select&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#FFFFFF;strokeColor=#432D57;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="-545" y="1752.5" width="115" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="318" value="Logged in user&amp;nbsp;&lt;br style=&quot;font-size: 14px&quot;&gt;- could also be an event organiser or an event invitee, but this role has the access to all &lt;br&gt;the stuff you MUST be logged in to get (e.g. logging in and out, managing own user profile &lt;br&gt;and managing own friends list (adding, updating and removing friends)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#36393d;fillColor=#cce5ff;fontSize=14;fontStyle=0;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="-680" y="-660" width="570" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="319" value="updating people&lt;br&gt;in friends list&amp;nbsp;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#314354;fillColor=#647687;fontSize=19;fontStyle=4;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="-475" y="7.5" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="320" value="Managing Friends List" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#314354;fillColor=#647687;fontSize=19;fontStyle=4;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="-1085" y="-35" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="321" value="Managing Authentication/Authorisation" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#314354;fillColor=#647687;fontSize=19;fontStyle=4;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="-1520" y="-40" width="340" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="322" value="Managing Events User Journeys" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#432D57;fillColor=#76608a;fontSize=19;fontStyle=4;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="-47.5" width="290" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="323" value="deleting people&lt;br&gt;from friends list&amp;nbsp;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#314354;fillColor=#647687;fontSize=19;fontStyle=4;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="-280" y="5" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="324" value="TBC" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" parent="1" vertex="1">
+                    <mxGeometry x="-475" y="70" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="325" value="TBC" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" parent="1" vertex="1">
+                    <mxGeometry x="-280" y="67.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="326" value="Managing invitations User Journeys" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#001DBC;fillColor=#0050ef;fontSize=19;fontStyle=4;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="2046" y="-43.5" width="320" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="327" value="user journey - between event being agreed and it occurring" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#10739e;fillColor=#b1ddf0;fontSize=19;fontStyle=4;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="7490" y="7.5" width="510" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="328" value="" style="whiteSpace=wrap;html=1;rounded=0;fontSize=34;fontColor=#FFFF66;fillColor=#FFFF00;" parent="1" vertex="1">
+                    <mxGeometry x="8132" y="-10.5" width="16" height="1180" as="geometry"/>
+                </mxCell>
+                <mxCell id="329" value="Event &lt;br&gt;occurs" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#001DBC;fillColor=#FFFF00;fontSize=60;fontStyle=0;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="8040" y="-180" width="190" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="330" value="Edit Event" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#432D57;fillColor=#76608a;fontSize=19;fontStyle=4;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="1654" y="7.5" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="331" value="&quot;Delete&quot; Event" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#432D57;fillColor=#76608a;fontSize=19;fontStyle=4;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="1780" y="10" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="332" value="TBC tasks that make up editing an event" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#314354;" parent="1" vertex="1">
+                    <mxGeometry x="1650" y="87.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="333" value="TBC tasks that make up deleting an event" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#314354;" parent="1" vertex="1">
+                    <mxGeometry x="1800" y="84" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="335" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=34;fontColor=#FFFFFF;" parent="1" source="334" target="112" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="334" value="" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="3140" y="75" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="346" value="send the invitations (link?)" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="5190" y="88" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="347" value="&lt;span style=&quot;font-size: 11px&quot;&gt;AS A tbc&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;I WANT TO tbc&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;SO THAT tbc&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="2186" y="1686" width="140" height="82.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="348" value="&lt;span style=&quot;font-size: 11px&quot;&gt;AS A tbc&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;I WANT TO tbc&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;SO THAT tbc&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="4660" y="1635" width="140" height="82.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="353" value="(optionally) &lt;br&gt;set up poll&amp;nbsp; for activity choices&lt;br&gt;&lt;font style=&quot;font-size: 34px&quot;&gt;+&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#008a00;arcSize=22;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+                    <mxGeometry x="1038.5" y="160" width="120" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="354" value="(optionally) &lt;br&gt;set up poll&amp;nbsp; for location choices&lt;br&gt;&lt;font style=&quot;font-size: 34px&quot;&gt;+&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#008a00;arcSize=22;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+                    <mxGeometry x="1038.5" y="254" width="120" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="355" value="(optionally) &lt;br&gt;set up poll&amp;nbsp; for date choices&lt;br&gt;&lt;font style=&quot;font-size: 34px&quot;&gt;+&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#008a00;arcSize=22;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+                    <mxGeometry x="1050" y="484" width="120" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="356" value="(optionally) &lt;br&gt;set up poll&amp;nbsp; for activity choices&lt;br&gt;&lt;font style=&quot;font-size: 34px&quot;&gt;+&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#008a00;arcSize=22;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+                    <mxGeometry x="1170" y="484" width="120" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="357" value="(optionally) &lt;br&gt;set up poll&amp;nbsp; for location choices&lt;br&gt;&lt;font style=&quot;font-size: 34px&quot;&gt;+&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#008a00;arcSize=22;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+                    <mxGeometry x="1290" y="480" width="120" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="358" value="(optionally) &lt;br&gt;Invite people&lt;br&gt;&lt;font style=&quot;font-size: 34px&quot;&gt;+&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#0050EF;fontColor=#ffffff;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="1410" y="484" width="120" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="359" value="TBC tasks that make up editing an event" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#314354;" parent="1" vertex="1">
+                    <mxGeometry x="1660" y="425" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="360" value="TBC tasks that make up deleting an event" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#314354;" parent="1" vertex="1">
+                    <mxGeometry x="1800" y="426.25" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="361" value="&lt;span style=&quot;font-size: 11px&quot;&gt;AS AN Event Organiser&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;I WANT the option to set up a poll on possible dates/times when creating an event&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;SO THAT ...&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1000" y="1775" width="140" height="117.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="362" value="&lt;span style=&quot;font-size: 11px&quot;&gt;N/A - no polls for MVP&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#B3FF66;strokeColor=#432D57;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1035" y="1519.69" width="375" height="66.87" as="geometry"/>
+                </mxCell>
+                <mxCell id="363" value="&lt;span style=&quot;font-size: 11px&quot;&gt;N/A - not sending invitations for MVP&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#B3FF66;strokeColor=#432D57;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1440" y="1519.69" width="115" height="66.87" as="geometry"/>
+                </mxCell>
+                <mxCell id="367" value="&lt;span style=&quot;font-size: 11px&quot;&gt;AS AN Event Organiser&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;I WANT TO be able to send invitation links via email to my chosen list of invitees when creating an event&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;SO THAT ...&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1427.5" y="1777.5" width="140" height="112.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="368" value="&lt;span style=&quot;font-size: 11px&quot;&gt;AS AN Organiser&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;I WANT the option to set up a poll for activity choices when creating an event&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;SO THAT ...&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1145" y="1990" width="145" height="115" as="geometry"/>
+                </mxCell>
+                <mxCell id="369" value="&lt;span style=&quot;font-size: 11px&quot;&gt;AS AN Organiser&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;I WANT the option to set up a poll for location choices when creating an event&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;SO THAT ...&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1300" y="1990" width="140" height="115" as="geometry"/>
+                </mxCell>
+                <mxCell id="372" value="Managing Event Discussions User Journeys" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#A50040;fillColor=#d80073;fontSize=19;fontStyle=4;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="4595" y="-40.5" width="390" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="373" value="functionality for user journey tasks/activites from the time the event is agreed, to the time the event occurs&lt;br&gt;e.g.&amp;nbsp;&lt;br&gt;contdowns&lt;br&gt;notificatinos alerts to users to remind them the event is arising&lt;br&gt;managing people cancelling&lt;br&gt;alowing chat to continue&amp;nbsp;&lt;br&gt;&lt;br&gt;maybe extra functionality showing free carparking spots near the event, or public transport information for the event etc.&lt;br&gt;&lt;br&gt;or alllowing tickets or menus etc to be shared.&lt;br&gt;etc" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=9;verticalAlign=top;align=left;rounded=1;fontSize=13;fontColor=#FFFF66;fontStyle=2" parent="1" vertex="1">
+                    <mxGeometry x="7500" y="80" width="390" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="374" value="After the Event User Journeys" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#BD7000;fillColor=#f0a30a;fontSize=19;fontStyle=4;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="8170" y="5" width="270" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="375" value="TBC" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" parent="1" vertex="1">
+                    <mxGeometry x="8180" y="155" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="376" value="Add photos&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#BD7000;fillColor=#f0a30a;fontSize=19;fontStyle=4;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="8180" y="80" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="377" value="Archive the event" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#BD7000;fillColor=#f0a30a;fontSize=19;fontStyle=4;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="8520" y="80" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="378" value="Mark Event as eneded" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" parent="1" vertex="1">
+                    <mxGeometry x="8520" y="142" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="380" value="&lt;span style=&quot;font-size: 11px&quot;&gt;AS AN Invitee&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;I WANT TO tbc&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;SO THAT tbc&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="6789" y="1669.75" width="140" height="82.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="382" value="&lt;span style=&quot;font-size: 11px&quot;&gt;AS AN Organiser&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;I WANT TO be able to set up polls on any topic&lt;br&gt;SO THAT ...&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="6192.5" y="2099.5" width="140" height="82.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="383" value="&lt;span style=&quot;font-size: 11px&quot;&gt;AS AN Organiser&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;I WANT TO propose options for an event location&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;SO THAT i can see what my friends want to do, and reach a decision quickly&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="6375" y="1876" width="140" height="115" as="geometry"/>
+                </mxCell>
+                <mxCell id="384" value="&lt;span style=&quot;font-size: 11px&quot;&gt;N/A - only a date poll is included in the MVP&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#008a00;fontColor=#FFFF33;strokeColor=#005700;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="6200" y="1669.75" width="140" height="82.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="385" value="&lt;span style=&quot;font-size: 11px&quot;&gt;AS AN Organiser&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;I WANT TO propose a set of date(s) to other invitees, where i'm available&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;SO THAT I can quickly find out if my event is viable&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="6375" y="1672.25" width="140" height="112.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="386" value="&lt;span style=&quot;font-size: 11px&quot;&gt;N/A - only a date poll is included in the MVP&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#008a00;fontColor=#FFFF33;strokeColor=#005700;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="6047.5" y="1671" width="140" height="82.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="388" value="&lt;span style=&quot;font-size: 11px&quot;&gt;AS AN Organiser&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;I WANT TO propose options for an event acitvity&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px&quot;&gt;SO THAT i can see what my friends want to do, and reach a decision quickly&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="6192.5" y="1876" width="140" height="115" as="geometry"/>
+                </mxCell>
+                <mxCell id="389" value="" style="whiteSpace=wrap;html=1;rounded=0;fontSize=34;fontColor=#FFFF66;fillColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="-20" y="1760" width="1911.5" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="390" value="" style="whiteSpace=wrap;html=1;rounded=0;fontSize=34;fontColor=#FFFF66;fillColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="-1.5" y="1972.5" width="1911.5" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="392" value="&lt;span style=&quot;font-size: 11px&quot;&gt;N/A - not sending invitations for MVP?&amp;nbsp; Starting with a hard-coded friends list?&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="2192" y="1535.38" width="1064" height="41.25" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-392" value="THEMES" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="28.5" y="-43.5" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-393" value="EPICS" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="18.5" y="424" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-396" value="TASKS" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="18.5" y="510" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-397" value="start new event&amp;nbsp; (reword this)" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="215" y="496" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-398" value="TASKS" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=19;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="18.5" y="510" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-399" value="start new event&amp;nbsp; (reword this)" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="215" y="496" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-400" value="Start a new Event" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="205" y="417.5" width="385" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-401" value="Add Event button/link with functionality to trigger rendering a new event" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="215" y="740" width="120" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-402" value="Capture Event Details" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="633" y="420" width="407" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-403" value="(optional) enter description/comments" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="795" y="309" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-404" value="Enter Polls" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="1050" y="420" width="360" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-405" value="Invite People" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="1413" y="420" width="117" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-406" value="Event Component&lt;br&gt;- display" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="648.5" y="630" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-407" value="Title&lt;br&gt;&amp;nbsp;- display&lt;br&gt;- allow entry of value&lt;br&gt;- capture value entered" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="652" y="710" width="171.5" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-408" value="Location (optional)&lt;br&gt;- display&lt;br&gt;- allow (optional) entry&lt;br&gt;-capture any value entered" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="648.5" y="810" width="171.5" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-409" value="Date (optional):&lt;br&gt;- display&lt;br&gt;- allow (optional) entry&lt;br&gt;-capture any value entered" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="652" y="910" width="171.5" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-410" value="Time (optional)" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="652" y="1010" width="108" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-411" value="List of&amp;nbsp; People Added so far&lt;br&gt;- Display" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#0050EF;fontColor=#FFFFFF;strokeColor=#432D57;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1413" y="625" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-412" value="Warn if adding an existing person" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#0050EF;fontColor=#FFFFFF;strokeColor=#432D57;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1410" y="760" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-413" value="Save Event" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="1447.5" y="35" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-414" value="Save Event" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="1534" y="424" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-415" value="Save Event" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="1534" y="495" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-418" style="edgeStyle=none;html=1;fontSize=11;fontColor=#FFFF33;align=left;" parent="1" source="6jAbmmS3Mkt3HBRpso1j-417" target="6jAbmmS3Mkt3HBRpso1j-406" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-417" value="Note: Event could have its own page, or just a part of another page" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=11;verticalAlign=top;align=left;rounded=1;fontSize=13;fontColor=#FFFF66;fontStyle=2" parent="1" vertex="1">
+                    <mxGeometry x="490" y="625" width="133" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-420" style="edgeStyle=none;html=1;fontSize=11;fontColor=#FFFF33;align=left;" parent="1" source="6jAbmmS3Mkt3HBRpso1j-419" target="6jAbmmS3Mkt3HBRpso1j-421" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-419" value="Question: From where is the new event being triggered?" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=11;verticalAlign=top;align=left;rounded=1;fontSize=13;fontColor=#FFFF66;fontStyle=2" parent="1" vertex="1">
+                    <mxGeometry x="40" y="690" width="133" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-421" value="TBC Component" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="215" y="648.75" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-422" value="(optionally) &lt;br&gt;Invite people&lt;br&gt;&lt;font style=&quot;font-size: 34px&quot;&gt;+&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="5180" y="172.5" width="120" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-423" value="(optionally) &lt;br&gt;set up poll&amp;nbsp; for date choices&lt;br&gt;&lt;font style=&quot;font-size: 34px&quot;&gt;+&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#008a00;arcSize=0;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+                    <mxGeometry x="5370" y="156" width="120" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-424" value="(backend)&lt;br&gt;save event to datastore&amp;nbsp;&lt;br&gt;(insert)" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1552" y="1090" width="108" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="6jAbmmS3Mkt3HBRpso1j-425" value="save event to in-memorystate" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#76608A;fontColor=#ffffff;strokeColor=#432D57;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1546" y="625" width="108" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="393" value="NEW: warn if person is already added" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" vertex="1" parent="1">
+                    <mxGeometry x="2470" y="299" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="395" value="" style="whiteSpace=wrap;html=1;rounded=0;fontSize=34;fontColor=#FFFF66;fillColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="-40" y="1080" width="1911.5" height="10" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="Yoqdiqv7Rxgi3MDT4p4G" name="Page-2">
+        <mxGraphModel dx="1361" dy="763" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="UXoqdHChpDuNk0vmxXIh-0"/>
+                <mxCell id="UXoqdHChpDuNk0vmxXIh-1" parent="UXoqdHChpDuNk0vmxXIh-0"/>
+                <mxCell id="UXoqdHChpDuNk0vmxXIh-2" value="List" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;labelBorderColor=default;fontSize=11;fontColor=#FFFF33;" vertex="1" parent="UXoqdHChpDuNk0vmxXIh-1">
+                    <mxGeometry x="230" y="320" width="140" height="104" as="geometry"/>
+                </mxCell>
+                <mxCell id="UXoqdHChpDuNk0vmxXIh-3" value="Item 1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;labelBorderColor=default;fontSize=11;fontColor=#FFFF33;" vertex="1" parent="UXoqdHChpDuNk0vmxXIh-2">
+                    <mxGeometry y="26" width="140" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="UXoqdHChpDuNk0vmxXIh-4" value="Item 2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;labelBorderColor=default;fontSize=11;fontColor=#FFFF33;" vertex="1" parent="UXoqdHChpDuNk0vmxXIh-2">
+                    <mxGeometry y="52" width="140" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="UXoqdHChpDuNk0vmxXIh-5" value="Item 3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;labelBorderColor=default;fontSize=11;fontColor=#FFFF33;" vertex="1" parent="UXoqdHChpDuNk0vmxXIh-2">
+                    <mxGeometry y="78" width="140" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="UXoqdHChpDuNk0vmxXIh-6" value="&lt;table border=&quot;1&quot; width=&quot;100%&quot; height=&quot;100%&quot; cellpadding=&quot;4&quot; style=&quot;width:100%;height:100%;border-collapse:collapse;&quot;&gt;&lt;tr&gt;&lt;th align=&quot;center&quot;&gt;&lt;b&gt;Title&lt;/b&gt;&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;Section 1.1&#10;Section 1.2&#10;Section 1.3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;Section 2.1&#10;Section 2.2&#10;Section 2.3&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;strokeColor=none;fillColor=none;overflow=fill;rounded=0;labelBorderColor=default;fontSize=11;fontColor=#FFFF33;" vertex="1" parent="UXoqdHChpDuNk0vmxXIh-1">
+                    <mxGeometry x="210" y="510" width="160" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="UXoqdHChpDuNk0vmxXIh-14" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.multiButton;fillColor=#008cff;strokeColor=#666666;mainText=;subText=;rounded=0;labelBorderColor=default;fontSize=11;fontColor=#FFFF33;" vertex="1" parent="UXoqdHChpDuNk0vmxXIh-1">
+                    <mxGeometry x="150" y="780" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="UXoqdHChpDuNk0vmxXIh-15" value="Main Text" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.anchor;fontSize=16;fontColor=#ffffff;fontStyle=1;whiteSpace=wrap;rounded=0;labelBorderColor=default;fillColor=#76608A;" vertex="1" parent="UXoqdHChpDuNk0vmxXIh-14">
+                    <mxGeometry y="8" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="UXoqdHChpDuNk0vmxXIh-16" value="Sub Text" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.anchor;fontSize=12;fontColor=#ffffff;fontStyle=1;whiteSpace=wrap;rounded=0;labelBorderColor=default;fillColor=#76608A;" vertex="1" parent="UXoqdHChpDuNk0vmxXIh-14">
+                    <mxGeometry y="30" width="150" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="UXoqdHChpDuNk0vmxXIh-17" value="ON" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.onOffButton;gradientColor=none;strokeColor=#999999;buttonState=on;fillColor2=#008cff;fontColor=#ffffff;fontSize=17;mainText=;spacingRight=40;fontStyle=1;rounded=0;labelBorderColor=default;" vertex="1" parent="UXoqdHChpDuNk0vmxXIh-1">
+                    <mxGeometry x="390" y="800" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="UXoqdHChpDuNk0vmxXIh-18" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.rrect;rSize=10;strokeColor=#666666;rounded=0;labelBorderColor=default;fontSize=11;fontColor=#FFFF33;fillColor=#76608A;" vertex="1" parent="UXoqdHChpDuNk0vmxXIh-1">
+                    <mxGeometry x="30" y="620" width="120" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="UXoqdHChpDuNk0vmxXIh-19" value="Button 2" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.rrect;rSize=0;fontSize=17;fontColor=#666666;fontStyle=1;resizeWidth=1;rounded=0;labelBorderColor=default;" vertex="1" parent="UXoqdHChpDuNk0vmxXIh-18">
+                    <mxGeometry width="120" height="50" relative="1" as="geometry">
+                        <mxPoint y="50" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="UXoqdHChpDuNk0vmxXIh-20" value="Button 3" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.rrect;rSize=0;fontSize=17;fontColor=#666666;fontStyle=1;resizeWidth=1;rounded=0;labelBorderColor=default;" vertex="1" parent="UXoqdHChpDuNk0vmxXIh-18">
+                    <mxGeometry width="120" height="50" relative="1" as="geometry">
+                        <mxPoint y="100" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="UXoqdHChpDuNk0vmxXIh-21" value="Button 4" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.bottomButton;rSize=10;fontSize=17;fontColor=#666666;fontStyle=1;resizeWidth=1;rounded=0;labelBorderColor=default;" vertex="1" parent="UXoqdHChpDuNk0vmxXIh-18">
+                    <mxGeometry y="1" width="120" height="50" relative="1" as="geometry">
+                        <mxPoint y="-50" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="UXoqdHChpDuNk0vmxXIh-22" value="Button 1" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.topButton;rSize=10;fontSize=17;fontColor=#ffffff;fontStyle=1;fillColor=#008cff;strokeColor=#008cff;resizeWidth=1;rounded=0;labelBorderColor=default;" vertex="1" parent="UXoqdHChpDuNk0vmxXIh-18">
+                    <mxGeometry width="120" height="50" relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
