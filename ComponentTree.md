@@ -62,6 +62,7 @@ All still within event information Section:
 - Confirm Attendance Component (Functionality not MVP)
 - Event Date (If not set it says “Date pending”). The value of the event date could be a state with the initial value of "Date pending". If it has been set then change the state to the date which comes from the fetch
 - Event Location (If not set it says “Location pending”)
+
   - People Section
     - H4 tag that says People
     - Maybe an extra component called people container - need the people invited saved in an array state - map through and render a user icon image component.
@@ -69,19 +70,26 @@ All still within event information Section:
     - Add Person button
   - Description Component - passed in as prop from the event information section
   - Collapse Event Information section (Button)
-    - On click function that activates some form of conditional rendering that hides people, organiser and description to only shopw key information on the event (date, title, location)
+    - On click function that activates some form of conditional rendering (toggles on/off) that hides people, organiser and description to only shopw key information on the event (date, title, location)
 
--Poll Section
-H4 tag that says “Poll”
-Add poll button
-Poll Component
-Collapse Poll Section button
+- Poll Section
 
-Post Section
-Comment Section
--User Icon Image Component
+  - H4 tag that says “Poll”
+  - Add poll button
 
-- Comment Component - Submit Comment Section - Input Box - Send Button
+    - Add poll button has an onClick that will redirect to CREATE A POLL PAGE.
+
+  - Poll Component (The poll options will need to be saved to a state in array- map method which will map through array returning the poll option- the index of the array will need to be passed thorugh as a prop as a key) - Poll Option ( Each poll option wil need an onClick function- if that particular poll (referenced to specific index) is picked- useEffect (post/write to the polls table in the database what option was selected - also doing fetch to get all the other results (shows how everyone voted)))
+    Collapse Poll Section button
+  - On click function that activates some form of conditional rendering (toggles on off) will hide the add poll button and the poll component.
+
+- Post Section - would want all the comments saved in a database- run fect that gets all the comments and saves them in a state in the form of an array. Map through state and return below comments section and its contents.
+  - Comment Section -
+    - User Icon Image Component - (Contents passed to here s a prop from the map)
+    - Comment Component - (Contents passed to here s a prop from the map)
+  - Sumbit Comment section
+    - Input Box (has an onchange function that registers the change and saves it into a state)
+    - Send Button (will set the state of the input box, onClick- also post request to write to the databse) (MAYBE CHECK JAMES WEEK PROJECT)
 
 Low-Fi Frame 6:
 
