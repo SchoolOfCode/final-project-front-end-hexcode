@@ -93,20 +93,18 @@ All still within event information Section:
 
 Low-Fi Frame 6:
 
-- Event Page:
-  - Hamburger Container (Banner) - hamburger menu
+- Create a Poll Section
 
-Create a Poll Section
-P Tag “Add a title for your Poll”
-Input Section (Reusable)
-P tag “Category”
-Drop down of categories (Functionality not MVP)
-Add an option Section
-Add an option button (On click this will render the component below)
-Input Section (Reusable)
-Confirm button (On click will move the input contents into the ‘Confirmed options’ section)
+  - P Tag “Add a title for your Poll”
+  - Input Section (Reusable) onChange function that registers the change of the input box and saves it in a state.
+  - P tag “Category”
+  - Drop down of categories (Functionality not MVP) on Click function that will register what category has been selected and save it to a state.
+  - Add an option Section
+  - Add an option button (On click this will render the component below)
+  - Input Section (Reusable)
+    Confirm button (On click will move the input contents into the ‘Confirmed options’ section)
 
-     - Confirmed options Section
+         - Confirmed options Section
 
 Options component
 Bin icon button to remove option from list
