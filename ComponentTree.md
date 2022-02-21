@@ -46,7 +46,7 @@ Pages folder: Create event page, Event page, Create a poll
       - On Change on the component so it will regsiter any changes to input box/map component and save it in a sate called description ( const [description, setDescription] = useState)
 - Confirm Event Button
   - A way of saving who the organsier is with the event ID in a state? Organiser state [organsier, setOrganiser] = useState([img src, organiser name])
-  - On Click that activates a UseEffect to the database. Do a post of what the state values are
+  - On Click that activates a UseEffect ( TBD, could just do it in the onclick function) to the database. Do a post of what the state values are
   - ON click that will redirect you to the event page (Spinner on the event page if it takes a few seconds? Creating your event some sort of fun emoji)
 
 ## Low-Fi Frame 4.1:
@@ -54,7 +54,7 @@ Pages folder: Create event page, Event page, Create a poll
 - Event Page:
 
 - Event Information Section
-  - Fetch the data from the database to get the event information. Save the information from the fetch request into states.
+  - Fetch the data from the database to get the event information. Save the information from the fetch request into states. Save all the event info into an array of objects?
   - Organiser state [img src, organiser name]
   - Organiser Section - User Icon Image Component - passed in as prop from the event information section - User Name Component - passed in as prop from the event information section - Settings Cog Component (Functionality not MVP) - conditionally rendered if you are the organiser or not. onClick it will take you back to the create event page.
 
@@ -69,7 +69,7 @@ All still within event information Section:
     - H4 tag that says People
     - Maybe an extra component called people container - need the people invited saved in an array state - map through and render a user icon image component.
       - User Icon Image Component (People that have been invited)
-    - Add Person button
+    - Add Person button (Functionality not MVP? Function would be needed - only renders people not already invited)
   - Description Component - passed in as prop from the event information section
   - Collapse Event Information section (Button)
     - On click function that activates some form of conditional rendering (toggles on/off) that hides people, organiser and description to only shopw key information on the event (date, title, location)
@@ -95,7 +95,7 @@ All still within event information Section:
 
 ## Low-Fi Frame 6:
 
-- Create a Poll Section
+- Create a Poll Section - MVP just selecting 1 option
 
   - P Tag “Add a title for your Poll”
   - Input Section (Reusable) onChange function that registers the change of the input box and saves it in a state.
