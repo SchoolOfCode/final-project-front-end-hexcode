@@ -1,17 +1,15 @@
-import logo from "./logo.svg";
-import "./App.css";
-import InputBox from "../InputBox";
-import HamburgerContainer from "../HamburgerContainer";
-import { createEvent } from "@testing-library/react";
-import CreatePollPage from "../../pages/CreatePollPage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "../Nabvar";
 
 function App() {
   return (
     <div className="App">
-      <HamburgerContainer />
-      <CreateEvent />
-      <CreatePollPage />
-      <Event />
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" />
+        </Routes>
+      </Router>
     </div>
   );
 }
