@@ -15,4 +15,4 @@ function App() {
 }
 
 export default App;
-console.log("hello");
+console.log("hi");
