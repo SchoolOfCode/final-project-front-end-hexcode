@@ -1,15 +1,17 @@
-import Show from "../Show";
-
 import logo from "./logo.svg";
 import "./App.css";
+import InputBox from "../InputBox";
+import HamburgerContainer from "../HamburgerContainer";
+import { createEvent } from "@testing-library/react";
+import CreatePollPage from "../../pages/CreatePollPage";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Show />
-      </header>
+      <HamburgerContainer />
+      <CreateEvent />
+      <CreatePollPage />
+      <Event />
     </div>
   );
 }
