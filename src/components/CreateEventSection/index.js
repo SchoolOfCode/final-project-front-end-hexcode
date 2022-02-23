@@ -21,7 +21,7 @@ function CreateEventSection() {
     time: "",
     description: "",
   });
-
+  console.log("test");
   // Handle change function for input fields on form
   function handleChange(e) {}
 
