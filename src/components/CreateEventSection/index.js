@@ -1,42 +1,78 @@
-import React, { useState } from 'react';
-
-import TitleSection from '../TitleSection';
-import PeopleSection from '../PeopleSection';
-import LocationSection from '../LocationSection';
-import DateSection from '../DateSection';
+import React, { useState } from "react";
+import {
+  DatePicker,
+  Input,
+  TimePicker,
+  Menu,
+  Dropdown,
+  Button,
+  Space,
+  message,
+} from "antd";
+import { UserOutlined } from "@ant-design/icons";
+import "antd/dist/antd.css";
 
 function CreateEventSection() {
+  // Create event state
   const [event, setEvent] = useState({
-    title: '',
+    title: "",
     people: [],
-    date: 'Date pending',
-    time: '',
-    description: '',
+    date: "Date pending",
+    time: "",
+    description: "",
   });
 
+  // Handle change function for input fields on form
+  function handleChange(e) {}
+
+  // Ant components stuff
+  const { TextArea } = Input;
+  const menu = (
+    <Menu>
+      <Menu.Item key="Belinda" icon={<UserOutlined />}>
+        Belinda
+      </Menu.Item>
+      <Menu.Item key="Luke" icon={<UserOutlined />}>
+        Luke
+      </Menu.Item>
+      <Menu.Item key="James" icon={<UserOutlined />}>
+        James
+      </Menu.Item>
+    </Menu>
+  );
+
   return (
-    <div>
+    <div className="formContainer">
       <h2>Create an Event</h2>
       <form>
         <label>
           <h3>Title</h3>
-          <input type='text' name='title' />
+          <Input placeholder="Set a title for your event" />
         </label>
         <label>
           <h3>People</h3>
-          <input type='text' name='people' />
+          <Space wrap>
+            <Dropdown.Button
+              overlay={menu}
+              placement="bottomCenter"
+              icon={<UserOutlined />}
+            >
+              Add people
+            </Dropdown.Button>
+          </Space>
         </label>
         <label>
           <h3>Date</h3>
-          <input type='text' name='date' />
+          <DatePicker />
         </label>
         <label>
           <h3>Time</h3>
-          <input type='text' name='time' />
+          <TimePicker />
         </label>
         <label>
           <h3>Description</h3>
-          <input type='text' name='description' />
+          <TextArea placeholder="Add a description for your event.." autoSize />
+          <div style={{ margin: "24px 0" }} />
         </label>
       </form>
     </div>

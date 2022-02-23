@@ -1,15 +1,16 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from '../Nabvar';
-import CreateEvent from '../../pages/CreateEvent';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "../Nabvar";
+import CreateEvent from "../../pages/CreateEvent";
+import "antd/dist/antd.css";
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <Router>
         <Navbar />
         <Routes>
-          <Route path='/' />
-          <Route path='/createEvent' element={<CreateEvent />} />
+          <Route path="/" />
+          <Route path="/createEvent" element={<CreateEvent />} />
         </Routes>
       </Router>
     </div>
@@ -17,4 +18,4 @@ function App() {
 }
 
 export default App;
-console.log('hi');
+console.log("hi");

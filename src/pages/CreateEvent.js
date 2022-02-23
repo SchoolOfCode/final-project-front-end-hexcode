@@ -1,5 +1,6 @@
-import React from 'react';
-import CreateEventSection from '../components/CreateEventSection';
+import React from "react";
+import CreateEventSection from "../components/CreateEventSection";
+import { Button } from "antd";
 
 function CreateEvent() {
   return (
@@ -11,7 +12,7 @@ function CreateEvent() {
         this later by adding a poll on the event and editing the event details
         once decided.
       </p>
-      <button>Confirm Event</button>
+      <Button type="primary">Create Event</Button>
     </div>
   );
 }
