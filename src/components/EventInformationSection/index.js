@@ -17,7 +17,9 @@ function EventInformationSection({
         <button>Confirm Attendance</button>
       </div>
       <div className="dateAndLocation">
-        <h3>{{ eventDate } + "@" + { eventTime }}</h3>
+        <h3>
+          {eventDate} @ {eventTime}
+        </h3>
         <h3>{eventLocation}</h3>
       </div>
       <div>

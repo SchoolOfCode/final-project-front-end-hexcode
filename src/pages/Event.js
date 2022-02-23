@@ -2,13 +2,14 @@ import React from "react";
 import EventInformationSection from "../components/EventInformationSection";
 import { useEffect, useState } from "react";
 import useFetch from "../CustomHooks/customHooks";
+import { FaBullseye } from "react-icons/fa";
 
 function Event() {
   // const [data] = useFetch(
   //   "https://hexcode-arrange-group-event.herokuapp.com/events/2"
   // );
 
-  const [event, setEvent] = useState([]);
+  const [event, setEvent] = useState(false);
 
   useEffect(() => {
     async function getEvent() {
@@ -17,7 +18,7 @@ function Event() {
       );
       const data = await response.json();
       console.log("Event data", data);
-      setEvent(data.payload, console.log(event));
+      setEvent(data.payload);
     }
     getEvent();
   }, []);
@@ -32,11 +33,11 @@ function Event() {
             return (
               <EventInformationSection
                 key={index}
-                eventTitle={event.title}
-                eventDescription={event.description}
-                eventLocation={event.location}
-                eventTime={event.time}
-                eventDate={event.date}
+                eventTitle={item.event_title}
+                eventDescription={item.event_description}
+                eventLocation={item.event_location}
+                eventTime={item.event_time}
+                eventDate={item.event_date}
               />
             );
           })
