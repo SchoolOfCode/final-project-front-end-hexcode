@@ -1,7 +1,7 @@
 import React from "react";
 
 function PeopleSection() {
-  return <h4>people</h4>;
+  return;
 }
 
 export default PeopleSection;

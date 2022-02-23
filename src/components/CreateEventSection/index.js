@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   DatePicker,
   Input,
@@ -13,12 +14,12 @@ import { UserOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
 
 function CreateEventSection() {
-  // Create event state
+  // States
   const [event, setEvent] = useState({
-    title: "",
+    eventTitle: "",
     people: [],
-    location: "",
-    description: "",
+    eventLocation: "",
+    eventDescription: "",
   });
 
   const [eventDate, setEventDate] = useState("date pending");
@@ -28,16 +29,22 @@ function CreateEventSection() {
   function onChange(date, dateString) {
     setEventDate(dateString);
   }
+
   function onChangeTime(date, timeString) {
     setEventTime(timeString);
   }
+
   function handleChange(e) {
     const value = e.target.value;
     //const selected = e.target.selected;
     setEvent({ ...event, [e.target.name]: value });
-    console.log(event.title);
   }
-  console.log("this is the enet", event, eventDate, eventTime);
+
+  // OnClick function to create Event
+  // function handleClick(e) {
+  //   <Link to="/Event"></Link>;
+  // }
+
   // Ant components stuff
   const { TextArea } = Input;
   const menu = (
@@ -62,8 +69,8 @@ function CreateEventSection() {
           <h3>Title</h3>
           <Input
             placeholder="Set a title for your event"
-            name="title"
-            value={event.title}
+            name="eventTitle"
+            value={event.eventTitle}
             onChange={handleChange}
           />
         </label>
@@ -71,8 +78,8 @@ function CreateEventSection() {
           <h3>Location</h3>
           <Input
             placeholder="Set a location for your event"
-            name="location"
-            value={event.location}
+            name="eventLocation"
+            value={event.eventLocation}
             onChange={handleChange}
           />
         </label>
@@ -90,28 +97,31 @@ function CreateEventSection() {
         </label>
         <label>
           <h3>Date</h3>
-          <DatePicker name="date" selected={event.date} onChange={onChange} />
+          <DatePicker name="date" onChange={onChange} />
         </label>
         <label>
           <h3>Time</h3>
-          <DatePicker
-            picker="time"
-            name="time"
-            selected={event.time}
-            onChange={onChangeTime}
-          />
+          <DatePicker picker="time" name="time" onChange={onChangeTime} />
         </label>
+        <p>
+          If you havent decided on a date or location dont worry, you can decide
+          this later by adding a poll on the event and editing the event details
+          once decided.
+        </p>
         <label>
           <h3>Description</h3>
           <TextArea
             placeholder="Add a description for your event.."
             autoSize
-            name="description"
-            value={event.description}
+            name="eventDescript"
+            value={event.eventDescription}
             onChange={handleChange}
           />
           <div style={{ margin: "24px 0" }} />
         </label>
+        <Link to="/Event">
+          <Button type="primary">Create Event</Button>
+        </Link>
       </form>
     </div>
   );
