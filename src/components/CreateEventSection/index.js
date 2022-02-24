@@ -21,7 +21,6 @@ function CreateEventSection() {
     eventLocation: "",
     eventDescription: "",
   });
-
   const [eventDate, setEventDate] = useState("date pending");
   const [eventTime, setEventTime] = useState("");
 
@@ -113,7 +112,7 @@ function CreateEventSection() {
           <TextArea
             placeholder="Add a description for your event.."
             autoSize
-            name="eventDescript"
+            name="eventDescription"
             value={event.eventDescription}
             onChange={handleChange}
           />
