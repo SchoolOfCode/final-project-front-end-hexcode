@@ -20,3 +20,7 @@ ul {
 a {
   color: #8432d6;
 }
+
+a:hover {
+  color: #ffff;
+}
