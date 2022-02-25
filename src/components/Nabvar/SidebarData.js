@@ -11,3 +11,5 @@ export const SidebarData = [
     className: "addEventBtn",
   },
 ];
+
+console.log("hi");
