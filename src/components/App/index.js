@@ -1,5 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "../Nabvar";
+import CreateEvent from "../../pages/CreateEvent";
+import Event from "../../pages/Event";
+import "antd/dist/antd.css";
 
 function App() {
   return (
@@ -8,6 +11,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" />
+          <Route path="/createEvent" element={<CreateEvent />} />
+          <Route path="/Event" element={<Event />} />
         </Routes>
       </Router>
     </div>
@@ -15,4 +20,4 @@ function App() {
 }
 
 export default App;
-console.log("hello");
+console.log("hi");
