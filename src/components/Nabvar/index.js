@@ -34,7 +34,7 @@ function Navbar() {
               </li>
             );
           })}
-          <h4>Your Events</h4>
+          <h4 className="your-event">Your Events</h4>
           <button className="eventButton">
             <li> Pub Crawl</li>
           </button>

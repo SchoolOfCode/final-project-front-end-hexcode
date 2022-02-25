@@ -32,3 +32,23 @@
 .menu-bars {
   color: #ffffff;
 }
+
+.eventButton {
+  display: flex;
+  color: #8432d6;
+  background-color: #ffff;
+  border: solid 2px #8432d6;
+  border-radius: 5px;
+  margin: 0.2rem;
+}
+
+.navbar-toggle{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.your-event{
+  font-family: 'Righteous';
+}
+
+
