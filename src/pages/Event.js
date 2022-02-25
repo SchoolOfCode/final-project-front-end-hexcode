@@ -2,6 +2,7 @@ import React from "react";
 import EventInformationSection from "../components/EventInformationSection";
 import { useEffect, useState } from "react";
 import useFetch from "../CustomHooks/customHooks";
+import CommentSection from "../components/CommentSection";
 
 function Event() {
   // const [data] = useFetch(
@@ -42,6 +43,7 @@ function Event() {
           })
         )}
       </div>
+      <div className="commentSection"></div>
     </div>
   );
 }
