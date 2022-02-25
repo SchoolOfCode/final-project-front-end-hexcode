@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
-import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose, AiFillPlusCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { SidebarData } from "./SidebarData";
 import "./Navbar.css";
@@ -25,6 +25,9 @@ function Navbar() {
             <Link to="#" className="menu-bars">
               <AiOutlineClose />
             </Link>
+          </li>
+          <li className="addEventbtn">
+            <Link to={"/createEvent"}></Link>
           </li>
           {SidebarData.map((item, index) => {
             //map not neceessary YET- use as reference for when we map through user ID and associated events.

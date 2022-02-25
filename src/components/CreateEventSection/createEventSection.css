@@ -1,0 +1,7 @@
+.phone {
+  width: 200px;
+  height: 390px;
+  background-color: blue;
+  margin: auto;
+  overflow-y: scroll;
+}
