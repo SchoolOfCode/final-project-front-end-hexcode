@@ -40,6 +40,7 @@ function Navbar() {
               <AiOutlineClose />
             </Link>
           </li>
+
           <li className="addEventbtn">
             <Link to={"/createEvent"}>
               <AiFillPlusCircle />
