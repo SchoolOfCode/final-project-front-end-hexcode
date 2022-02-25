@@ -2,25 +2,27 @@ import React from "react";
 import EventInformationSection from "../components/EventInformationSection";
 import { useEffect, useState } from "react";
 import useFetch from "../CustomHooks/customHooks";
+import { useParams } from "react-router-dom";
 
 function Event() {
   // const [data] = useFetch(
   //   "https://hexcode-arrange-group-event.herokuapp.com/events/2"
   // );
+  const { id } = useParams();
 
   const [event, setEvent] = useState(false);
 
   useEffect(() => {
     async function getEvent() {
       const response = await fetch(
-        "https://hexcode-arrange-group-event.herokuapp.com/events/10"
+        `https://hexcode-arrange-group-event.herokuapp.com/events/${id}`
       );
       const data = await response.json();
       console.log("Event data", data);
       setEvent(data.payload);
     }
     getEvent();
-  }, []);
+  }, [id]);
 
   return (
     <div>
@@ -42,6 +44,7 @@ function Event() {
           })
         )}
       </div>
+      {id}
     </div>
   );
 }
