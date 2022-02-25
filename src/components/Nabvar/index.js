@@ -53,11 +53,11 @@ function Navbar() {
             userEvents.map((item, index) => {
               //map not neceessary YET- use as reference for when we map through user ID and associated events.
               return (
-                <li key={item.id} className="userEvents">
+                <div key={item.id} className="userEvents">
                   <Link to={`/Event/${item.id}`}>
                     <p>{item.event_title}</p>
                   </Link>
-                </li>
+                </div>
               );
             })
           )}
