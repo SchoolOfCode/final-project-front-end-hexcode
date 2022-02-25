@@ -1,5 +1,7 @@
 .formContainer,
 h2,
 h3 {
-  color: pink;
+  color: purple;
+  display: flex;
+  justify-content: center;
 }
