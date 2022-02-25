@@ -1,7 +1,23 @@
-.phone {
-  width: 200px;
-  height: 390px;
-  background-color: blue;
-  margin: auto;
-  overflow-y: scroll;
+.formContainer,
+h2,
+h3 {
+  color: purple;
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: #8432d6;
+  font-size: 60px;
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+a:hover {
+  color: #ffff;
 }
