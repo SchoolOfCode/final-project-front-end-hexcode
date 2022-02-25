@@ -5,6 +5,7 @@ import ProfileImage from "../ProfileImage";
 import { GrLocation } from "react-icons/gr";
 import { BsCalendarCheck } from "react-icons/bs";
 import { AiOutlineArrowUp, AiFillPlusCircle } from "react-icons/ai";
+import CommentSection from "../CommentSection";
 
 function EventInformationSection({
   eventTitle,
@@ -48,7 +49,11 @@ function EventInformationSection({
           <AiOutlineArrowUp />
         </button>
       </div>
+
       <div className="pollSection"></div>
+      <div claasName="commentSection">
+        <CommentSection />
+      </div>
     </div>
   );
 }

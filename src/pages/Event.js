@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import useFetch from "../CustomHooks/customHooks";
 import { useParams } from "react-router-dom";
 
+
 function Event() {
   // const [data] = useFetch(
   //   "https://hexcode-arrange-group-event.herokuapp.com/events/2"
@@ -44,7 +45,6 @@ function Event() {
           })
         )}
       </div>
-      {id}
     </div>
   );
 }
