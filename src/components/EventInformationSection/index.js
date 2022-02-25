@@ -14,7 +14,7 @@ function EventInformationSection({
   eventTime,
 }) {
   return (
-    <div>
+    <div className="eventSection">
       <OrganiserSection />
       <div className="titleAndConfirm">
         <h2>{eventTitle}</h2>
