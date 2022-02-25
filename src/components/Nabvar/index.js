@@ -35,8 +35,12 @@ function Navbar() {
             );
           })}
           <h4>Your Events</h4>
-          <li> Pub Crawl</li>
-          <li>Lunch With The Girls</li>
+          <button className="eventButton">
+            <li> Pub Crawl</li>
+          </button>
+          <button className="eventButton">
+            <li>Lunch With The Girls</li>
+          </button>
         </ul>
       </nav>
     </div>
