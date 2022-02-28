@@ -1,0 +1,41 @@
+.loginpage-container {
+  padding-top: 30%;
+}
+
+.Title {
+  color: #8432d6;
+  justify-content: center;
+  padding: 30px;
+  font-size: 35px;
+}
+
+img {
+  height: 250px;
+  width: 350px;
+
+  display: flex;
+  align-self: center;
+}
+
+/* .formcontainer {
+  display: inline-flex;
+  flex-direction: row;
+
+  justify-content: space-around;
+} */
+
+input {
+  width: 75%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #8432d6;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10%;
+}
+
+Button {
+  color: #8432d6;
+  flex-direction: row;
+}

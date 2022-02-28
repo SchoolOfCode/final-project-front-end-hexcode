@@ -1,9 +1,14 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './CreatePollPage';
+import loginimage from '../images/loginimage.png';
+import './LoginPage.css';
+import { Button } from 'antd';
+import 'antd/dist/antd.css';
 
 function LoginPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   // const [userId, setUserId] = useState("")
 
   // function postData() {
@@ -32,28 +37,37 @@ function LoginPage() {
     setPassword(e.target.value);
   }
   return (
-    <div>
-      <h2>Event Planner App</h2>
-      <form>
-        {/* pass in appUserEmail to the API tbc, Get back appUserId - HandleClick for login*/}
+    <div className='loginpage-container'>
+      <h2 className='Title'>Event Planner App</h2>
+      <div className='titlepic'>
+        <img src={loginimage} alt='people' />
+      </div>
+      <div className='formcontainer'>
+        <form className='form'>
+          {/* pass in appUserEmail to the API tbc, Get back appUserId - HandleClick for login*/}
 
-        <input
-          placeholder="e-mail"
-          value={email}
-          onChange={handleChangeEmail}
-        />
+          <input
+            type='email'
+            placeholder='e-mail'
+            value={email}
+            onChange={handleChangeEmail}
+            className='form-input'
+          />
 
-        <input
-          placeholder="password"
-          value={password}
-          onChange={handleChangePassword}
-        />
-        <Link to="/homepage">
-          <button>Login</button>
-        </Link>
+          <input
+            type='password'
+            placeholder='password'
+            value={password}
+            onChange={handleChangePassword}
+            className='form-input'
+          />
+        </form>
+      </div>
+      <Link to='/homepage'>
+        <Button>Login</Button>
+      </Link>
 
-        <button>Sign Up</button>
-      </form>
+      <Button>Sign Up</Button>
     </div>
   );
 }
