@@ -5,7 +5,9 @@ import { Button } from "antd";
 function CreateEvent() {
   return (
     <div>
-      <CreateEventSection />
+      <image className="background-container">
+        <CreateEventSection />
+      </image>
     </div>
   );
 }
