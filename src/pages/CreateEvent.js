@@ -1,10 +1,12 @@
-import React from "react";
-import CreateEventSection from "../components/CreateEventSection";
-import { Button } from "antd";
+import React from 'react';
+import CreateEventSection from '../components/CreateEventSection';
+import { Button } from 'antd';
+import Navbar from '../components/Navbar';
 
 function CreateEvent() {
   return (
     <div>
+      <Navbar />
       <CreateEventSection />
     </div>
   );

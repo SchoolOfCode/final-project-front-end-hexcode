@@ -1,9 +1,9 @@
-import React from "react";
-import EventInformationSection from "../components/EventInformationSection";
-import { useEffect, useState } from "react";
-import useFetch from "../CustomHooks/customHooks";
-import { useParams } from "react-router-dom";
-
+import React from 'react';
+import EventInformationSection from '../components/EventInformationSection';
+import { useEffect, useState } from 'react';
+import useFetch from '../CustomHooks/customHooks';
+import { useParams } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 function Event() {
   // const [data] = useFetch(
@@ -19,7 +19,7 @@ function Event() {
         `https://hexcode-arrange-group-event.herokuapp.com/events/${id}`
       );
       const data = await response.json();
-      console.log("Event data", data);
+      console.log('Event data', data);
       setEvent(data.payload);
     }
     getEvent();
@@ -27,9 +27,10 @@ function Event() {
 
   return (
     <div>
+      <Navbar />
       <div>
         {!event ? (
-          <div className="hide">Cannot find the event you're looking for..</div>
+          <div className='hide'>Cannot find the event you're looking for..</div>
         ) : (
           event.map((item, index) => {
             return (
