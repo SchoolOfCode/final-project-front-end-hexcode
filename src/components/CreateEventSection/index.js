@@ -94,31 +94,33 @@ function CreateEventSection() {
   );
 
   return (
+    <div> <h2>Create an Event</h2> 
     <div className="formContainer">
-      <h2>Create an Event</h2>
       <form>
-        <label>
           <h3>Title</h3>
+        <label>
           <Input
             placeholder="Set a title for your event"
-            name="eventTitle"
+            name="eventTitleInput"
             value={event.eventTitle}
             onChange={handleChange}
           />
         </label>
-        <label>
           <h3>Location</h3>
+        <label>
           <Input
+            className="titleInput"
             placeholder="Set a location for your event"
             name="eventLocation"
             value={event.eventLocation}
             onChange={handleChange}
           />
         </label>
-        <label>
           <h3>People</h3>
+        <label>
           <Space wrap>
             <Dropdown.Button
+              className="dropdownPeople"
               overlay={menu}
               placement="bottomCenter"
               icon={<UserOutlined />}
@@ -127,22 +129,30 @@ function CreateEventSection() {
             </Dropdown.Button>
           </Space>
         </label>
-        <label>
           <h3>Date</h3>
-          <DatePicker name="date" onChange={onChange} />
-        </label>
         <label>
+          <DatePicker 
+          className="datePicker"
+          name="date" 
+          onChange={onChange} />
+        </label>
           <h3>Time</h3>
-          <DatePicker picker="time" name="time" onChange={onChangeTime} />
-        </label>
-        <p>
-          If you havent decided on a date or location dont worry, you can decide
-          this later by adding a poll on the event and editing the event details
-          once decided.
-        </p>
         <label>
+          <DatePicker 
+          className="timePicker"
+          picker="time" 
+          name="time"
+          onChange={onChangeTime} />
+        </label>
+        <p className="disclaimer">
+         <i> If you havent decided on a date or location dont worry, you can decide
+          this later by adding a poll on the event and editing the event details
+          once decided.</i>
+        </p>
           <h3>Description</h3>
+        <label>
           <TextArea
+            className="descriptionInput"
             placeholder="Add a description for your event.."
             autoSize
             name="eventDescription"
@@ -152,11 +162,12 @@ function CreateEventSection() {
           <div style={{ margin: "24px 0" }} />
         </label>
         <Link to="/Event">
-          <Button type="primary" onClick={handleClick}>
+          <Button className="createEventButton" type="primary" onClick={handleClick}>
             Create Event
           </Button>
         </Link>
       </form>
+    </div>
     </div>
   );
 }
