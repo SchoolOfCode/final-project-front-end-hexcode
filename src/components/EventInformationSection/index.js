@@ -18,7 +18,9 @@ function EventInformationSection({
     <div className="eventSection">
       <OrganiserSection />
       <div className="titleAndConfirm">
-        <h2>{eventTitle}</h2>
+        <div className="eventTitle">
+          <h2>{eventTitle}</h2>
+        </div>
         <button>Confirm Attendance</button>
       </div>
       <div className="date">
