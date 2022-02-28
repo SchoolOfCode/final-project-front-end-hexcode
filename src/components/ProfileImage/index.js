@@ -1,5 +1,5 @@
 import React from "react";
-import "../EventInformationSection/EventInfo.css";
+import "../EventInformationSection/eventInfo.css";
 import image1 from "../../images/1.png";
 
 function ProfileImage() {

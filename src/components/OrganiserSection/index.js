@@ -2,7 +2,7 @@ import React from "react";
 import ProfileImage from "../ProfileImage";
 import { FiSettings } from "react-icons/fi";
 import "../OrganiserSection/OrganiserSection.css";
-import "../EventInformationSection/EventInfo.css";
+import "../EventInformationSection/eventInfo.css";
 
 function OrganiserSection({ eventOrganiser }) {
   return (
