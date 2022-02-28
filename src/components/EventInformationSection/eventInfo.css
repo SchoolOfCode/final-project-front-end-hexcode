@@ -38,8 +38,21 @@ button {
   display: inline-flex;
   flex-direction: row;
 }
-.eventTitle {
+.eventTitleSection {
   border: solid purple 3px;
   border-radius: 10px;
   width: fit-content;
+}
+
+.eventTitle{
+  font-size: 18px;
+}
+
+.date{
+  display: inline-flex;
+  font-size: 20px;
+}
+
+.eventDateTime{
+
 }
