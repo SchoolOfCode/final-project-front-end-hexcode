@@ -1,4 +1,4 @@
-img {
+ .profile-pic{
   height: 50px;
   width: 50px;
   border-radius: 70%;
@@ -36,20 +36,20 @@ button {
 
 .titleAndConfirm {
   display: inline-flex;
-  flex-direction: row;
+  /* flex-direction: row; */
 }
 .eventTitleSection {
-  border: solid purple 3px;
+  /* border: solid purple 3px; */
   border-radius: 10px;
   width: fit-content;
 }
 
 .eventTitle{
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .date{
-  display: inline-flex;
+  display: flex;
   font-size: 20px;
 }
 

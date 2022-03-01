@@ -6,6 +6,8 @@ import { GrLocation } from "react-icons/gr";
 import { BsCalendarCheck } from "react-icons/bs";
 import { AiOutlineArrowUp, AiFillPlusCircle } from "react-icons/ai";
 import CommentSection from "../CommentSection";
+import {GiConfirmed} from "react-icons/gi";
+import {ImCross} from "react-icons/im"
 
 function EventInformationSection({
   eventTitle,
@@ -16,12 +18,19 @@ function EventInformationSection({
 }) {
   return (
     <div className="eventSection">
+      <div className="organiserSection">
       <OrganiserSection />
+      </div>
       <div className="titleAndConfirm">
         <div className="eventTitleSection">
           <h2 className="eventTitle">{eventTitle}</h2>
         </div>
-        <button>Confirm Attendance</button>
+        <button className="confirmButton">
+          <GiConfirmed/>
+        </button>
+        <button className="crossButton">
+          <ImCross/>
+        </button>
       </div>
       <div className="date">
         <BsCalendarCheck />
@@ -53,7 +62,7 @@ function EventInformationSection({
       </div>
 
       <div className="pollSection"></div>
-      <div claasName="commentSection">
+      <div className="commentSection">
         <CommentSection />
       </div>
     </div>
