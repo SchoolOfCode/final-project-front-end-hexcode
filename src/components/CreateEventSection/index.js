@@ -13,6 +13,9 @@ import {
 import { UserOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import "./createEventSection.css";
+import moment from "moment";
+import "moment/locale/zh-cn";
+
 //hexcode-safety-net-server.herokuapp.com"
 
 function CreateEventSection() {
@@ -107,11 +110,11 @@ function CreateEventSection() {
   );
 
   return (
-    <div>
-      <h2>Create an Event</h2>
+    <div className="createEventSection">
+      <h2 className="createEventTitle">Create an Event</h2>
       <div className="formContainer">
         <form>
-          <h3 className="input-name">Title</h3>
+          <h3 className="inputTitle">Title</h3>
           <label>
             <Input
               maxLength={30}
@@ -121,7 +124,7 @@ function CreateEventSection() {
               onChange={handleChange}
             />
           </label>
-          <h3 className="input-name">Location</h3>
+          <h3 className="inputTitle">Location</h3>
           <label>
             <Input
               maxLength={40}
@@ -132,7 +135,7 @@ function CreateEventSection() {
               onChange={handleChange}
             />
           </label>
-          <h3>People</h3>
+          <h3 className="inputTitle">People</h3>
           <Space wrap>
             <Dropdown.Button
               overlay={menu}
@@ -146,12 +149,13 @@ function CreateEventSection() {
           <h3 className="input-name">Date</h3>
           <label>
             <DatePicker
+              format="YYYY-MM-DD"
               className="datePicker"
               name="date"
               onChange={onChange}
             />
           </label>
-          <h3 className="input-name">Time</h3>
+          <h3 className="inputTitle">Time</h3>
           <label>
             <DatePicker
               className="timePicker"
@@ -168,7 +172,7 @@ function CreateEventSection() {
               event details once decided.
             </i>
           </p>
-          <h3 className="input-name">Description</h3>
+          <h3 className="inputTitle">Description</h3>
           <label>
             <TextArea
               maxLength={255}

@@ -1,29 +1,18 @@
-h3 {
-  color: purple;
+
+
+.inputTitle {
+  color: black;
   display: flex;
   display: block;
   margin: auto;
   width: 50%;
+  
 }
 
-h2 {
+.createEventTitle {
   display: flex;
   justify-content: center;
-}
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  color: #8432d6;
-  font-size: 60px;
-  display: flex;
-  justify-content: flex-start;
-}
-
-a:hover {
-  color: #ffff;
+  font-size: 2rem;
 }
 
 .formContainer {
@@ -33,7 +22,6 @@ a:hover {
 
 label,
 .disclaimer {
-  display: flex;
   display: block;
   margin: auto;
   width: 50%;
@@ -74,3 +62,5 @@ input[type="text"] {
   border: solid 2px #8432d6;
   border-radius: 10px;
 }
+
+

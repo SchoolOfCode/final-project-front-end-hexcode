@@ -43,13 +43,13 @@
   margin: 0.2rem;
 }
 
-.navbar-toggle{
+.navbar-toggle {
   display: flex;
   justify-content: flex-end;
 }
 
-.your-event{
-  font-family: 'Righteous';
+.your-event {
+  font-family: "Righteous";
 }
 
 .userEvents a {
@@ -60,4 +60,20 @@
   margin: 0.2rem;
   height: 30px;
   display: flex;
+  color: #8432d6;
+}
+
+.nav-menu-items {
+  list-style: none;
+}
+
+.addButton {
+  color: #8432d6;
+  font-size: 60px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.addbutton:hover {
+  color: #ffff;
 }

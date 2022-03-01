@@ -1,4 +1,4 @@
-img {
+.profile-pic {
   height: 50px;
   width: 50px;
   border-radius: 70%;
@@ -31,28 +31,46 @@ button {
 .organiser {
   font-weight: bolder;
   font-size: 20px;
-  color: purple;
+  color: black;
+  padding-top: 20px;
 }
 
 .titleAndConfirm {
   display: inline-flex;
-  flex-direction: row;
+  /* flex-direction: row; */
 }
 .eventTitleSection {
-  border: solid purple 3px;
+  /* border: solid purple 3px; */
   border-radius: 10px;
   width: fit-content;
 }
 
-.eventTitle{
-  font-size: 18px;
+.eventTitle,
+.eventDateTime,
+.locationPlace {
+  font-size: 15px;
+  color: black;
 }
 
-.date{
-  display: inline-flex;
+.date {
+  display: flex;
   font-size: 20px;
 }
 
-.eventDateTime{
+.eventSection {
+  margin: 10px 15px 10px 15px;
+}
 
+.calendar,
+.locationIcon {
+  margin-right: 10px;
+}
+
+.location {
+  display: inline-flex;
+}
+.locationIcon {
+  color: purple;
+  height: 20px;
+  width: 20px;
 }
