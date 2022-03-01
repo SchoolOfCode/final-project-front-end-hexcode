@@ -6,8 +6,14 @@ import Navbar from "../components/Nabvar";
 function CreateEvent() {
   return (
     <div>
+
       <Navbar />
-      <CreateEventSection />
+     
+
+      <image className="background-container">
+        <CreateEventSection />
+      </image>
+
     </div>
   );
 }

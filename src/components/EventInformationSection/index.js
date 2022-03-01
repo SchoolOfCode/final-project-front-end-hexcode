@@ -18,12 +18,14 @@ function EventInformationSection({
     <div className="eventSection">
       <OrganiserSection />
       <div className="titleAndConfirm">
-        <h2>{eventTitle}</h2>
+        <div className="eventTitleSection">
+          <h2 className="eventTitle">{eventTitle}</h2>
+        </div>
         <button>Confirm Attendance</button>
       </div>
       <div className="date">
         <BsCalendarCheck />
-        <h3>
+        <h3 className="eventDateTime">
           {eventDate} @ {eventTime}
         </h3>
       </div>

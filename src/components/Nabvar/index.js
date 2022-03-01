@@ -3,7 +3,7 @@ import { FaBars } from "react-icons/fa";
 import { AiOutlineClose, AiFillPlusCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-
+const API_URL = "https://hexcode-safety-net-server.herokuapp.com";
 function Navbar() {
   // States
   const [sidebar, setSidebar] = useState(false);
@@ -13,7 +13,7 @@ function Navbar() {
   useEffect(() => {
     async function getEvent() {
       const response = await fetch(
-        "https://hexcode-arrange-group-event.herokuapp.com/events"
+        "https://hexcode-safety-net-server.herokuapp.com/events"
       );
       const data = await response.json();
       setUserEvents(data.payload);
@@ -54,8 +54,8 @@ function Navbar() {
               //map not neceessary YET- use as reference for when we map through user ID and associated events.
               return (
                 <div key={item.id} className="userEvents">
-                  <Link to={`/Event/${item.id}`}>
-                    <p>{item.event_title}</p>
+                  <Link to={`/Event/${item.eventId}`}>
+                    <p>{item.eventTitle}</p>
                   </Link>
                 </div>
               );
