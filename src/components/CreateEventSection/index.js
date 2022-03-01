@@ -13,6 +13,9 @@ import {
 import { UserOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import "./createEventSection.css";
+import moment from "moment";
+import "moment/locale/zh-cn";
+
 //hexcode-safety-net-server.herokuapp.com"
 function CreateEventSection() {
   // States
@@ -134,6 +137,7 @@ function CreateEventSection() {
           <h3 className="inputTitle">Date</h3>
           <label>
             <DatePicker
+              format="YYYY-MM-DD"
               className="datePicker"
               name="date"
               onChange={onChange}

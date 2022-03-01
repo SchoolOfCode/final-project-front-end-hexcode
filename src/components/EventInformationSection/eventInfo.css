@@ -48,7 +48,7 @@ button {
 .eventTitle,
 .eventDateTime,
 .locationPlace {
-  /* font-size: 15px; */
+  font-size: 15px;
   color: black;
 }
 

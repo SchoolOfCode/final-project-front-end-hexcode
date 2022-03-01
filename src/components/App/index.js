@@ -5,6 +5,7 @@ import Event from "../../pages/Event";
 import "antd/dist/antd.css";
 import LoginPage from "../../pages/LoginPage";
 import HomePage from "../../pages/homePage";
+import "./app.css";
 
 function App() {
   return (
