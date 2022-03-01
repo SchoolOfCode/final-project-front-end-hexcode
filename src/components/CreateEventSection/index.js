@@ -96,10 +96,10 @@ function CreateEventSection() {
 
   return (
     <div>
-      <h2>Create an Event</h2>
+      <h2 className="createEventTitle">Create an Event</h2>
       <div className="formContainer">
         <form>
-          <h3 className="input-name">Title</h3>
+          <h3 className="inputTitle">Title</h3>
           <label>
             <Input
               placeholder="Set a title for your event"
@@ -108,7 +108,7 @@ function CreateEventSection() {
               onChange={handleChange}
             />
           </label>
-          <h3 className="input-name">Location</h3>
+          <h3 className="inputTitle">Location</h3>
           <label>
             <Input
               className="titleInput"
@@ -118,7 +118,7 @@ function CreateEventSection() {
               onChange={handleChange}
             />
           </label>
-          <h3>People</h3>
+          <h3 className="inputTitle">People</h3>
           <label>
             <Space wrap>
               <Dropdown.Button
@@ -131,7 +131,7 @@ function CreateEventSection() {
               </Dropdown.Button>
             </Space>
           </label>
-          <h3 className="input-name">Date</h3>
+          <h3 className="inputTitle">Date</h3>
           <label>
             <DatePicker
               className="datePicker"
@@ -139,7 +139,7 @@ function CreateEventSection() {
               onChange={onChange}
             />
           </label>
-          <h3 className="input-name">Time</h3>
+          <h3 className="inputTitle">Time</h3>
           <label>
             <DatePicker
               className="timePicker"
@@ -156,7 +156,7 @@ function CreateEventSection() {
               event details once decided.
             </i>
           </p>
-          <h3 className="input-name">Description</h3>
+          <h3 className="inputTitle">Description</h3>
           <label>
             <TextArea
               className="descriptionInput"

@@ -2,12 +2,12 @@ import React from "react";
 import OrganiserSection from "../OrganiserSection";
 import PeopleSection from "../PeopleSection";
 import ProfileImage from "../ProfileImage";
-import { GrLocation } from "react-icons/gr";
+import { GoLocation } from "react-icons/go";
 import { BsCalendarCheck } from "react-icons/bs";
 import { AiOutlineArrowUp, AiFillPlusCircle } from "react-icons/ai";
 import CommentSection from "../CommentSection";
-import {GiConfirmed} from "react-icons/gi";
-import {ImCross} from "react-icons/im"
+import { GiConfirmed } from "react-icons/gi";
+import { ImCross } from "react-icons/im";
 
 function EventInformationSection({
   eventTitle,
@@ -19,28 +19,28 @@ function EventInformationSection({
   return (
     <div className="eventSection">
       <div className="organiserSection">
-      <OrganiserSection />
+        <OrganiserSection />
       </div>
       <div className="titleAndConfirm">
         <div className="eventTitleSection">
           <h2 className="eventTitle">{eventTitle}</h2>
         </div>
         <button className="confirmButton">
-          <GiConfirmed/>
+          <GiConfirmed />
         </button>
         <button className="crossButton">
-          <ImCross/>
+          <ImCross />
         </button>
       </div>
       <div className="date">
-        <BsCalendarCheck />
+        <BsCalendarCheck className="calendar" />
         <h3 className="eventDateTime">
           {eventDate} @ {eventTime}
         </h3>
       </div>
       <div className="location">
-        <h3>{eventLocation}</h3>
-        <GrLocation />
+        <GoLocation className="locationIcon" />
+        <h3 className="locationPlace">{eventLocation}</h3>
       </div>
 
       <div>

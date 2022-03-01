@@ -44,7 +44,7 @@ function Navbar() {
 
           <li className="addEventbtn">
             <Link to={"/createEvent"}>
-              <AiFillPlusCircle />
+              <AiFillPlusCircle className="addButton" />
             </Link>
           </li>
           <h4>Your Events</h4>
