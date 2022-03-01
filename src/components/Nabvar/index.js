@@ -13,7 +13,8 @@ function Navbar() {
   useEffect(() => {
     async function getEvent() {
       const response = await fetch(
-        "https://hexcode-safety-net-server.herokuapp.com/events"
+        // "https://hexcode-safety-net-server.herokuapp.com/events"
+        `https://hexcode-arrange-group-event.herokuapp.com/events`
       );
       const data = await response.json();
       setUserEvents(data.payload);

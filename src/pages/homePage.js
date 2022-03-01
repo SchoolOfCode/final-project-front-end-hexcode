@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Nabvar";
 
 function HomePage() {
   return (
@@ -10,3 +10,5 @@ function HomePage() {
 }
 
 export default HomePage;
+
+//changed import name at the top to be nabvar

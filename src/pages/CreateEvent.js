@@ -8,11 +8,11 @@ function CreateEvent() {
     <div>
 
       <Navbar />
+        <CreateEventSection />
      
 
-      <image className="background-container">
-        <CreateEventSection />
-      </image>
+      {/* <img className="background-container">
+      </img> */}
 
     </div>
   );

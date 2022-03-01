@@ -21,7 +21,8 @@ function Event() {
   useEffect(() => {
     async function getEvent() {
       const response = await fetch(
-        `https://hexcode-safety-net-server.herokuapp.com/events/${id}`
+        // `https://hexcode-safety-net-server.herokuapp.com/events/${id}`
+        `https://hexcode-arrange-group-event.herokuapp.com/events/${id}`
       );
       const data = await response.json();
       console.log("Event data", data);
