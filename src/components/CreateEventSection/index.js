@@ -32,14 +32,15 @@ function CreateEventSection() {
         eventTitle: event.eventTitle,
         eventDescription: event.eventDescription,
         eventLocation: event.eventLocation,
-        eventDate: event.eventDate,
+        eventDate: eventDate,
         eventTime: eventTime,
         eventRequirements: "Booze",
         eventCategory: "Drinks",
       };
       console.log(newEvent);
       const response = await fetch(
-        "https://hexcode-safety-net-server.herokuapp.com/events/",
+        // "https://hexcode-safety-net-server.herokuapp.com/events/",
+        `https://hexcode-arrange-group-event.herokuapp.com/events/`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
