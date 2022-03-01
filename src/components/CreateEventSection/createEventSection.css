@@ -1,7 +1,66 @@
-.phone {
-  width: 200px;
-  height: 390px;
-  background-color: blue;
+
+
+.inputTitle {
+  color: black;
+  display: flex;
+  display: block;
   margin: auto;
-  overflow-y: scroll;
+  width: 50%;
+  
 }
+
+.createEventTitle {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.formContainer {
+  z-index: 1;
+  display: flex;
+}
+
+label,
+.disclaimer {
+  display: block;
+  margin: auto;
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  border: solid 2px #8432d6;
+  border-radius: 10px;
+}
+
+.descriptionInput {
+  border: solid 2px #8432d6;
+  border-radius: 10px;
+}
+
+.createEventButton {
+  background-color: #8432d6;
+  color: white;
+  display: flex;
+  display: block;
+  margin: auto;
+  width: 30%;
+  border-radius: 10px;
+}
+
+.dropdownPeople {
+  border: solid 2px #8432d6;
+  border-radius: 10px;
+}
+
+.datePicker {
+  border: solid 2px #8432d6;
+  border-radius: 10px;
+}
+
+.timePicker {
+  border: solid 2px #8432d6;
+  border-radius: 10px;
+}
+
+

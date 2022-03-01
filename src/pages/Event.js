@@ -2,28 +2,38 @@ import React from "react";
 import EventInformationSection from "../components/EventInformationSection";
 import { useEffect, useState } from "react";
 import useFetch from "../CustomHooks/customHooks";
+import { useParams } from "react-router-dom";
+
+import Navbar from "../components/Nabvar";
+
+const API_URL = "https://hexcode-safety-net-server.herokuapp.com";
+// `https://hexcode-arrange-group-event.herokuapp.com/events/${id}`;
+
 
 function Event() {
   // const [data] = useFetch(
   //   "https://hexcode-arrange-group-event.herokuapp.com/events/2"
   // );
+  const { id } = useParams();
 
   const [event, setEvent] = useState(false);
 
   useEffect(() => {
     async function getEvent() {
       const response = await fetch(
-        "https://hexcode-arrange-group-event.herokuapp.com/events/10"
+        // `https://hexcode-safety-net-server.herokuapp.com/events/${id}`
+        `https://hexcode-arrange-group-event.herokuapp.com/events/${id}`
       );
       const data = await response.json();
       console.log("Event data", data);
       setEvent(data.payload);
     }
     getEvent();
-  }, []);
+  }, [id]);
 
   return (
     <div>
+      <Navbar />
       <div>
         {!event ? (
           <div className="hide">Cannot find the event you're looking for..</div>
@@ -31,7 +41,7 @@ function Event() {
           event.map((item, index) => {
             return (
               <EventInformationSection
-                key={index}
+                key={item.eventId}
                 eventTitle={item.eventTitle}
                 eventDescription={item.eventDescription}
                 eventLocation={item.eventLocation}
