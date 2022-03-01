@@ -17,6 +17,7 @@ import moment from "moment";
 import "moment/locale/zh-cn";
 
 //hexcode-safety-net-server.herokuapp.com"
+
 function CreateEventSection() {
   // States
   const [event, setEvent] = useState({
@@ -27,6 +28,7 @@ function CreateEventSection() {
   });
   const [eventDate, setEventDate] = useState("date pending");
   const [eventTime, setEventTime] = useState("");
+  const [personMenu, setPersonMenu] = useState([]);
 
   function postData() {
     async function createEvent() {
@@ -76,6 +78,16 @@ function CreateEventSection() {
     setEvent({ ...event, [e.target.name]: value });
   }
 
+  function handleMenuClick(e) {
+    const selectedUser = e.key;
+
+    const addUser = [...personMenu, selectedUser];
+
+    setPersonMenu(addUser);
+  }
+
+  console.log(personMenu);
+
   // OnClick function to create Event
   // function handleClick(e) {
   //   <Link to="/Event"></Link>;
@@ -84,7 +96,7 @@ function CreateEventSection() {
   // Ant components stuff
   const { TextArea } = Input;
   const menu = (
-    <Menu>
+    <Menu onClick={handleMenuClick}>
       <Menu.Item key="Belinda" icon={<UserOutlined />}>
         Belinda
       </Menu.Item>
@@ -105,6 +117,7 @@ function CreateEventSection() {
           <h3 className="inputTitle">Title</h3>
           <label>
             <Input
+              maxLength={30}
               placeholder="Set a title for your event"
               name="eventTitle"
               value={event.eventTitle}
@@ -114,6 +127,7 @@ function CreateEventSection() {
           <h3 className="inputTitle">Location</h3>
           <label>
             <Input
+              maxLength={40}
               className="titleInput"
               placeholder="Set a location for your event"
               name="eventLocation"
@@ -122,19 +136,17 @@ function CreateEventSection() {
             />
           </label>
           <h3 className="inputTitle">People</h3>
-          <label>
-            <Space wrap>
-              <Dropdown.Button
-                className="dropdownPeople"
-                overlay={menu}
-                placement="bottomCenter"
-                icon={<UserOutlined />}
-              >
-                Add people
-              </Dropdown.Button>
-            </Space>
-          </label>
-          <h3 className="inputTitle">Date</h3>
+          <Space wrap>
+            <Dropdown.Button
+              overlay={menu}
+              placement="bottomCenter"
+              icon={<UserOutlined />}
+            >
+              Add people
+            </Dropdown.Button>
+            <Input prefix={<UserOutlined />} value={personMenu} />
+          </Space>
+          <h3 className="input-name">Date</h3>
           <label>
             <DatePicker
               format="YYYY-MM-DD"
@@ -163,6 +175,7 @@ function CreateEventSection() {
           <h3 className="inputTitle">Description</h3>
           <label>
             <TextArea
+              maxLength={255}
               className="descriptionInput"
               placeholder="Add a description for your event.."
               autoSize
@@ -172,7 +185,7 @@ function CreateEventSection() {
             />
             <div style={{ margin: "24px 0" }} />
           </label>
-          <Link to="/Event">
+          <Link to="/homepage">
             <Button
               className="createEventButton"
               type="primary"
