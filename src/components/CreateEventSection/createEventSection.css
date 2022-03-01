@@ -51,6 +51,8 @@ input[type="text"] {
 }
 
 .createEventButton {
+  background-color: #8432d6;
+  color: white;
   display: flex;
   display: block;
   margin: auto;

@@ -102,6 +102,7 @@ function CreateEventSection() {
           <h3 className="input-name">Title</h3>
           <label>
             <Input
+              maxLength={30}
               placeholder="Set a title for your event"
               name="eventTitle"
               value={event.eventTitle}
@@ -111,6 +112,7 @@ function CreateEventSection() {
           <h3 className="input-name">Location</h3>
           <label>
             <Input
+              maxLength={40}
               className="titleInput"
               placeholder="Set a location for your event"
               name="eventLocation"
@@ -159,6 +161,7 @@ function CreateEventSection() {
           <h3 className="input-name">Description</h3>
           <label>
             <TextArea
+              maxLength={255}
               className="descriptionInput"
               placeholder="Add a description for your event.."
               autoSize
@@ -168,7 +171,7 @@ function CreateEventSection() {
             />
             <div style={{ margin: "24px 0" }} />
           </label>
-          <Link to="/Event">
+          <Link to="/homepage">
             <Button
               className="createEventButton"
               type="primary"
