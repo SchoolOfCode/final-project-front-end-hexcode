@@ -35,7 +35,24 @@ input {
   margin-left: 10%;
 }
 
-Button {
-  color: #8432d6;
-  flex-direction: row;
+.loginbutton {
+  background-color: #8432d6;
+  color: white;
+  display: flex;
+  display: block;
+  margin: auto;
+  width: 30%;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.signupbutton {
+  background-color: #8432d6;
+  color: white;
+  display: flex;
+  display: block;
+  margin: auto;
+  width: 30%;
+  border-radius: 10px;
 }
