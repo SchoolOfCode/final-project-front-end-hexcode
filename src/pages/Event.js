@@ -3,8 +3,12 @@ import EventInformationSection from "../components/EventInformationSection";
 import { useEffect, useState } from "react";
 import useFetch from "../CustomHooks/customHooks";
 import { useParams } from "react-router-dom";
+
+import Navbar from "../components/Nabvar";
+
 const API_URL = "https://hexcode-safety-net-server.herokuapp.com";
 // `https://hexcode-arrange-group-event.herokuapp.com/events/${id}`;
+
 
 function Event() {
   // const [data] = useFetch(
@@ -28,6 +32,7 @@ function Event() {
 
   return (
     <div>
+      <Navbar />
       <div>
         {!event ? (
           <div className="hide">Cannot find the event you're looking for..</div>
