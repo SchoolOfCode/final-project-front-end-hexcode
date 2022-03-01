@@ -95,7 +95,7 @@ function CreateEventSection() {
   );
 
   return (
-    <div>
+    <div className="createEventSection">
       <h2 className="createEventTitle">Create an Event</h2>
       <div className="formContainer">
         <form>
