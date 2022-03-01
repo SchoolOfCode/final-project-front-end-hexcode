@@ -64,10 +64,10 @@ function LoginPage() {
         </form>
       </div>
       <Link to='/homepage'>
-        <Button>Login</Button>
+        <Button className='loginbutton'>Login</Button>
       </Link>
 
-      <Button>Sign Up</Button>
+      <Button className='signupbutton'>Sign Up</Button>
     </div>
   );
 }
