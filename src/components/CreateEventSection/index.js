@@ -12,7 +12,7 @@ import {
 } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
-import "./createEventSection.css";
+import "./CreateEventSection.css";
 import moment from "moment";
 import "moment/locale/zh-cn";
 
