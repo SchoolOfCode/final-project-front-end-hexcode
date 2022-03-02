@@ -69,10 +69,24 @@ input[type="text"] {
 }
 
 .dropdownPeople {
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
+}
+.inputedpeople {
   border: solid 2px #8432d6;
   border-radius: 10px;
 }
 
+.addingpeople {
+  border: solid 2px #8432d6;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.datetext {
+  text-align: center;
+}
 .datePicker {
   border: solid 2px #8432d6;
   border-radius: 10px;

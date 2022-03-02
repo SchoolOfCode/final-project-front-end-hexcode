@@ -39,7 +39,7 @@ function LoginPage() {
   return (
     <div className="loginpage-container">
       <h2 className="Title">Raduno!</h2>
-      <h3>Catch up without the fuss</h3>
+      <h3 className="tagLine">Catch up without the fuss</h3>
       <div className="titlepic">
         <img src={loginimage} alt="people" />
       </div>
