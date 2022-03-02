@@ -11,6 +11,7 @@ import {
 } from "@ant-design/icons";
 import ProfileImage from "../ProfileImage";
 import "./CommentSection.css";
+import { BiSend } from "react-icons/bi";
 
 function CommentSection() {
   // States
@@ -84,11 +85,12 @@ function CommentSection() {
           </div>
         );
       })}
-
-      <Input onChange={handleChange} />
-      <Button type="primary" onClick={handleClick}>
-        Send
-      </Button>
+      <div className="send-comment">
+        <input className="enter-comment" type="text" onChange={handleChange} />
+        <button className="send-Btn" type="primary" onClick={handleClick}>
+          <BiSend />
+        </button>
+      </div>
     </div>
   );
 }

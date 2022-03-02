@@ -11,7 +11,7 @@
 button {
   background-color: transparent;
   border: none;
-  color: purple;
+  color: #8432d6;
 }
 
 .organiser-container {
@@ -70,7 +70,7 @@ button {
   display: inline-flex;
 }
 .locationIcon {
-  color: purple;
+  color: #8432d6;
   height: 20px;
   width: 20px;
 }
@@ -99,7 +99,7 @@ button {
 
 .eventDescription {
   margin-top: 20px;
-  border-bottom: solid 1px purple;
+  border-bottom: solid 1px #8432d6;
 }
 
 .collapseSection {
