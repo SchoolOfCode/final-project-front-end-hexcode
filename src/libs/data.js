@@ -18,6 +18,15 @@ const photos = [
   {
     image: "../images/5.png",
   },
+  {
+    image: "../images/2.png",
+  },
+  {
+    image: "../images/2.png",
+  },
+  {
+    image: "../images/2.png",
+  },
 ];
 
 export default photos;

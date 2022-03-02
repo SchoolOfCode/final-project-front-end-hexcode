@@ -43,21 +43,23 @@ function EventInformationSection({
         <GoLocation className="locationIcon" />
         <h3 className="locationPlace">{eventLocation}</h3>
       </div>
-
-      <div>
-        <h3>People</h3>
-        {photos.map((item, index) => {
-          return <ProfileImage image={item.image} key={index} />;
-        })}
-        <button>
+      <div className="people-title-container">
+        <h3 className="peopleTitle">Attendees</h3>
+        <button className="add-attendees-btn">
           <AiFillPlusCircle />
         </button>
       </div>
+      <div className="people-container">
+        {photos.map((item, index) => {
+          return <ProfileImage image={item.image} key={index} />;
+        })}
+      </div>
+
       <div className="eventDescription">
         <p>{eventDescription}</p>
       </div>
       <div className="collapseSection">
-        <button>
+        <button className="arrow-btn">
           <AiOutlineArrowUp />
         </button>
       </div>
