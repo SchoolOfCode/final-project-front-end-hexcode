@@ -8,6 +8,7 @@ import { AiOutlineArrowUp, AiFillPlusCircle } from "react-icons/ai";
 import CommentSection from "../CommentSection";
 import { GiConfirmed } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
+import photos from "../../libs/data";
 
 function EventInformationSection({
   eventTitle,
@@ -45,9 +46,9 @@ function EventInformationSection({
 
       <div>
         <h3>People</h3>
-        {/* {eventPeople.map((item, index) {
-        return <ProfileImage image={item.appUserProfilePicLink} key={index} />
-      })} */}
+        {photos.map((item, index) => {
+          return <ProfileImage image={item.image} key={index} />;
+        })}
         <button>
           <AiFillPlusCircle />
         </button>
