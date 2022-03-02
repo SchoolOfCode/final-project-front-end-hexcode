@@ -136,17 +136,22 @@ function CreateEventSection() {
             />
           </label>
           <h3 className="inputTitle">People</h3>
-          <Space wrap>
+          <Space className="dropdownPeople" wrap>
+            <Input
+              className="inputedpeople"
+              prefix={<UserOutlined />}
+              value={personMenu}
+            />
             <Dropdown.Button
+              className="addingpeople"
               overlay={menu}
               placement="bottomCenter"
               icon={<UserOutlined />}
             >
               Add people
             </Dropdown.Button>
-            <Input prefix={<UserOutlined />} value={personMenu} />
           </Space>
-          <h3 className="input-name">Date</h3>
+          <h3 className="inputTitle">Date</h3>
           <label>
             <DatePicker
               format="YYYY-MM-DD"

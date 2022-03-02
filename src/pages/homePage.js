@@ -1,14 +1,21 @@
-import React from 'react';
-import Navbar from '../components/Nabvar';
-//import event-background from '../images/event-background.png';
+import React from "react";
+import Navbar from "../components/Nabvar";
+import RADUNO from "../images/RADUNO.png";
 
 function HomePage() {
   return (
     <div>
       <Navbar />
-      {/* <div>
-        <img src={eventbackground} alt='background' />
-      </div> */}
+      <div
+        style={{
+          objectFit: "contain",
+          marginTop: 200,
+          marginLeft: 0,
+        }}
+      >
+        <img src={RADUNO} alt="background" />
+        {/* <img src={eventbackground} alt='background' /> */}
+      </div>
 
       {/* <div
         style={{ backgroundImage: `url(${eventbackground})` }}
