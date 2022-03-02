@@ -3,4 +3,6 @@
   height: 844px;
   margin: auto;
   overflow-y: scroll;
+  /* overflow-x: none;  */
+  border: solid black 5px;
 }

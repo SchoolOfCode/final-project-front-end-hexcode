@@ -1,6 +1,6 @@
 // import React from "react";
 import React, { createElement, useState } from "react";
-import userComment from "../../libs/data";
+import { userComment } from "../../libs/data";
 import { Comment, Avatar, Tooltip, Input, Button } from "antd";
 import "antd/dist/antd.css";
 import {
@@ -10,6 +10,7 @@ import {
   LikeFilled,
 } from "@ant-design/icons";
 import ProfileImage from "../ProfileImage";
+import "./CommentSection.css";
 
 function CommentSection() {
   // States
@@ -39,17 +40,11 @@ function CommentSection() {
   }
 
   return (
-    <div
-      style={{
-        display: "block",
-        width: 1000,
-        padding: 30,
-      }}
-    >
+    <div className="comment-section">
       <h4>Posts</h4>
       {comments.map((item) => {
         return (
-          <div>
+          <div className="comments">
             <Comment
               author={item.author}
               content={item.text}
