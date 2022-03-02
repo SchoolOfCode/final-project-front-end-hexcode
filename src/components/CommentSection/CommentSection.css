@@ -4,6 +4,20 @@
   padding: 30;
 }
 
-/* .comments {
-  
-} */
+.send-comment {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.send-Btn {
+  font-size: 30px;
+}
+.send-Btn:hover {
+  color: green;
+  cursor: pointer;
+}
+
+.enter-comment {
+  height: 20px;
+  width: 30vh;
+}
