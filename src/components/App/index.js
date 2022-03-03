@@ -10,6 +10,7 @@ import "./app.css";
 function App() {
   return (
     <div className="App">
+      <div className="nav-container"></div>
       <Router>
         <Routes>
           <Route path="/" element={<LoginPage />} />

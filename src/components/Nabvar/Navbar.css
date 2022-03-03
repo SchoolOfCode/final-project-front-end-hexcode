@@ -15,16 +15,16 @@
 }
 
 .nav-menu {
-  background-color: #8432d6;
+  background-color: pink;
   width: 250px;
   height: 100vh;
   display: flex;
   justify-content: center;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: -100%;
   transition: 850ms;
-  z-index: 2;
+  z-index: 1;
 }
 
 .nav-menu.active {
