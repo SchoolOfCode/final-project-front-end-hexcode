@@ -15,6 +15,10 @@ export const userComment = [
     author: "Bob",
     text: "Can't wait to see everyone!",
   },
+  {
+    author: "Jenny",
+    text: "Anyone fancy a coffee after?",
+  },
 ];
 
 const photos = [

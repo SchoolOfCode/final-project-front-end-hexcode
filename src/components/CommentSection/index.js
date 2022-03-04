@@ -52,7 +52,7 @@ function CommentSection() {
                   author={item.author}
                   content={item.text}
                   avatar={
-                    <Avatar style={{ backgroundColor: "green" }}>D</Avatar>
+                    <Avatar style={{ backgroundColor: "green" }}></Avatar>
                   }
                   datetime={"25-04-2022 11:09AM"}
                   actions={[
