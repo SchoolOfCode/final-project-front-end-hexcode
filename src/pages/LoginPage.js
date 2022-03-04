@@ -36,6 +36,7 @@ function LoginPage() {
   function handleChangePassword(e) {
     setPassword(e.target.value);
   }
+  
   return (
     <div className="loginpage-container">
       <h2 className="Title">Raduno!</h2>

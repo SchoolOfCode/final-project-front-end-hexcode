@@ -35,7 +35,7 @@ function Event() {
       <Navbar />
       <div>
         {!event ? (
-          <div className="hide">Cannot find the event you're looking for..</div>
+          <div>Cannot find the event you're looking for..</div>
         ) : (
           event.map((item, index) => {
             return (
