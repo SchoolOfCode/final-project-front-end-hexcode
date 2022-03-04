@@ -9,7 +9,6 @@ import Navbar from "../components/Nabvar";
 const API_URL = "https://hexcode-safety-net-server.herokuapp.com";
 // `https://hexcode-arrange-group-event.herokuapp.com/events/${id}`;
 
-
 function Event() {
   // const [data] = useFetch(
   //   "https://hexcode-arrange-group-event.herokuapp.com/events/2"
@@ -36,7 +35,7 @@ function Event() {
       <Navbar />
       <div>
         {!event ? (
-          <div className="hide">Cannot find the event you're looking for..</div>
+          <div>Cannot find the event you're looking for..</div>
         ) : (
           event.map((item, index) => {
             return (

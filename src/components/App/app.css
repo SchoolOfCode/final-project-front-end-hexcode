@@ -1,6 +1,24 @@
 .App {
+  position: relative;
   width: 390px;
   height: 844px;
   margin: auto;
   overflow-y: scroll;
+  /* overflow-x: none;  */
+  border: solid black 5px;
 }
+
+.nav-container {
+  position: relative;
+  /* width: 390px;
+  height: 844px;
+  margin: auto;
+  background-color: red;
+  z-index: 2; */
+}
+
+/* .nav-relative {
+  height: 100%;
+  width: 100%;
+  position: relative;
+} */

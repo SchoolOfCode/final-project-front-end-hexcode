@@ -1,6 +1,6 @@
 // import React from "react";
 import React, { createElement, useState } from "react";
-import userComment from "../../libs/data";
+import { userComment } from "../../libs/data";
 import { Comment, Avatar, Tooltip, Input, Button } from "antd";
 import "antd/dist/antd.css";
 import {
@@ -10,6 +10,8 @@ import {
   LikeFilled,
 } from "@ant-design/icons";
 import ProfileImage from "../ProfileImage";
+import "./CommentSection.css";
+import { BiSend } from "react-icons/bi";
 
 function CommentSection() {
   // States
@@ -39,62 +41,66 @@ function CommentSection() {
   }
 
   return (
-    <div
-      style={{
-        display: "block",
-        width: 1000,
-        padding: 30,
-      }}
-    >
-      <h4>Posts</h4>
-      {comments.map((item) => {
-        return (
-          <div>
-            <Comment
-              author={item.author}
-              content={item.text}
-              avatar={<Avatar style={{ backgroundColor: "green" }}>D</Avatar>}
-              datetime={"25-04-2022 11:09AM"}
-              actions={[
-                <Tooltip title="Like">
-                  <span
-                    onClick={() => {
-                      setLikesCount(1);
-                      setDislikesCount(0);
-                      setAction("liked");
-                    }}
-                  >
-                    {createElement(
-                      action === "liked" ? LikeFilled : LikeOutlined
-                    )}
-                    {likesCount}
-                  </span>
-                </Tooltip>,
-                <Tooltip title="Dislike">
-                  <span
-                    onClick={() => {
-                      setLikesCount(0);
-                      setDislikesCount(1);
-                      setAction("disliked");
-                    }}
-                  >
-                    {React.createElement(
-                      action === "disliked" ? DislikeFilled : DislikeOutlined
-                    )}
-                    {dislikesCount}
-                  </span>
-                </Tooltip>,
-              ]}
-            />
-          </div>
-        );
-      })}
-
-      <Input onChange={handleChange} />
-      <Button type="primary" onClick={handleClick}>
-        Send
-      </Button>
-    </div>
+    <>
+      <div className="comment-section">
+        <h4>Posts</h4>
+        <div className="comment-container">
+          {comments.map((item) => {
+            return (
+              <div className="comments">
+                <Comment
+                  author={item.author}
+                  content={item.text}
+                  avatar={
+                    <Avatar style={{ backgroundColor: "green" }}></Avatar>
+                  }
+                  datetime={"25-04-2022 11:09AM"}
+                  actions={[
+                    <Tooltip title="Like">
+                      <span
+                        onClick={() => {
+                          setLikesCount(1);
+                          setDislikesCount(0);
+                          setAction("liked");
+                        }}
+                      >
+                        {createElement(
+                          action === "liked" ? LikeFilled : LikeOutlined
+                        )}
+                        {likesCount}
+                      </span>
+                    </Tooltip>,
+                    <Tooltip title="Dislike">
+                      <span
+                        onClick={() => {
+                          setLikesCount(0);
+                          setDislikesCount(1);
+                          setAction("disliked");
+                        }}
+                      >
+                        {React.createElement(
+                          action === "disliked"
+                            ? DislikeFilled
+                            : DislikeOutlined
+                        )}
+                        {dislikesCount}
+                      </span>
+                    </Tooltip>,
+                  ]}
+                />
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <div className="send-comment">
+        <input className="enter-comment" type="text" onChange={handleChange} />
+        <button className="send-Btn" type="primary" onClick={handleClick}>
+          <BiSend />
+        </button>
+      </div>
+      <div className="empty-div"></div>
+    </>
   );
 }
 

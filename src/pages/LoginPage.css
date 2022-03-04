@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
 
 .loginpage-container {
   padding-top: 30%;
@@ -6,13 +6,16 @@
 
 .Title {
   color: #8432d6;
+  text-align: center;
   justify-content: center;
   padding: 30px;
   font-size: 35px;
   font-family: Montserrat;
   font-weight: 600;
 }
-
+.tagLine {
+  text-align: center;
+}
 img {
   height: 250px;
   width: 350px;
