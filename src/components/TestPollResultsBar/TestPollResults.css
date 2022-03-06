@@ -1,0 +1,36 @@
+.outerTestPollResultsBarBox {
+  display: flex;
+  width: 18em;
+}
+.containerStyles {
+  width: 18em;
+  background-color: #e0e0de;
+  border-radius: 5px;
+  margin-bottom: 0.2em;
+  margin-left: 3em;
+  box-sizing: border-box;
+}
+
+.fillerStyles {
+  height: 100%;
+  width: 50%; /* Sinead: this needs to be a parameter */
+  background-color: #6a1b9a; /* Sinead: ideally a parameter */
+  border-radius: 5px;
+  text-align: right;
+}
+
+.labelStyles {
+  width: 100%;
+  padding: 5;
+  color: white;
+  font-size: 50%;
+}
+.pollQuestionStyles {
+  width: 20%;
+  padding: 0;
+  margin: 0;
+  margin-left: 3em;
+  text-align: left;
+  font-size: 50%;
+  color: rgb(37, 35, 35);
+}

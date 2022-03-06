@@ -10,6 +10,8 @@ import { GiConfirmed } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
 import photos from "../../libs/data";
 
+import TestPoll from "../TestPoll/index.js"; // SINEAD TEMP CODE TESTING POLL
+
 function EventInformationSection({
   eventTitle,
   eventDescription,
@@ -64,6 +66,11 @@ function EventInformationSection({
       <div className={!collapse ? "eventDescription" : "hide"}>
         <p>{eventDescription}</p>
       </div>
+
+      <div className={!collapse ? "testPoll" : "hide"}>
+        <TestPoll />
+      </div>
+
       <div className="collapseSection">
         <button className="arrow-btn" onClick={collapseInfo}>
           <AiOutlineArrowUp />

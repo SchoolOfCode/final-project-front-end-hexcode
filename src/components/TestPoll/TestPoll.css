@@ -1,0 +1,192 @@
+.poll {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: inherit;
+  padding: 10px;
+}
+
+.poll * {
+  box-sizing: border-box;
+}
+
+.poll . {
+  color: #3a3a3a;
+  text-align: inherit;
+  font-weight: normal;
+  margin: 0;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #6d4b943b;
+}
+
+.poll .answers {
+  list-style-type: none; /* sinead added to try to remove bullets*/
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.poll .answers li {
+  list-style-type: none; /* sinead added to try to remove bullets*/
+  list-style: none;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.poll .answers .option:hover,
+.poll .answers .option:active {
+  background: #3030303b;
+}
+
+.poll .answers .option.purple:hover,
+.poll .answers .option.purple:active {
+  background: #6d4b943b;
+}
+
+.poll .answers .option.red:hover,
+.poll .answers .option.red:active {
+  background: #ff28283b;
+}
+
+.poll .answers .option.blue:hover,
+.poll .answers .option.blue:active {
+  background: #283eff3b;
+}
+
+.poll .answers .option.white:hover,
+.poll .answers .option.white:active {
+  background: #ffffff3b;
+}
+
+.poll .answers .option.cyan:hover,
+.poll .answers .option.cyan:active {
+  background: #00bcdd3b;
+}
+
+.poll .answers .result {
+  height: 42px;
+  padding: 0;
+  cursor: default;
+  position: relative;
+}
+
+.poll .answers .result .fill {
+  width: 0%;
+  height: 100%;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.poll .answers .result .labels {
+  position: absolute;
+  top: calc(19px - 9px);
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+.poll .answers .result .answer.vote::after {
+  content: " \2713";
+}
+
+.poll .votes {
+  text-align: inherit;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  color: #3030305e;
+}
+
+.pollVoteButton {
+  color: white;
+  background-color: rgb(211, 148, 248);
+  margin-bottom: 0.2em;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 5px;
+  width: 18em;
+}
+
+.pollList {
+  list-style-type: none; /* sinead added to try to remove bullets*/
+  margin-bottom: 1em;
+}
+#resultPercent {
+  margin: 0.5em;
+}
+#resultOption {
+  margin: 0.5em;
+}
+.stylesTestA {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.stylesTestB {
+  font-weight: bold;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  padding: 10px;
+  transition: all 0.3s ease;
+  outline: 0;
+  font-family: inherit;
+  background-color: inherit;
+}
+
+.tempStyle-to-test-out-colours {
+  background-color: #6a1b9a;
+  background-color: #f780ed;
+  background-color: #5557da;
+  background-color: #e0e0de;
+}
+.stylesTestC {
+  margin-left: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+progress {
+  -webkit-appearance: none;
+}
+
+progress::-webkit-progress-bar {
+  background-color: orange;
+}
+
+.progress-bar span {
+  position: absolute;
+  display: inline-block;
+  color: #fff;
+  text-align: right;
+}
+
+.progress-bar {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+progress {
+  width: 100%;
+}
