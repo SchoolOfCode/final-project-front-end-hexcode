@@ -2,65 +2,75 @@ import React from "react";
 import "./TestPollResults.css";
 
 const TestPollResultsBar = (props) => {
-  //VERSION 6
-  const { bgColor, percentComplete, pollResultText, pollQuestion, pollVotes } =
-    props;
+    //VERSION 6
+    const {
+        bgColor,
+        percentComplete,
+        pollResultText,
+        pollQuestion,
+        pollVotes,
+    } = props;
 
-  //VERSION 1 to 5
-  //   const { bgColor, percentComplete, pollResultText } = props;
+    //VERSION 1 to 5
+    //   const { bgColor, percentComplete, pollResultText } = props;
 
-  console.log({ props });
+    console.log({ props });
 
-  //VERSION 1 containerStyles
-  //   const containerStyles = {
-  //     height: 20,
-  //     width: "80%",
-  //     backgroundColor: "#e0e0de",
-  //     borderRadius: 50,
-  //     margin: 50,
-  //   };
+    //VERSION 1 containerStyles
+    //   const containerStyles = {
+    //     height: 20,
+    //     width: "80%",
+    //     backgroundColor: "#e0e0de",
+    //     borderRadius: 50,
+    //     margin: 50,
+    //   };
 
-  //VERSION 2 containerStyles
-  const containerStyles = {
-    backgroundColor: "#e0e0de",
-    borderRadius: 50,
-    width: "18em",
-    marginBottom: "0.2em",
-    marginLeft: "3em",
-    boxSizing: "border-box",
-    lineHeight: 1,
-  };
+    //VERSION 2 containerStyles
+    const containerStyles = {
+        backgroundColor: "#e0e0de",
+        borderRadius: 50,
+        width: "18em",
+        //if the TestPollResults bar is mapped within an <li> then this isn't needed
+        // marginLeft: "3em",
+        boxSizing: "border-box",
+        //increasing size to match 'ant buttons' questions - lineHeight 1 -> 2; marginBottom "0.2em" ->
+        lineHeight: 1.5715,
+        marginBottom: "0.2em",
+        height: "32px",
+    };
 
-  //VERSION 1 and VERSION 2
-  const fillerStyles = {
-    height: "100%",
-    width: `${percentComplete}%`,
-    backgroundColor: bgColor,
-    borderRadius: "inherit",
-    textAlign: "right",
-  };
+    //VERSION 1 and VERSION 2
+    const fillerStyles = {
+        height: "100%",
+        width: `${percentComplete}%`,
+        backgroundColor: bgColor,
+        borderRadius: "inherit",
+        textAlign: "right",
+    };
 
-  //NEEDED FOR VERSION 3 only
-  //   const barWidthStyle = {
-  //     width: `${percentComplete}%`,
-  //   };
+    //NEEDED FOR VERSION 3 only
+    //   const barWidthStyle = {
+    //     width: `${percentComplete}%`,
+    //   };
 
-  //VERSION 1 and VERSION 2
-  const labelStyles = {
-    width: `100%`,
-    padding: 5,
-    color: "white",
-    fontSize: "65%",
-  };
+    //VERSION 1 and VERSION 2
+    const labelStyles = {
+        width: `100%`,
+        marginTop: "2em",
+        padding: 10,
+        color: "white",
+        //increasing size to match 'ant buttons' questions 65% to
+        fontSize: "100%",
+    };
 
-  //VERSION 7 = VERSION 1 but with short question as text, nothing more
-  return (
-    <div style={containerStyles}>
-      <div style={fillerStyles}>
-        <span style={labelStyles}>{`${pollQuestion}`}</span>
-      </div>
-    </div>
-  );
+    //VERSION 7 = VERSION 1 but with short question as text, nothing more
+    return (
+        <div style={containerStyles}>
+            <div style={fillerStyles}>
+                <span style={labelStyles}>{`${pollQuestion}`}</span>
+            </div>
+        </div>
+    );
 };
 
 //VERSION 6 - cutting to realistic data -+ flx

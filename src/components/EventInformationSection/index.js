@@ -13,76 +13,76 @@ import photos from "../../libs/data";
 import TestPoll from "../TestPoll/index.js"; // SINEAD TEMP CODE TESTING POLL
 
 function EventInformationSection({
-  eventTitle,
-  eventDescription,
-  eventLocation,
-  eventDate,
-  eventTime,
+    eventTitle,
+    eventDescription,
+    eventLocation,
+    eventDate,
+    eventTime,
 }) {
-  const [collapse, setCollapse] = useState(false);
+    const [collapse, setCollapse] = useState(false);
 
-  function collapseInfo(e) {
-    setCollapse(!collapse);
-  }
+    function collapseInfo(e) {
+        setCollapse(!collapse);
+    }
 
-  return (
-    <div className="eventSection">
-      <div className={!collapse ? "organiserSection" : "hide"}>
-        <OrganiserSection />
-      </div>
-      <div className="titleAndConfirm">
-        <div className="eventTitleSection">
-          <h2 className="eventTitle">{eventTitle}</h2>
+    return (
+        <div className="eventSection">
+            <div className={!collapse ? "organiserSection" : "hide"}>
+                <OrganiserSection />
+            </div>
+            <div className="titleAndConfirm">
+                <div className="eventTitleSection">
+                    <h2 className="eventTitle">{eventTitle}</h2>
+                </div>
+                <button className={!collapse ? "confirmButton" : "hide"}>
+                    <GiConfirmed />
+                </button>
+                <button className={!collapse ? "crossButton" : "hide"}>
+                    <ImCross />
+                </button>
+            </div>
+            <div className="date">
+                <BsCalendarCheck className="calendar" />
+                <h3 className="eventDateTime">
+                    {eventDate} @ {eventTime}
+                </h3>
+            </div>
+            <div className="location">
+                <GoLocation className="locationIcon" />
+                <h3 className="locationPlace">{eventLocation}</h3>
+            </div>
+            <div className={!collapse ? "people-title-container" : "hide"}>
+                <h3 className="peopleTitle">Attendees</h3>
+                <button className="add-attendees-btn">
+                    <AiFillPlusCircle />
+                </button>
+            </div>
+            <div className={!collapse ? "people-container" : "hide"}>
+                {photos.map((item, index) => {
+                    return <ProfileImage image={item.image} key={index} />;
+                })}
+            </div>
+
+            <div className={!collapse ? "eventDescription" : "hide"}>
+                <p>{eventDescription}</p>
+            </div>
+
+            <div className={!collapse ? "testPoll" : "hide"}>
+                <TestPoll />
+            </div>
+
+            <div className="collapseSection">
+                <button className="arrow-btn" onClick={collapseInfo}>
+                    <AiOutlineArrowUp />
+                </button>
+            </div>
+
+            <div className="pollSection"></div>
+            <div className="commentSection">
+                <CommentSection />
+            </div>
         </div>
-        <button className={!collapse ? "confirmButton" : "hide"}>
-          <GiConfirmed />
-        </button>
-        <button className={!collapse ? "crossButton" : "hide"}>
-          <ImCross />
-        </button>
-      </div>
-      <div className="date">
-        <BsCalendarCheck className="calendar" />
-        <h3 className="eventDateTime">
-          {eventDate} @ {eventTime}
-        </h3>
-      </div>
-      <div className="location">
-        <GoLocation className="locationIcon" />
-        <h3 className="locationPlace">{eventLocation}</h3>
-      </div>
-      <div className={!collapse ? "people-title-container" : "hide"}>
-        <h3 className="peopleTitle">Attendees</h3>
-        <button className="add-attendees-btn">
-          <AiFillPlusCircle />
-        </button>
-      </div>
-      <div className={!collapse ? "people-container" : "hide"}>
-        {photos.map((item, index) => {
-          return <ProfileImage image={item.image} key={index} />;
-        })}
-      </div>
-
-      <div className={!collapse ? "eventDescription" : "hide"}>
-        <p>{eventDescription}</p>
-      </div>
-
-      <div className={!collapse ? "testPoll" : "hide"}>
-        <TestPoll />
-      </div>
-
-      <div className="collapseSection">
-        <button className="arrow-btn" onClick={collapseInfo}>
-          <AiOutlineArrowUp />
-        </button>
-      </div>
-
-      <div className="pollSection"></div>
-      <div className="commentSection">
-        <CommentSection />
-      </div>
-    </div>
-  );
+    );
 }
 
 export default EventInformationSection;
