@@ -17,6 +17,7 @@ function Event() {
 
   const [event, setEvent] = useState(false);
 
+  //When the Event ID changes, go to database nad
   useEffect(() => {
     async function getEvent() {
       const response = await fetch(
