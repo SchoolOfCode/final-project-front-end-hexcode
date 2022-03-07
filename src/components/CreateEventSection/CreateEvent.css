@@ -4,38 +4,38 @@
     display: block;
     margin: auto;
     width: 50%;
-  }
-  
-  .createEventTitle {
+}
+
+.createEventTitle {
     display: flex;
     justify-content: center;
     font-size: 2rem;
-  }
-  
-  .formContainer {
+}
+
+.formContainer {
     z-index: 1;
     display: flex;
-  }
-  
-  label,
-  .disclaimer {
+}
+
+label,
+.disclaimer {
     display: block;
     margin: auto;
     width: 50%;
     margin-bottom: 20px;
-  }
-  
-  input[type="text"] {
+}
+
+input[type="text"] {
     border: solid 2px #8432d6;
     border-radius: 10px;
-  }
-  
-  .descriptionInput {
+}
+
+.descriptionInput {
     border: solid 2px #8432d6;
     border-radius: 10px;
-  }
-  
-  .createEventButton {
+}
+
+.createEventButton {
     background-color: #8432d6;
     color: white;
     display: flex;
@@ -43,34 +43,33 @@
     margin: auto;
     width: 30%;
     border-radius: 10px;
-  }
-  
-  .dropdownPeople {
+}
+
+.dropdownPeople {
     display: flex;
     align-items: center;
     margin-left: 100px;
-  }
-  .inputedpeople {
+}
+.inputedpeople {
     border: solid 2px #8432d6;
     border-radius: 10px;
-  }
-  
-  .addingpeople {
+}
+
+.addingpeople {
     border: solid 2px #8432d6;
     border-radius: 10px;
     margin-bottom: 20px;
-  }
-  
-  .datetext {
+}
+
+.datetext {
     text-align: center;
-  }
-  .datePicker {
+}
+.datePicker {
     border: solid 2px #8432d6;
     border-radius: 10px;
-  }
-  
-  .timePicker {
+}
+
+.timePicker {
     border: solid 2px #8432d6;
     border-radius: 10px;
-  }
-  
+}
