@@ -3,7 +3,9 @@ import { FaBars } from "react-icons/fa";
 import { AiOutlineClose, AiFillPlusCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-const API_URL = "https://hexcode-safety-net-server.herokuapp.com";
+
+import { API_URL } from "../../config/index.js";
+// const API_URL = "https://hexcode-safety-net-server.herokuapp.com";
 
 //07Mar SC: adding comment to force prettier to update
 function Navbar() {
@@ -16,7 +18,8 @@ function Navbar() {
         async function getEvent() {
             const response = await fetch(
                 // "https://hexcode-safety-net-server.herokuapp.com/events"
-                `https://hexcode-arrange-group-event.herokuapp.com/events`
+                // `https://hexcode-arrange-group-event.herokuapp.com/events`
+                `${API_URL}/events`
             );
             const data = await response.json();
             setUserEvents(data.payload);

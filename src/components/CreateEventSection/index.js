@@ -16,6 +16,7 @@ import "./CreateEvent.css";
 import moment from "moment";
 import "moment/locale/zh-cn";
 
+import { API_URL } from "../../config/index.js";
 //hexcode-safety-net-server.herokuapp.com"
 
 //07Mar SC: adding comment to force prettier to update
@@ -43,10 +44,16 @@ function CreateEventSection() {
                 eventRequirements: "Booze",
                 eventCategory: "Drinks",
             };
+            console.log(
+                "src/components/CreateEventSection/index.js: new event="
+            );
             console.log(newEvent);
+
+            //POST (Insert) the newly created event to the database and return with the eventId for the newly created Event.
             const response = await fetch(
                 // "https://hexcode-safety-net-server.herokuapp.com/events/",
-                `https://hexcode-arrange-group-event.herokuapp.com/events/`,
+                // `https://hexcode-arrange-group-event.herokuapp.com/events/`,
+                `${API_URL}/events`,
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },

@@ -6,7 +6,8 @@ import { useParams } from "react-router-dom";
 
 import Navbar from "../components/Nabvar";
 
-const API_URL = "https://hexcode-safety-net-server.herokuapp.com";
+import { API_URL } from "../config/index.js";
+// const API_URL = "https://hexcode-safety-net-server.herokuapp.com";
 // `https://hexcode-arrange-group-event.herokuapp.com/events/${id}`;
 
 function Event() {
@@ -17,12 +18,13 @@ function Event() {
 
     const [event, setEvent] = useState(false);
 
-    //When the Event ID changes, go to database nad
+    //When the Event ID changes, go to database and fetch the event details for the given EventId
     useEffect(() => {
         async function getEvent() {
             const response = await fetch(
                 // `https://hexcode-safety-net-server.herokuapp.com/events/${id}`
-                `https://hexcode-arrange-group-event.herokuapp.com/events/${id}`
+                // `https://hexcode-arrange-group-event.herokuapp.com/events/${id}`
+                `${API_URL}/events/${id}`
             );
             const data = await response.json();
             console.log("Event data", data);
