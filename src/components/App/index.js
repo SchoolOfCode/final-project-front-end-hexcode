@@ -29,4 +29,4 @@ function App() {
 }
 
 export default App;
-console.log("src/components/App/index.js: completed");
+console.log("src/components/App/index.js: completed ");
