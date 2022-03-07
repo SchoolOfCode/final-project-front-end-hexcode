@@ -24,7 +24,6 @@ function LoginPage({ handleLoginClick }) {
     function handleChangeEmail(e) {
         setEmail(e.target.value);
     }
-    console.log(setEmail);
 
     function handleChangePassword(e) {
         setPassword(e.target.value);
@@ -34,6 +33,7 @@ function LoginPage({ handleLoginClick }) {
     // function handleLocalLoginClick(){
     //     handleLoginClick(email);
     // }
+    console.log(`src/pages/LoginPage.js: EMAIL  : ${email}`);
     return (
         <div className="loginpage-container">
             <h2 className="Title">Raduno!</h2>
@@ -68,7 +68,8 @@ function LoginPage({ handleLoginClick }) {
                     // FYI ONLY -LONGER BUT CLEARER VERSION
                     // onClick={handleLocalLoginClick}
                     // but we are using more succinct fat-arrow version instead
-                    onClick={() => handleLoginClick(TEMP_EMAIL)}
+                    // onClick={() => handleLoginClick(TEMP_EMAIL)}
+                    onClick={() => handleLoginClick(email)}
                 >
                     Login
                 </Button>

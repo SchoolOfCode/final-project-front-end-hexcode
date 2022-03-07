@@ -2,10 +2,12 @@ import React from "react";
 import Navbar from "../components/Nabvar";
 import RADUNO from "../images/RADUNO.png";
 
-function HomePage() {
+function HomePage(props) {
+    const loggedInUserId = props.loggedInUserId; //coming from App/index.js
+
     return (
         <div>
-            <Navbar />
+            <Navbar loggedInUserId={loggedInUserId} />
             <div
                 style={{
                     objectFit: "contain",

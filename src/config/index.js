@@ -4,7 +4,7 @@
 // export const API_URL = process.env.REACT_APP_API_URL;
 
 // SAFETY-NET (STAGING) VERSION OF BACK END SERVER
-//export const API_URL = "https://hexcode-safety-net-server.herokuapp.com";
+export const API_URL = "https://hexcode-safety-net-server.herokuapp.com";
 
 // LIVE VERSION OF BACK END SERVER
-export const API_URL = "https://hexcode-arrange-group-event.herokuapp.com";
+// export const API_URL = "https://hexcode-arrange-group-event.herokuapp.com";

@@ -10,7 +10,9 @@ import { API_URL } from "../config/index.js";
 // const API_URL = "https://hexcode-safety-net-server.herokuapp.com";
 // `https://hexcode-arrange-group-event.herokuapp.com/events/${id}`;
 
-function Event() {
+function Event(props) {
+    const loggedInUserId = props.loggedInUserId; //coming from App/index.js
+
     // const [data] = useFetch(
     //   "https://hexcode-arrange-group-event.herokuapp.com/events/2"
     // );
@@ -27,7 +29,9 @@ function Event() {
                 `${API_URL}/events/${id}`
             );
             const data = await response.json();
-            console.log("Event data", data);
+            console.log(`src/pages/Event.js: after fetch, data retrieved is: `);
+            console.log(data);
+
             setEvent(data.payload);
         }
         getEvent();
@@ -35,7 +39,7 @@ function Event() {
 
     return (
         <div>
-            <Navbar />
+            <Navbar loggedInUserId={loggedInUserId} />
             <div>
                 {!event ? (
                     <div>Cannot find the event you're looking for..</div>

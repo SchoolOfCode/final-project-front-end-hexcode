@@ -36,15 +36,26 @@ function App() {
             `src/components/App/index.js: in handleLoginClick() function with userEmail = ${userEmail}`
         );
         // DONE fetch the (logged in) user from the database for that email.
+
+        console.log(
+            `src/components/App/index.js: about to fetch from | ${API_URL}${API_END_POINT}${userEmail} |`
+        );
         const response = await fetch(`${API_URL}${API_END_POINT}${userEmail}`);
         const data = await response.json(response);
-        console.log(
-            `src/components/App/index.js: data object returned from fetch from | ${API_URL}${API_END_POINT}${userEmail} | =`
-        );
+
+        console.log(`src/components/App/index.js: data object returned =`);
         console.log(data);
         //TODO: change appUserid to appUserId when backend bug is fixed
         //setLoggedInUserId(data.payload[0].appUserId);
-        setLoggedInUserId(data.payload[0].appUserid);
+        if (data.payload[0].appUserid === undefined) {
+            setLoggedInUserId(5); //TEMP - need to use proper errorchecking
+            console.log(
+                `src/components/App/index.js: ERROR ERROR USER IS NOT FETCHED for email = ${userEmail}`
+            );
+        } else {
+            setLoggedInUserId(data.payload[0].appUserid);
+        }
+
         setLoggedInUserEmail(data.payload[0].appUserEmail);
         setLoggedInUserHasAccount(data.payload[0].appUserHasAccount);
         setLoggedInUserFirstName(data.payload[0].appUserFirstName); //sets loggedInUserFirstName
@@ -68,7 +79,7 @@ function App() {
     //                    (b)TODO: create event page) and
     //                    (c)TODO: (display) event page
 
-    // loggedInUserIdLoggedInUserId = {loggedInUserIdLoggedInUserId}
+    // loggedInUserId = {loggedInUserId}
     // loggedInUserEmailLoggedInUserEmail = {loggedInUserEmailLoggedInUserEmail}
     // loggedInUserHasAccountLoggedInUserHasAccount  = {loggedInUserHasAccountLoggedInUserHasAccount}
     // loggedInUserFirstNameLoggedInUserFirstName  = {loggedInUserFirstNameLoggedInUserFirstName}
@@ -97,10 +108,21 @@ function App() {
                             <LoginPage handleLoginClick={handleLoginClick} />
                         }
                     />
-                    <Route path="/homepage" element={<HomePage />} />
+                    <Route
+                        path="/homepage"
+                        element={<HomePage loggedInUserId={loggedInUserId} />}
+                    />
 
-                    <Route path="/createEvent" element={<CreateEvent />} />
-                    <Route path="/event/:id" element={<Event />} />
+                    <Route
+                        path="/createEvent"
+                        element={
+                            <CreateEvent loggedInUserId={loggedInUserId} />
+                        }
+                    />
+                    <Route
+                        path="/event/:id"
+                        element={<Event loggedInUserId={loggedInUserId} />}
+                    />
                     {/* <Route path='/' />
           <Route path='/createEvent' element={<CreateEvent />} />
           <Route path='/event/:id' element={<Event />} /> */}
