@@ -1,0 +1,102 @@
+<mxfile host="65bd71144e">
+    <diagram id="JDqNV9zCpzHi4Wj0F8d3" name="Version 2">
+        <mxGraphModel dx="1754" dy="1396" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="lF0aHZ670RLiYSog_u3N-0"/>
+                <mxCell id="lF0aHZ670RLiYSog_u3N-1" parent="lF0aHZ670RLiYSog_u3N-0"/>
+                <mxCell id="woAUijJBvtw3JGNg9RWi-0" value="" style="edgeStyle=none;html=1;" edge="1" parent="lF0aHZ670RLiYSog_u3N-1" source="woAUijJBvtw3JGNg9RWi-4" target="woAUijJBvtw3JGNg9RWi-6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="woAUijJBvtw3JGNg9RWi-1" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.558;entryY=0.017;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="lF0aHZ670RLiYSog_u3N-1" source="woAUijJBvtw3JGNg9RWi-4" target="woAUijJBvtw3JGNg9RWi-7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="woAUijJBvtw3JGNg9RWi-2" style="edgeStyle=none;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.308;entryY=-0.05;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="lF0aHZ670RLiYSog_u3N-1" source="woAUijJBvtw3JGNg9RWi-4" target="woAUijJBvtw3JGNg9RWi-9">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="woAUijJBvtw3JGNg9RWi-3" style="edgeStyle=none;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.108;entryY=-0.067;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="lF0aHZ670RLiYSog_u3N-1" source="woAUijJBvtw3JGNg9RWi-4" target="woAUijJBvtw3JGNg9RWi-8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="woAUijJBvtw3JGNg9RWi-4" value="APP&lt;br&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="lF0aHZ670RLiYSog_u3N-1">
+                    <mxGeometry x="500" y="210" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="woAUijJBvtw3JGNg9RWi-5" value="" style="edgeStyle=none;html=1;" edge="1" parent="lF0aHZ670RLiYSog_u3N-1" source="woAUijJBvtw3JGNg9RWi-6" target="woAUijJBvtw3JGNg9RWi-11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="woAUijJBvtw3JGNg9RWi-6" value="Hamburger&lt;br&gt;Container" style="whiteSpace=wrap;html=1;" vertex="1" parent="lF0aHZ670RLiYSog_u3N-1">
+                    <mxGeometry x="500" y="300" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="woAUijJBvtw3JGNg9RWi-7" value="Create Event Page" style="whiteSpace=wrap;html=1;" vertex="1" parent="lF0aHZ670RLiYSog_u3N-1">
+                    <mxGeometry x="200" y="540" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="woAUijJBvtw3JGNg9RWi-8" value="Event Page" style="whiteSpace=wrap;html=1;" vertex="1" parent="lF0aHZ670RLiYSog_u3N-1">
+                    <mxGeometry x="370" y="540" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="woAUijJBvtw3JGNg9RWi-9" value="Create A Poll Page" style="whiteSpace=wrap;html=1;" vertex="1" parent="lF0aHZ670RLiYSog_u3N-1">
+                    <mxGeometry x="694" y="540" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="woAUijJBvtw3JGNg9RWi-10" style="edgeStyle=none;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="lF0aHZ670RLiYSog_u3N-1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="225" y="570" as="sourcePoint"/>
+                        <mxPoint x="225" y="590" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="woAUijJBvtw3JGNg9RWi-11" value="Dashboard Menu (Onclick rendered on top of what ever page you are on" style="whiteSpace=wrap;html=1;" vertex="1" parent="lF0aHZ670RLiYSog_u3N-1">
+                    <mxGeometry x="500" y="390" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="woAUijJBvtw3JGNg9RWi-12" value="Hamburger container wil be rendered at the top of every page&lt;br&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="lF0aHZ670RLiYSog_u3N-1">
+                    <mxGeometry x="500" y="460" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="yQ4fUQos-VY5oXtwgS37" name="Version 1">
+        <mxGraphModel dx="1704" dy="698" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="13" value="" style="edgeStyle=none;html=1;" parent="1" source="2" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.558;entryY=0.017;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="2" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=none;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.308;entryY=-0.05;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="2" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" style="edgeStyle=none;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.108;entryY=-0.067;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="2" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="APP&lt;br&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="30" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="" style="edgeStyle=none;html=1;" parent="1" source="3" target="33" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Hamburger&lt;br&gt;Container" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="120" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Create Event Page" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-80" y="360" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Event Page" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="360" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Create A Poll Page" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="414" y="360" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" style="edgeStyle=none;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-55" y="390" as="sourcePoint"/>
+                        <mxPoint x="-55" y="410" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" value="Dashboard Menu (Onclick rendered on top of what ever page you are on" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="210" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="Hamburger container wil be rendered at the top of every page&lt;br&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="280" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
