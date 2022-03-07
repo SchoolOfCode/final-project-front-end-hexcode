@@ -1,27 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
 
 .loginpage-container {
-  padding-top: 30%;
+    padding-top: 30%;
 }
 
 .Title {
-  color: #8432d6;
-  text-align: center;
-  justify-content: center;
-  padding: 30px;
-  font-size: 35px;
-  font-family: Montserrat;
-  font-weight: 600;
+    color: #8432d6;
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
+    font-size: 35px;
+    font-family: Montserrat;
+    font-weight: 600;
 }
 .tagLine {
-  text-align: center;
+    text-align: center;
 }
 img {
-  height: 250px;
-  width: 350px;
+    height: 250px;
+    width: 350px;
 
-  display: flex;
-  align-self: center;
+    display: flex;
+    align-self: center;
 }
 
 /* .formcontainer {
@@ -32,36 +32,36 @@ img {
 } */
 
 input {
-  width: 75%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #8432d6;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-left: 10%;
+    width: 75%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #8432d6;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 10%;
 }
 
 .loginbutton {
-  background-color: #8432d6;
-  color: white;
-  display: flex;
-  display: block;
-  margin: auto;
-  width: 30%;
-  border-radius: 10px;
-  margin-top: 50px;
-  margin-bottom: 10px;
-  font-weight: 600;
+    background-color: #8432d6;
+    color: white;
+    display: flex;
+    display: block;
+    margin: auto;
+    width: 30%;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .signupbutton {
-  background-color: #8432d6;
-  color: white;
-  display: flex;
-  display: block;
-  margin: auto;
-  width: 30%;
-  border-radius: 10px;
-  font-weight: 600;
+    background-color: #8432d6;
+    color: white;
+    display: flex;
+    display: block;
+    margin: auto;
+    width: 30%;
+    border-radius: 10px;
+    font-weight: 600;
 }

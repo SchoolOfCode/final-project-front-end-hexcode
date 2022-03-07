@@ -18,6 +18,7 @@ import "moment/locale/zh-cn";
 
 //hexcode-safety-net-server.herokuapp.com"
 
+//07Mar SC: adding comment to force prettier to update
 function CreateEventSection() {
     // States
     const [event, setEvent] = useState({

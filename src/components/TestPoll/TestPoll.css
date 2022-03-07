@@ -14,14 +14,14 @@
     box-sizing: border-box;
 }
 
-.poll . {
+/* .poll .{
     color: #3a3a3a;
     text-align: inherit;
     font-weight: normal;
     margin: 0;
     padding-bottom: 3px;
     border-bottom: 1px solid #6d4b943b;
-}
+} */
 
 .poll .answers {
     list-style-type: none; /* sinead added to try to remove bullets*/

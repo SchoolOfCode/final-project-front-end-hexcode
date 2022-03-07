@@ -4,6 +4,8 @@ import { AiOutlineClose, AiFillPlusCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 const API_URL = "https://hexcode-safety-net-server.herokuapp.com";
+
+//07Mar SC: adding comment to force prettier to update
 function Navbar() {
     // States
     const [sidebar, setSidebar] = useState(false);

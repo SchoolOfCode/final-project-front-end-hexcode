@@ -1,119 +1,119 @@
 .profile-pic {
-  height: 50px;
-  width: 50px;
-  border-radius: 70%;
-  margin: 10px 10px 10px 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 70%;
+    margin: 10px 10px 10px 10px;
 }
 
 .cog-button,
 .date,
 .location,
 button {
-  background-color: transparent;
-  border: none;
-  color: #8432d6;
+    background-color: transparent;
+    border: none;
+    color: #8432d6;
 }
 
 .organiser-container {
-  display: inline-flex;
-  flex-direction: row;
+    display: inline-flex;
+    flex-direction: row;
 
-  align-items: flex-start;
+    align-items: flex-start;
 }
 
 .cog-button {
-  align-items: flex-start;
-  align-self: center;
-  font-size: 20px;
-  padding-top: 6px;
+    align-items: flex-start;
+    align-self: center;
+    font-size: 20px;
+    padding-top: 6px;
 }
 
 .organiser {
-  font-weight: bolder;
-  font-size: 20px;
-  color: black;
-  padding-top: 20px;
+    font-weight: bolder;
+    font-size: 20px;
+    color: black;
+    padding-top: 20px;
 }
 
 .titleAndConfirm {
-  display: inline-flex;
-  /* flex-direction: row; */
+    display: inline-flex;
+    /* flex-direction: row; */
 }
 .eventTitleSection {
-  /* border: solid purple 3px; */
-  border-radius: 10px;
-  width: fit-content;
+    /* border: solid purple 3px; */
+    border-radius: 10px;
+    width: fit-content;
 }
 
 .eventTitle,
 .eventDateTime,
 .locationPlace {
-  font-size: 15px;
-  color: black;
+    font-size: 15px;
+    color: black;
 }
 
 .date {
-  display: flex;
-  font-size: 20px;
+    display: flex;
+    font-size: 20px;
 }
 
 .eventSection {
-  margin: 10px 15px 10px 15px;
+    margin: 10px 15px 10px 15px;
 }
 
 .calendar,
 .locationIcon {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
 .location {
-  display: inline-flex;
+    display: inline-flex;
 }
 .locationIcon {
-  color: #8432d6;
-  height: 20px;
-  width: 20px;
+    color: #8432d6;
+    height: 20px;
+    width: 20px;
 }
 
 .people-container {
-  display: flex;
-  flex-direction: row;
-  overflow-x: scroll;
-  margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    margin-top: 20px;
 }
 
 .peopleTitle {
-  font-size: 15px;
-  color: black;
+    font-size: 15px;
+    color: black;
 }
 
 .people-title-container {
-  display: flex;
-  align-content: flex-start;
-  margin-top: 5px;
+    display: flex;
+    align-content: flex-start;
+    margin-top: 5px;
 }
 
 .add-attendees-btn {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 .eventDescription {
-  margin-top: 20px;
-  border-bottom: solid 1px #8432d6;
+    margin-top: 20px;
+    border-bottom: solid 1px #8432d6;
 }
 
 .collapseSection {
-  display: flex;
-  justify-content: center;
-  font-size: 30px;
-  height: 40px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    height: 40px;
 }
 
 .arrow-btn:hover {
-  color: green;
-  cursor: pointer;
+    color: green;
+    cursor: pointer;
 }
 
 .hide {
-  display: none;
+    display: none;
 }

@@ -1,81 +1,81 @@
 /*we need to pick some new colours?*/
 
 .navbar {
-  background-color: #8432d6;
-  height: 80px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
+    background-color: #8432d6;
+    height: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 
 .menu-bars {
-  margin-left: 2rem;
-  font-size: 2rem;
-  background: none;
+    margin-left: 2rem;
+    font-size: 2rem;
+    background: none;
 }
 
 .nav-menu {
-  background-color: pink;
-  width: 250px;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: -100%;
-  transition: 850ms;
-  z-index: 1;
+    background-color: pink;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: 850ms;
+    z-index: 1;
 }
 
 .nav-menu.active {
-  left: 0;
-  transition: 350ms;
+    left: 0;
+    transition: 350ms;
 }
 
 .menu-bars {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 .addEventButton a {
-  display: flex;
-  color: #8432d6;
-  background-color: #ffff;
-  border: solid 2px #8432d6;
-  border-radius: 5px;
-  margin: 0.2rem;
+    display: flex;
+    color: #8432d6;
+    background-color: #ffff;
+    border: solid 2px #8432d6;
+    border-radius: 5px;
+    margin: 0.2rem;
 }
 
 .navbar-toggle {
-  display: flex;
-  justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .your-event {
-  font-family: "Righteous";
+    font-family: "Righteous";
 }
 
 .userEvents a {
-  background-color: #ffff;
-  font-size: 10px;
-  border: solid 2px #8432d6;
-  border-radius: 5px;
-  margin: 0.2rem;
-  height: 30px;
-  display: flex;
-  color: #8432d6;
+    background-color: #ffff;
+    font-size: 10px;
+    border: solid 2px #8432d6;
+    border-radius: 5px;
+    margin: 0.2rem;
+    height: 30px;
+    display: flex;
+    color: #8432d6;
 }
 
 .nav-menu-items {
-  list-style: none;
+    list-style: none;
 }
 
 .addButton {
-  color: #8432d6;
-  font-size: 60px;
-  display: flex;
-  justify-content: flex-start;
+    color: #8432d6;
+    font-size: 60px;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .addbutton:hover {
-  color: #ffff;
+    color: #ffff;
 }

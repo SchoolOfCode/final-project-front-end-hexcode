@@ -12,6 +12,7 @@ import photos from "../../libs/data";
 
 import TestPoll from "../TestPoll/index.js"; // SINEAD TEMP CODE TESTING POLL
 
+//07Mar SC: adding comment to force prettier to update
 function EventInformationSection({
     eventTitle,
     eventDescription,
