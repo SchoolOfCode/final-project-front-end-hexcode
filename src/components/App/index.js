@@ -6,6 +6,7 @@ import "antd/dist/antd.css";
 import LoginPage from "../../pages/LoginPage";
 import HomePage from "../../pages/homePage";
 import "./app.css";
+import CreatePollPage from "../../pages/CreatePollPage";
 
 //07Mar SC: adding comment to force prettier to update
 function App() {
@@ -18,6 +19,10 @@ function App() {
                     <Route path="/homepage" element={<HomePage />} />
 
                     <Route path="/createEvent" element={<CreateEvent />} />
+                    <Route
+                        path="/CreatePollPage"
+                        element={<CreatePollPage />}
+                    />
                     <Route path="/event/:id" element={<Event />} />
                     {/* <Route path='/' />
           <Route path='/createEvent' element={<CreateEvent />} />
