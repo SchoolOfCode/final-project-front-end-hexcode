@@ -12,8 +12,8 @@ describe("navigates hamburger menu to create an event", () => {
         cy.get('.yourEventsTitle').contains('YOUR EVENTS')
         cy.get('.addEventbtn').click()
     })
-    it("redirects to createEventPage", () => {
+    // it("redirects to createEventPage", () => {
         
-        cy.url().should('be.equal', 'http://localhost:3000/createEvent')
-        })
+    //     cy.url().should('be.equal', 'http://localhost:3000/createEvent')
+    //     })
 })

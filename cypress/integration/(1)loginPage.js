@@ -18,9 +18,9 @@ describe ("logs in the app", () => {
     cy.get('.loginbutton').click()
     })
 
-    it("redirects to homepage", () => {
+    // it("redirects to homepage", () => {
         
-    cy.url().should('be.equal', 'http://localhost:3000/homepage')
-    })
+    // cy.url().should('be.equal', 'http://localhost:3000/homepage')
+    // })
 })
 

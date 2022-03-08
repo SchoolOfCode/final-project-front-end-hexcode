@@ -1,6 +1,6 @@
 describe("renders the Create Event page", () => {
     it("renders the form", () => {
-        cy.visit("/createEvent");
+        // cy.visit("/createEvent");
 
         cy.get(".inputTitle").should("exist").contains("Title");
         cy.get("#title").should("exist");
@@ -61,13 +61,13 @@ describe("renders the Create Event page", () => {
             );
         cy.get(".createEventButton").contains("Create Event").click();
     });
-    it("redirects to Homepage", () => {
-        cy.url().should("be.equal", "http://localhost:3000/homepage");
-    });
+    // it("redirects to Homepage", () => {
+    //     cy.url().should("be.equal", "http://localhost:3000/homepage");
+    // });
 });
 
 describe("Navigate to the newly created event", () => {
-    it("clicks on the newly created ecent", () => {
+    it("clicks on the newly created event", () => {
         cy.get(".hamburgerMenu").click();
         cy.get(".userEvents")
             .eq(0)
