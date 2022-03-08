@@ -8,6 +8,7 @@ import "antd/dist/antd.css";
 import LoginPage from "../../pages/LoginPage";
 import HomePage from "../../pages/homePage";
 import "./app.css";
+import CreatePollPage from "../../pages/CreatePollPage";
 
 import { API_URL } from "../../config/index.js"; //the fetch will need the URL for the back end
 const API_END_POINT = "/appusers/search?email="; //must fetch from this exact endpoint, plus email address to retrieve the logged-in-users details including the user ID.
@@ -105,7 +106,11 @@ function App() {
                         path="/homepage"
                         element={<HomePage loggedInUserId={loggedInUserId} />}
                     />
-
+                    
+                    <Route
+                        path="/CreatePollPage"
+                        element={<CreatePollPage />}
+                    />
                     <Route
                         path="/createEvent"
                         element={
