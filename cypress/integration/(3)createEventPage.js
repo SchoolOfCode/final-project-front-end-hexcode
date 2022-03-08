@@ -47,9 +47,9 @@ describe("renders the Create Event page", () => {
         cy.contains(25).click();
 
         //Select a time
-        cy.get("#time").click();
-        cy.contains(11, { force: true }).click();
-        cy.contains("Ok").click();
+        // cy.get("#time").click();
+        // cy.contains(11, { force: true }).click();
+        // cy.contains("Ok").click();
 
         cy.get("#description")
             .type(
@@ -60,5 +60,9 @@ describe("renders the Create Event page", () => {
                 "have.value",
                 "Hi everyone, thought we should all catch up for a brunch as it's been a while!"
             );
+        cy.get(".createEventButton").contains("Create Event").click();
+    });
+    it("redirects to Homepage", () => {
+        cy.url().should("be.equal", "http://localhost:3000/homepage");
     });
 });
