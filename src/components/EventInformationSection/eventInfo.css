@@ -75,7 +75,7 @@ button {
 }
 
 .titleIcon {
-    display: flex;
+    display: inline-flex;
     color: #4a3774;
     height: 20px;
     width: 20px;
