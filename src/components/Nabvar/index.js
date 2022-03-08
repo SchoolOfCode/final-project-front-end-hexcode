@@ -90,7 +90,9 @@ function Navbar(props) {
                             <AiFillPlusCircle className="addButton" />
                         </Link>
                     </li>
-                    <h4 key="H-your-events">Your Events</h4>
+                    <h4 key="H-your-events" className="yourEventsTitle">
+                        YOUR EVENTS
+                    </h4>
                     {!userEvents ? (
                         <div key="no-events">No user events</div>
                     ) : (
