@@ -92,7 +92,6 @@ function EventInformationSection({
                 </div>
             </div>
             {/* arrow button */}
-            <br></br>
             <div className="collapseSection">
                 <button className="arrow-btn" onClick={collapseInfo}>
                     <AiOutlineArrowUp />
