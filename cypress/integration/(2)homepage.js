@@ -1,7 +1,7 @@
 
 describe("renders the homepage", () => {
     it("renders correctly", () => {
-        cy.visit("/homepage")
+        // cy.visit("/homepage")
         cy.get(".hamburgerMenu").should("exist")
     })
 })
@@ -9,7 +9,7 @@ describe("renders the homepage", () => {
 describe("navigates hamburger menu to create an event", () => { 
     it('opens the menu and creates a new event', ()=> {
         cy.get('.hamburgerMenu').click()
-        cy.get('.nav-menu-items').contains('Your Events')
+        cy.get('.yourEventsTitle').contains('YOUR EVENTS')
         cy.get('.addEventbtn').click()
     })
     it("redirects to createEventPage", () => {
