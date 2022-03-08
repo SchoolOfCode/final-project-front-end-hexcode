@@ -65,10 +65,7 @@ function Navbar() {
                                         to={`/Event/${item.eventId}`}
                                         key="x-Link"
                                     >
-                                        <p
-                                            key={item.eventTitle}
-                                            className={item.eventTitle}
-                                        >
+                                        <p key={item.eventTitle}>
                                             {item.eventTitle}
                                         </p>
                                     </Link>
