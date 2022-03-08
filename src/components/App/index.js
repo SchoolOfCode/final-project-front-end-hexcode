@@ -31,6 +31,7 @@ function App() {
 
     // DONE  Add a handleLoginClick function here that takes in an email as a prop
     //          This function will be triggered in LoginPage.js by the login button event
+
     async function handleLoginClick(userEmail) {
         console.log(
             `src/components/App/index.js: in handleLoginClick() function with userEmail = ${userEmail}`
@@ -47,10 +48,10 @@ function App() {
         console.log(data);
         //TODO: change appUserid to appUserId when backend bug is fixed
         //setLoggedInUserId(data.payload[0].appUserId);
-        if (data.payload[0].appUserid === undefined) {
-            setLoggedInUserId(5); //TEMP - need to use proper errorchecking
+        if (data.payload[0].appUserId === undefined) {
+            setLoggedInUserId(5); //TODO: TEMP - need to use proper errorchecking - and potentially return to login page here
             console.log(
-                `src/components/App/index.js: ERROR ERROR USER IS NOT FETCHED for email = ${userEmail}`
+                `src/components/App/index.js: USER IS NOT YET IS NOT FETCHED for email = ${userEmail}. User Id set to 5, Luke`
             );
         } else {
             // setLoggedInUserId(data.payload[0].appUserid);
