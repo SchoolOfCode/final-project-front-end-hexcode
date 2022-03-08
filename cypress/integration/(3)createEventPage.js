@@ -53,8 +53,7 @@ describe("renders the Create Event page", () => {
 
         cy.get("#description")
             .type(
-                "Hi everyone, thought we should all catch up for a brunch as it's been a while!",
-                { delay: 200 }
+                "Hi everyone, thought we should all catch up for a brunch as it's been a while!"
             )
             .should(
                 "have.value",
@@ -64,5 +63,17 @@ describe("renders the Create Event page", () => {
     });
     it("redirects to Homepage", () => {
         cy.url().should("be.equal", "http://localhost:3000/homepage");
+    });
+});
+
+describe("Navigate to the newly created event", () => {
+    it("clicks on the newly created ecent", () => {
+        cy.get(".hamburgerMenu").click();
+        cy.get(".userEvents")
+            .eq(0)
+            .should("contain.text", "Catch up over brunch")
+            .click();
+
+        cy.url().should("be.equal", "http://localhost:3000/Event/:id");
     });
 });
