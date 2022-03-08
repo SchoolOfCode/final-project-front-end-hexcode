@@ -160,21 +160,23 @@ function CreateEventSection(props) {
                         />
                     </label>
                     <h3 className="inputTitle">People</h3>
-                    <Space className="dropdownPeople" wrap>
-                        <Input
-                            className="inputedpeople"
-                            prefix={<UserOutlined />}
-                            value={personMenu}
-                        />
-                        <Dropdown.Button
-                            className="addingpeople"
-                            overlay={menu}
-                            placement="bottomCenter"
-                            icon={<UserOutlined id="dropdown" />}
-                        >
-                            Add people
-                        </Dropdown.Button>
-                    </Space>
+                    <div className="createPeople">
+                        <Space className="dropdownPeople" wrap>
+                            <Input
+                                className="inputedpeople"
+                                prefix={<UserOutlined />}
+                                value={personMenu}
+                            />
+                            <Dropdown.Button
+                                className="addingpeople"
+                                overlay={menu}
+                                placement="bottomCenter"
+                                icon={<UserOutlined id="dropdown" />}
+                            >
+                                Add people
+                            </Dropdown.Button>
+                        </Space>
+                    </div>
                     <h3 className="inputTitle">Date</h3>
                     <label>
                         <DatePicker
