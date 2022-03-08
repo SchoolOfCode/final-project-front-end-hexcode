@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import OrganiserSection from "../OrganiserSection";
-import PeopleSection from "../PeopleSection";
+//import PeopleSection from "../PeopleSection"; // have moved PeopleSection to 'unused componenets folder
 import ProfileImage from "../ProfileImage";
 import { GoLocation } from "react-icons/go";
 import { BsCalendarCheck } from "react-icons/bs";
