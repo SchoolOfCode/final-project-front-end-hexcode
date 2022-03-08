@@ -74,7 +74,7 @@ function Navbar(props) {
         <div>
             <div className="navbar">
                 <Link to="#" className="menu-bars">
-                    <FaBars onClick={showSidebar} />
+                    <FaBars className="hamburgerMenu" onClick={showSidebar} />
                 </Link>
             </div>
             <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
@@ -122,3 +122,5 @@ function Navbar(props) {
 }
 
 export default Navbar;
+
+console.log("Hello");

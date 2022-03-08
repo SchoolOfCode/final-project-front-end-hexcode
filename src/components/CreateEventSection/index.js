@@ -122,10 +122,10 @@ function CreateEventSection(props) {
             <Menu.Item key="Belinda" icon={<UserOutlined />}>
                 Belinda
             </Menu.Item>
-            <Menu.Item key="Luke" icon={<UserOutlined />}>
+            <Menu.Item key="Luke" id="Luke" icon={<UserOutlined />}>
                 Luke
             </Menu.Item>
-            <Menu.Item key="James" icon={<UserOutlined />}>
+            <Menu.Item id="James" key="James" icon={<UserOutlined />}>
                 James
             </Menu.Item>
         </Menu>
@@ -139,6 +139,7 @@ function CreateEventSection(props) {
                     <h3 className="inputTitle">Title</h3>
                     <label>
                         <Input
+                            id="title"
                             maxLength={30}
                             placeholder="Set a title for your event"
                             name="eventTitle"
@@ -149,6 +150,7 @@ function CreateEventSection(props) {
                     <h3 className="inputTitle">Location</h3>
                     <label>
                         <Input
+                            id="location"
                             maxLength={40}
                             className="titleInput"
                             placeholder="Set a location for your event"
@@ -168,7 +170,7 @@ function CreateEventSection(props) {
                             className="addingpeople"
                             overlay={menu}
                             placement="bottomCenter"
-                            icon={<UserOutlined />}
+                            icon={<UserOutlined id="dropdown" />}
                         >
                             Add people
                         </Dropdown.Button>
@@ -176,6 +178,7 @@ function CreateEventSection(props) {
                     <h3 className="inputTitle">Date</h3>
                     <label>
                         <DatePicker
+                            id="date"
                             format="YYYY-MM-DD"
                             className="datePicker"
                             name="date"
@@ -185,6 +188,7 @@ function CreateEventSection(props) {
                     <h3 className="inputTitle">Time</h3>
                     <label>
                         <DatePicker
+                            id="time"
                             className="timePicker"
                             picker="time"
                             name="time"
@@ -203,6 +207,7 @@ function CreateEventSection(props) {
                     <h3 className="inputTitle">Description</h3>
                     <label>
                         <TextArea
+                            id="description"
                             maxLength={255}
                             className="descriptionInput"
                             placeholder="Add a description for your event.."

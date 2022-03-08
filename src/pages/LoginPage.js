@@ -46,6 +46,7 @@ function LoginPage({ handleLoginClick }) {
                     {/* pass in appUserEmail to the API tbc, Get back appUserId - HandleClick for login*/}
 
                     <input
+                        id="email-field"
                         type="email"
                         placeholder="e-mail"
                         value={email}
@@ -54,6 +55,7 @@ function LoginPage({ handleLoginClick }) {
                     />
 
                     <input
+                        id="password-field"
                         type="password"
                         placeholder="password"
                         value={password}
