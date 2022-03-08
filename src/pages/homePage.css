@@ -1,0 +1,15 @@
+img.logo {
+    object-fit: "contain";
+    margin-top: 0;
+    margin-left: 0;
+    height: 100px;
+    width: 350px;
+}
+
+img.havingfun {
+    object-fit: "contain";
+    margin-top: 0;
+    margin-left: 0;
+    height: 200px;
+    width: 350px;
+}
