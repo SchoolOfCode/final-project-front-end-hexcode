@@ -73,7 +73,5 @@ describe("Navigate to the newly created event", () => {
             .eq(0)
             .should("contain.text", "Catch up over brunch")
             .click();
-
-        cy.url().should("be.equal", "http://localhost:3000/Event/:id");
     });
 });
