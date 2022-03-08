@@ -28,12 +28,12 @@ describe("renders the Create Event page", () => {
     it("Populates the form and creates an event", () => {
         // Input a title
         cy.get("#title")
-            .type("Catch up over brunch", { delay: 200 })
+            .type("Catch up over brunch")
             .should("have.value", "Catch up over brunch");
 
         // Add a location
         cy.get("#location")
-            .type("Cafe Yolk", { delay: 200 })
+            .type("Cafe Yolk")
             .should("have.value", "Cafe Yolk");
 
         // Select users to add
@@ -44,7 +44,7 @@ describe("renders the Create Event page", () => {
 
         // Select a date
         cy.get("#date").click();
-        cy.contains(25).click();
+        cy.contains(24).click();
 
         //Select a time
         // cy.get("#time").click();

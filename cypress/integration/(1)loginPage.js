@@ -13,8 +13,8 @@ describe ("logs in the app", () => {
 
     it("logs in with email and password", () => {
 
-    cy.get('#email-field').type('belinda@belinda.com', { delay: 200 }).should('have.value', 'belinda@belinda.com')
-    cy.get('#password-field').type('password1', { delay: 200 }).should('have.value', 'password1')
+    cy.get('#email-field').type('belinda@belinda.com').should('have.value', 'belinda@belinda.com')
+    cy.get('#password-field').type('password1').should('have.value', 'password1')
     cy.get('.loginbutton').click()
     })
 
