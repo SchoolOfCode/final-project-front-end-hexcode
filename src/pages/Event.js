@@ -1,58 +1,55 @@
 import React from "react";
 import EventInformationSection from "../components/EventInformationSection";
 import { useEffect, useState } from "react";
-import useFetch from "../CustomHooks/customHooks";
+// import useFetch from "../CustomHooks/customHooks";
 import { useParams } from "react-router-dom";
 
 import Navbar from "../components/Nabvar";
 
 import { API_URL } from "../config/index.js";
-// const API_URL = "https://hexcode-safety-net-server.herokuapp.com";
-// `https://hexcode-arrange-group-event.herokuapp.com/events/${id}`;
 
 function Event(props) {
-    const loggedInUserId = props.loggedInUserId; //coming from App/index.js
+    //PROPS - coming from App/index.js
+    const loggedInUserId = props.loggedInUserId;
 
-    // const [data] = useFetch(
-    //   "https://hexcode-arrange-group-event.herokuapp.com/events/2"
-    // );
+    //PARAMS - from URL
     const { id } = useParams();
+    const eventId = id; //re-assigning to a declarative name
 
-    const [event, setEvent] = useState(false);
+    //STATES
+    const [eventObject, setEventObject] = useState(false);
 
     //When the Event ID changes, go to database and fetch the event details for the given EventId
     useEffect(() => {
         async function getEvent() {
-            const response = await fetch(
-                // `https://hexcode-safety-net-server.herokuapp.com/events/${id}`
-                // `https://hexcode-arrange-group-event.herokuapp.com/events/${id}`
-                `${API_URL}/events/${id}`
-            );
+            const response = await fetch(`${API_URL}/events/${eventId}`);
             const data = await response.json();
             console.log(`src/pages/Event.js: after fetch, data retrieved is: `);
             console.log(data);
 
-            setEvent(data.payload);
+            setEventObject(data.payload);
         }
-        getEvent();
-    }, [id]);
+        //Only attempt to fetch the event if the eventId is not an empty string
+        if (!(eventId === "")) getEvent();
+    }, [eventId]);
 
+    //When the EventObject has been retrieved, then render the EventInformationSection component with it
     return (
         <div>
             <Navbar loggedInUserId={loggedInUserId} />
             <div>
-                {!event ? (
-                    <div>Cannot find the event you're looking for..</div>
+                {!eventObject ? (
+                    <div>Event still being retrieved or not found...</div>
                 ) : (
-                    event.map((item, index) => {
+                    eventObject.map((currItem) => {
                         return (
                             <EventInformationSection
-                                key={item.eventId}
-                                eventTitle={item.eventTitle}
-                                eventDescription={item.eventDescription}
-                                eventLocation={item.eventLocation}
-                                eventTime={item.eventTime}
-                                eventDate={item.eventDate}
+                                key={currItem.eventId}
+                                eventTitle={currItem.eventTitle}
+                                eventDescription={currItem.eventDescription}
+                                eventLocation={currItem.eventLocation}
+                                eventTime={currItem.eventTime}
+                                eventDate={currItem.eventDate}
                             />
                         );
                     })
