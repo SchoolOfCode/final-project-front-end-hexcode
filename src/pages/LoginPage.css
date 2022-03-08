@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
 
 .loginpage-container {
-    padding-top: 30%;
+    padding-top: 20px;
 }
 
 .Title {
-    color: #8432d6;
+    color: #4a3774;
     text-align: center;
     justify-content: center;
     padding: 30px;
@@ -36,27 +36,37 @@ input {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #8432d6;
+    border: 1px solid #4a3774;
     border-radius: 4px;
     box-sizing: border-box;
     margin-left: 10%;
 }
 
 .loginbutton {
-    background-color: #8432d6;
+    background-color: #4a3774;
     color: white;
     display: flex;
     display: block;
     margin: auto;
     width: 30%;
     border-radius: 10px;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 10px;
     font-weight: 600;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #b6eac5;
+    transition: ease 0.3s;
+    outline: none;
+    border: none;
+}
+
+.loginbutton:hover {
+    box-shadow: inset 140px 0 0 0 #b6eac5;
+    color: #ffff;
 }
 
 .signupbutton {
-    background-color: #8432d6;
+    background-color: #4a3774;
     color: white;
     display: flex;
     display: block;
@@ -64,4 +74,14 @@ input {
     width: 30%;
     border-radius: 10px;
     font-weight: 600;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #b6eac5;
+    transition: ease 0.3s;
+    outline: none;
+    border: none;
+}
+
+.signupbutton:hover {
+    box-shadow: inset 140px 0 0 0 #ec9c24;
+    color: #ffff;
 }

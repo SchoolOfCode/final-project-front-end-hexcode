@@ -16,10 +16,12 @@ import "./CreateEvent.css";
 import moment from "moment";
 import "moment/locale/zh-cn";
 
-//hexcode-safety-net-server.herokuapp.com"
+import { API_URL } from "../../config/index.js";
+const API_END_POINT = "/events";
 
-//07Mar SC: adding comment to force prettier to update
-function CreateEventSection() {
+function CreateEventSection(props) {
+    const loggedInUserId = props.loggedInUserId; //coming from App/index.js via CreateEvent page
+
     // States
     const [event, setEvent] = useState({
         eventTitle: "",
@@ -33,8 +35,9 @@ function CreateEventSection() {
 
     function postData() {
         async function createEvent() {
+            //07Mar - updating the POST to set the OrganiserID to the loggedInUserId
             const newEvent = {
-                organiserUserId: 2,
+                organiserUserId: loggedInUserId,
                 eventTitle: event.eventTitle,
                 eventDescription: event.eventDescription,
                 eventLocation: event.eventLocation,
@@ -43,10 +46,18 @@ function CreateEventSection() {
                 eventRequirements: "Booze",
                 eventCategory: "Drinks",
             };
+            console.log(
+                "src/components/CreateEventSection/index.js: new event="
+            );
             console.log(newEvent);
+
+            // POST (Insert) the newly created event to the database and return with the eventId for the newly created Event.
+            //07Mar - updating the POST to use the URL constants
             const response = await fetch(
                 // "https://hexcode-safety-net-server.herokuapp.com/events/",
-                `https://hexcode-arrange-group-event.herokuapp.com/events/`,
+                // `https://hexcode-arrange-group-event.herokuapp.com/events/`,
+                // `${API_URL}/events`,
+                `${API_URL}${API_END_POINT}`,
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
@@ -86,6 +97,7 @@ function CreateEventSection() {
         setEvent({ ...event, [e.target.name]: value });
     }
 
+    // TODO: STEP 2 (HARDER) - change this handleMenuClick to add the new invitee's user id to the list of users
     function handleMenuClick(e) {
         const selectedUser = e.key;
 
@@ -103,6 +115,8 @@ function CreateEventSection() {
 
     // Ant components stuff
     const { TextArea } = Input;
+
+    // TODO: STEP 1 - change this menu to a FETCH of contacts based on the loggedInUserId
     const menu = (
         <Menu onClick={handleMenuClick}>
             <Menu.Item key="Belinda" icon={<UserOutlined />}>

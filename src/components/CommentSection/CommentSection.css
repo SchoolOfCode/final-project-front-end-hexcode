@@ -1,36 +1,43 @@
 .comment-section {
-  display: "block";
-  width: 1000;
-  padding: 30;
+    display: "block";
+    width: 1000;
+    padding: 30;
 }
 
 .send-comment {
-  display: inline-flex;
-  justify-content: center;
-  position: sticky;
-  bottom: 0;
-  background-color: white;
-  width: 100%;
-  z-index: 3;
+    display: inline-flex;
+    justify-content: center;
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+    width: 100%;
+    z-index: 3;
 }
 
 .send-Btn {
-  font-size: 30px;
+    color: #24104f;
+    font-size: 30px;
+    outline: none;
+    border: none;
 }
 .send-Btn:hover {
-  color: green;
-  cursor: pointer;
+    color: #7f67b6;
+    cursor: pointer;
+    outline: none;
+    border: none;
 }
 
 .enter-comment {
-  height: 20px;
-  width: 30vh;
+    height: 20px;
+    width: 30vh;
+    outline: none;
+    border: none;
 }
 
 .comment-container {
-  width: 100%;
-  max-height: 100%;
-  overflow-y: scroll;
+    width: 100%;
+    max-height: 100%;
+    overflow-y: scroll;
 }
 
 /* .empty-div {

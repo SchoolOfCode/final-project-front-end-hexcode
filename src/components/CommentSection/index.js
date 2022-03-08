@@ -13,8 +13,9 @@ import ProfileImage from "../ProfileImage";
 import "./CommentSection.css";
 import { BiSend } from "react-icons/bi";
 
-//07Mar SC: adding comment to force prettier to update
 function CommentSection() {
+    console.log(`src/components/CommentSection/ userComment data object is:`);
+    console.log({ userComment });
     // States
     const [comments, setComments] = useState(userComment);
     const [inputValue, setInputValue] = useState("");
@@ -43,13 +44,17 @@ function CommentSection() {
 
     return (
         <>
-            <div className="comment-section">
-                <h4>Posts</h4>
-                <div className="comment-container">
+            <div className="comment-section" key="1">
+                <h4 key="2">Posts</h4>
+                <div className="comment-container" key="3">
                     {comments.map((item) => {
                         return (
-                            <div className="comments">
+                            <div
+                                className="comments"
+                                key={item.commentId + "x"}
+                            >
                                 <Comment
+                                    key={item.commentId}
                                     author={item.author}
                                     content={item.text}
                                     avatar={
@@ -59,7 +64,10 @@ function CommentSection() {
                                     }
                                     datetime={"25-04-2022 11:09AM"}
                                     actions={[
-                                        <Tooltip title="Like">
+                                        <Tooltip
+                                            title="Like"
+                                            key={item.commentId + "y"}
+                                        >
                                             <span
                                                 onClick={() => {
                                                     setLikesCount(1);
@@ -75,7 +83,10 @@ function CommentSection() {
                                                 {likesCount}
                                             </span>
                                         </Tooltip>,
-                                        <Tooltip title="Dislike">
+                                        <Tooltip
+                                            title="Dislike"
+                                            key={item.commentId + "z"}
+                                        >
                                             <span
                                                 onClick={() => {
                                                     setLikesCount(0);
