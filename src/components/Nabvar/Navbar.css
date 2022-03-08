@@ -64,6 +64,13 @@
     display: flex;
     color: #8432d6;
 }
+/* 07Mar SC: just so that the event titles in the hamburger menu are not right up against the edge */
+.userEventsTitles {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.2rem;
+}
 
 .nav-menu-items {
     list-style: none;
