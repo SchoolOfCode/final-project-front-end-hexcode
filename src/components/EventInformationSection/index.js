@@ -89,17 +89,25 @@ function EventInformationSection({
                 </div>
 
                 <div className={!collapse ? "testPoll" : "hide"}>
-                    <button className="createPoll">
+                    <div className="people-title-container ">
+                        <h3 className="peopleTitle">Polls:</h3>
                         <Link to="/CreatePollPage">
-                            <AiFillPlusCircle />
+                            <button className="add-attendees-btn">
+                                <AiFillPlusCircle />
+                            </button>
                         </Link>
-                    </button>
+                    </div>
                     <TestPoll />
                 </div>
             </div>
+
+            <br />
             {/* arrow button */}
             <div className="collapseSection">
-                <button className="arrow-btn" onClick={collapseInfo}>
+                <button
+                    onClick={collapseInfo}
+                    className={!collapse ? "arrow-btn" : "arrow-btn-down"}
+                >
                     <AiOutlineArrowUp />
                 </button>
             </div>
