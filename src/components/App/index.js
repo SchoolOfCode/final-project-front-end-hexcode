@@ -53,7 +53,9 @@ function App() {
                 `src/components/App/index.js: ERROR ERROR USER IS NOT FETCHED for email = ${userEmail}`
             );
         } else {
-            setLoggedInUserId(data.payload[0].appUserid);
+            // setLoggedInUserId(data.payload[0].appUserid);
+            //08Mar SC: fixed backend bug that returned appUserid instead of appUserId. Okay on safety-net.
+            setLoggedInUserId(data.payload[0].appUserId);
         }
 
         setLoggedInUserEmail(data.payload[0].appUserEmail);
@@ -67,18 +69,18 @@ function App() {
     }
 
     //DONE -  pass the handleLoginClick function into the login page, so that, when the login button is clicked, it gets triggered.
-    //TODO: step 4 is passing that loggedinUserId etc state(s) to other pages/componenets as needed - start with the Navbar, so it can select the events based on the correct user
+
+    //TODO: step 4 is passing that loggedinUserId etc state(s) to other pages/componenets as needed
 
     //      - TODO: pass to CreateEvent page, to pass through to CreateEventSection - so that the (1) logged-in-user's (who is now the Organiser as well) contacts can be fetched and (2) so that the loggedin user id can be sent inot the POST event as the oragniserUserId
 
     //      - TODO: pass to (Display) Event page to pass on to the EventInformationSection - so that (1) the loggedinuser's Name and Profile Pic are displayed (2) relevant contacts are listed in the dropdown to add more invitees (TBC)
 
-    //      - TODO: pass to NavBar so that it can get the events specific to the logged in user (instead of all events!)
-    //              in order to get the user object (state) into Nav bar, we need to pass it through
-    //                    (a)TODO: homepage
-    //                    (b)TODO: create event page) and
-    //                    (c)TODO: (display) event page
+    //      - DONE pass to NavBar so that it can get the events specific to the logged in user (instead of all events!)
 
+    //      -  DONE - pass to HomePage, - not currently needed - but might be if we decide to show data specific to loggedin user eg manage profile, manage contacts etc
+
+    // KEEP THESE JUST TO MAKE IT FASTER TO ADD THEM AS PROPS BELOW IF NEEDED:
     // loggedInUserId = {loggedInUserId}
     // loggedInUserEmailLoggedInUserEmail = {loggedInUserEmailLoggedInUserEmail}
     // loggedInUserHasAccountLoggedInUserHasAccount  = {loggedInUserHasAccountLoggedInUserHasAccount}
@@ -86,16 +88,6 @@ function App() {
     // loggedInUserLastNameLoggedInUserLastName = {loggedInUserLastNameLoggedInUserLastName}
     // loggedInUserNameLoggedInUserName = {loggedInUserNameLoggedInUserName}
     // loggedInUserProfilePicLink = {loggedInUserProfilePicLink}
-
-    // const  {
-    //     loggedInUserIdLoggedInUserId,
-    //     loggedInUserEmailLoggedInUserEmail,
-    //     loggedInUserHasAccountLoggedInUserHasAccount ,
-    //     loggedInUserFirstNameLoggedInUserFirstName ,
-    //     loggedInUserLastNameLoggedInUserLastName ,
-    //     loggedInUserNameLoggedInUserName ,
-    //     loggedInUserProfilePicLink ,
-    // } = {...props}
 
     return (
         <div className="App">
