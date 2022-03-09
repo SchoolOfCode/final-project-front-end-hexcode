@@ -14,7 +14,11 @@ function Event(props) {
 
     //PARAMS - from URL
     const { id } = useParams();
-    const eventId = id; //re-assigning to a declarative name
+    let eventId = 0;
+    eventId = id; //re-assigning to a declarative name
+
+    console.log(`src/pages/Event.js: TOP OF PAGE id param= |${id}| `);
+    console.log(`src/pages/Event.js: TOP OF PAGE eventId= |${eventId}| `);
 
     //STATES
     const [eventObject, setEventObject] = useState(false);
@@ -22,6 +26,7 @@ function Event(props) {
 
     //When the Event ID changes, go to database and fetch the event details for the given EventId
     useEffect(() => {
+        console.log(`src/pages/Event.js - useEffect START. `);
         async function getEvent() {
             const response = await fetch(`${API_URL}/events/${eventId}`);
             //TODO: check http status code returned - response.ok could be true or false
@@ -36,23 +41,42 @@ function Event(props) {
             const data = await response.json();
             console.log(`src/pages/Event.js: after fetch, data retrieved is: `);
             console.log(data);
-            const eventObject = data.payload;
+            const eventObjectFromDatabase = data.payload;
 
-            if (!eventObject) {
+            if (!eventObjectFromDatabase) {
                 console.log(
                     `src/pages/Event.js: eventObject was expected to be filled, but it is not: `
                 );
-                console.log(eventObject);
+                console.log(eventObjectFromDatabase);
                 // DONE - set a state to say error occurred
                 setErrorHappened(true);
                 return;
             }
             //otherwise all good
-            setEventObject(eventObject); //this is a SINGLE event object
+            setEventObject(eventObjectFromDatabase); //this is a SINGLE event object
+            console.log(`src/pages/Event.js: inside getEvent. eventObject retrieved and state set, so the following variables should have values: eventId = ${eventObjectFromDatabase.eventId} organiserName= ${eventObjectFromDatabase.organiserName}
+            organiserProfilePicLink=${eventObjectFromDatabase.organiserProfilePicLink}
+            organiserUserId=${eventObjectFromDatabase.organiserUserId}`);
         }
         //Only attempt to fetch the event if the eventId is not an empty string
-        console.log(`src/pages/Event.js: typeof eventId= |${typeof eventId}| `);
-        if (!(eventId === "")) getEvent();
+        console.log(
+            `src/pages/Event.js: Inside useEffect typeof eventId= |${typeof eventId}| `
+        );
+        console.log(
+            `src/pages/Event.js: Inside useEffect eventId= |${eventId}| `
+        );
+
+        if (!(eventId === "")) {
+            console.log(
+                `src/pages/Event.js - useEffect - going to call getEvent. `
+            );
+
+            getEvent();
+        } else {
+            console.log(
+                `src/pages/Event.js - useEffect - FAILING to call getEvent. eventId=|${eventId}|`
+            );
+        }
         // WARNING typeof eventId = string.  Could check that it was not NAN?
         // if (typeof eventId === "number") {
         //     getEvent();
@@ -68,15 +92,17 @@ function Event(props) {
     //When the EventObject has been retrieved, then render the EventInformationSection component with it
     //New code - have (hopefully) error checked above for blank objects
     // also added in organiser info - to display in Event Info section
-    console.log(`src/pages/Event.js: rendering.organiserName=${eventObject.organiserName}
+    console.log(`src/pages/Event.js: rendering - organiserName=${eventObject.organiserName}
     organiserProfilePicLink=${eventObject.organiserProfilePicLink}
     organiserUserId=${eventObject.organiserUserId}`);
+
     return (
         <div>
             <Navbar loggedInUserId={loggedInUserId} />
             <div>
                 <EventInformationSection
                     key={eventObject.eventId}
+                    eventId={eventObject.eventId}
                     eventTitle={eventObject.eventTitle}
                     eventDescription={eventObject.eventDescription}
                     eventLocation={eventObject.eventLocation}
@@ -92,6 +118,7 @@ function Event(props) {
                     organiserProfilePicLink={
                         eventObject.organiserProfilePicLink
                     }
+                    loggedInUserId={loggedInUserId}
                 />
             </div>
         </div>
