@@ -77,6 +77,7 @@ function Event(props) {
             <div>
                 <EventInformationSection
                     key={eventObject.eventId}
+                    eventId={eventObject.eventId}
                     eventTitle={eventObject.eventTitle}
                     eventDescription={eventObject.eventDescription}
                     eventLocation={eventObject.eventLocation}
@@ -92,6 +93,7 @@ function Event(props) {
                     organiserProfilePicLink={
                         eventObject.organiserProfilePicLink
                     }
+                    loggedInUserId={loggedInUserId}
                 />
             </div>
         </div>
