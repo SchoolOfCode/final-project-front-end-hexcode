@@ -24,12 +24,17 @@ function App() {
     const [loggedInUserName, setLoggedInUserName] = useState("");
     const [loggedInUserProfilePicLink, setLoggedInUserProfilePicLink] =
         useState("");
+    const [errorHappened, setErrorHappened] = useState(false);
+
+    //TODO: context stuff
+    // create context - once in app
+    // provide context - once in app
+    // (in destinations - consume context - once per every Component
 
     // DONE step 1 - can just be to get it to print out a console.log message - to make sure login page is triggering it correctly
     // DONE step 0 - take in the API-URL
     // DONE step 2 -   get the fetch working and printing the payload to console.log
     // DONE step 3 - introduce state, and save the fetch results (loggedinUserId) to state
-
     // DONE  Add a handleLoginClick function here that takes in an email as a prop
     //          This function will be triggered in LoginPage.js by the login button event
 
@@ -43,31 +48,82 @@ function App() {
             `src/components/App/index.js: about to fetch from | ${API_URL}${API_END_POINT}${userEmail} |`
         );
         const response = await fetch(`${API_URL}${API_END_POINT}${userEmail}`);
-        const data = await response.json(response);
 
-        console.log(`src/components/App/index.js: data object returned =`);
-        console.log(data);
-        //TODO: change appUserid to appUserId when backend bug is fixed
-        //setLoggedInUserId(data.payload[0].appUserId);
-        if (data.payload[0].appUserId === undefined) {
-            setLoggedInUserId(5); //TODO: TEMP - need to use proper errorchecking - and potentially return to login page here
+        //check response.ok = true or false
+        if (!response.ok) {
             console.log(
-                `src/components/App/index.js: USER IS NOT YET IS NOT FETCHED for email = ${userEmail}. User Id set to 5, Luke`
+                `src/components/App/index.js: fetch returned response.ok = false - Error.`
             );
+            //  DONE - set a state to say error occurred
+            setErrorHappened(true);
+            //TODO: send relevant message to user:
+            // error under user control.
+            //        response for 404 - hexcode - user not found for this email address - (user has control over this) - display message for use to recheck email, return to login page.
+            // otherwise - assume not under users' control,
+            //      respond for 400 - hexcode - email query string parameter not found
+            //      response for 500 - hexcode - server error -
+            //      otherwise reponse is poay - and we know user is found!!!
         } else {
-            // setLoggedInUserId(data.payload[0].appUserid);
-            //08Mar SC: fixed backend bug that returned appUserid instead of appUserId. Okay on safety-net.
-            setLoggedInUserId(data.payload[0].appUserId);
-        }
+            const data = await response.json(response);
 
-        setLoggedInUserEmail(data.payload[0].appUserEmail);
-        setLoggedInUserHasAccount(data.payload[0].appUserHasAccount);
-        setLoggedInUserFirstName(data.payload[0].appUserFirstName); //sets loggedInUserFirstName
-        setLoggedInUserLastName(data.payload[0].appUserLastName);
-        const fullName =
-            data.payload[0].appUserFirstName + data.payload[0].appUserLastName;
-        setLoggedInUserName(data.payload[0].fullName);
-        setLoggedInUserProfilePicLink(data.payload[0].appUserProfilePicLink);
+            console.log(`src/components/App/index.js: user object returned =`);
+            console.log(data);
+            //setLoggedInUserId(data.payload[0].appUserId);
+            // if (typeof data.payload[0].appUserId === "number")  // TODO: think about NAN
+
+            //FYI - optional chaining is like this:    ?.[]
+            // const loggedInUserObject = data.payload?.[0]; //have got rid of the array on back end
+            // response.ok so we know payload has a user object
+            const loggedInUserObject = data.payload;
+
+            //TEMP ERROR CHECKING
+            if (!loggedInUserObject) {
+                console.log(
+                    `src/components/App/index.js: loggedInUserObject was expected to be filled, but weirdly is not: `
+                );
+                console.log(loggedInUserObject);
+                // DONE - set a state to say error occurred
+                setErrorHappened(true);
+                return;
+            }
+            setLoggedInUserId(loggedInUserObject.appUserId);
+            setLoggedInUserEmail(loggedInUserObject.appUserEmail);
+            setLoggedInUserHasAccount(loggedInUserObject.appUserHasAccount);
+            setLoggedInUserFirstName(loggedInUserObject.appUserFirstName);
+            setLoggedInUserLastName(loggedInUserObject.appUserLastName);
+            setLoggedInUserName(loggedInUserObject.appUserName);
+            setLoggedInUserProfilePicLink(
+                loggedInUserObject.appUserProfilePicLink
+            );
+
+            //check first if loggedInUserObject is null/undefined and only if it exists, then check if appUserid is a number ...
+            // if (typeof loggedInUserObject?.appUserId === "number") {
+            // }
+
+            // if (data.payload[0].appUserId === undefined) {
+            //     setLoggedInUserId(5); //DONE-  TEMP - need to use proper errorchecking - and potentially return to login page here
+            //     console.log(
+            //         `src/components/App/index.js: USER IS NOT YET IS NOT FETCHED for email = ${userEmail}. User Id set to 5, Luke`
+            //     );
+            // } else {
+            //     // setLoggedInUserId(data.payload[0].appUserid);
+            //     //08Mar SC: fixed backend bug that returned appUserid instead of appUserId. Okay on safety-net.
+            //     setLoggedInUserId(data.payload[0].appUserId);
+            // }
+
+            // setLoggedInUserId(data.payload[0].appUserId);
+            // setLoggedInUserEmail(data.payload[0].appUserEmail);
+            // setLoggedInUserHasAccount(data.payload[0].appUserHasAccount);
+            // setLoggedInUserFirstName(data.payload[0].appUserFirstName); //sets loggedInUserFirstName
+            // setLoggedInUserLastName(data.payload[0].appUserLastName);
+            // const fullName =
+            //     data.payload[0].appUserFirstName +
+            //     data.payload[0].appUserLastName;
+            // setLoggedInUserName(data.payload[0].fullName);
+            // setLoggedInUserProfilePicLink(
+            //     data.payload[0].appUserProfilePicLink
+            // );
+        }
     }
 
     //DONE -  pass the handleLoginClick function into the login page, so that, when the login button is clicked, it gets triggered.
@@ -91,6 +147,12 @@ function App() {
     // loggedInUserNameLoggedInUserName = {loggedInUserNameLoggedInUserName}
     // loggedInUserProfilePicLink = {loggedInUserProfilePicLink}
 
+    //TODO: wrap retrun in if state - check if has error - then render something else, eg redirect to login page
+    if (errorHappened) {
+        console.log(
+            `src/components/App/index.js: ERROR SECTION - NO USER FOUND - TO DO - REDIRECT TO LOGIN `
+        ); // need to make sure this doesn't just render when there's a delay filling user
+    }
     return (
         <div className="App">
             <div className="nav-container"></div>
@@ -106,7 +168,7 @@ function App() {
                         path="/homepage"
                         element={<HomePage loggedInUserId={loggedInUserId} />}
                     />
-                    
+
                     <Route
                         path="/CreatePollPage"
                         element={<CreatePollPage />}
@@ -121,9 +183,6 @@ function App() {
                         path="/event/:id"
                         element={<Event loggedInUserId={loggedInUserId} />}
                     />
-                    {/* <Route path='/' />
-          <Route path='/createEvent' element={<CreateEvent />} />
-          <Route path='/event/:id' element={<Event />} /> */}
                 </Routes>
             </Router>
         </div>

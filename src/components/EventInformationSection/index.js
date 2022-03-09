@@ -20,8 +20,15 @@ function EventInformationSection({
     eventLocation,
     eventDate,
     eventTime,
+    organiserName,
+    organiserProfilePicLink,
+    organiserUserId,
 }) {
     const [collapse, setCollapse] = useState(false);
+
+    console.log(`src/components/EventInfoSection: incoming props.organiserName=${organiserName}
+    organiserProfilePicLink=${organiserProfilePicLink}
+    organiserUserId=${organiserUserId}`);
 
     function collapseInfo(e) {
         setCollapse(!collapse);
@@ -30,7 +37,11 @@ function EventInformationSection({
     return (
         <div className="eventSection">
             <div className={!collapse ? "organiserSection" : "hide"}>
-                <OrganiserSection />
+                <OrganiserSection
+                    organiserName={organiserName}
+                    organiserProfilePicLink={organiserProfilePicLink}
+                    organiserUserId={organiserUserId}
+                />
             </div>
             <div className="titleAndConfirm">
                 <div className="eventTitleSection">

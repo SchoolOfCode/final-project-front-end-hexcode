@@ -29,7 +29,8 @@ function CreateEventSection(props) {
         eventLocation: "",
         eventDescription: "",
     });
-    const [eventDate, setEventDate] = useState("date pending");
+    // const [eventDate, setEventDate] = useState("date pending");
+    const [eventDate, setEventDate] = useState(null); // because the date feidl ins
     const [eventTime, setEventTime] = useState("");
     const [personMenu, setPersonMenu] = useState([]);
 

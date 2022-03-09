@@ -12,10 +12,11 @@ import {
 import ProfileImage from "../ProfileImage";
 import "./CommentSection.css";
 import { BiSend } from "react-icons/bi";
+//08Mar SC: temp:
+//import { getImagefromUserId } from "../../libs/getImageFromUserId.js";
+import image9 from "../../images/9.png";
 
 function CommentSection() {
-    console.log(`src/components/CommentSection/ userComment data object is:`);
-    console.log({ userComment });
     // States
     const [comments, setComments] = useState(userComment);
     const [inputValue, setInputValue] = useState("");
@@ -23,38 +24,68 @@ function CommentSection() {
     const [dislikesCount, setDislikesCount] = useState(0);
     const [action, setAction] = useState(null);
 
+    console.log(`src/components/CommentSection/ comments[] state object is:`);
+    console.log({ comments });
     // Event Functions
     function handleChange(e) {
         setInputValue(e.target.value);
     }
 
+    function getImagePath(userId) {}
     function handleClick(e) {
+        // 08Mar SC: trying different ways of getting date/time on new comments
+        // this works - slightly wrong format but okay.
+        const commentDateTime = Date().toLocaleString();
+        //this might work, but might not
+        // let today = new Date();
+        // let todayDate = "-" + today.getMonth() + "-" + today.getFullYear();
+        // let todayTime = today.getHours() + ":" + today.getMinutes();
+        // const commentDateTime = todayDate + " " + todayTime + "AM";
+        console.log(
+            `src/components/CommentSection/ commentDateTime= ${commentDateTime}`
+        );
+
         const updateComment = [
             ...comments,
             {
                 ...comments,
                 text: inputValue,
                 author: "Dan",
+                //08Mar SC: will need to add something for the new fields
+                datetime: commentDateTime,
+                //commentId: <<max integer>>,
+                //key: same as what we set commentId to,
             },
         ];
         setComments(updateComment);
         setInputValue("");
         e.preventDefault();
+        //e.target.value = ""; //08Mar SC: just seeing if this clears, since setInputValue is not (which is weird). UPDATE. Nope - didn't help. Commenting out.
     }
 
+    //08Mar - added datetime into libs/data/userComment object, and now sending into <Comment> components, instead of sending in hard-coded datetime
+    //from datetime={"25-04-2022 11:09AM"}  to datetime={item.datetime}
+    //TODO: Ask Dan: in code below, why is it React.createElement in one place but just createElement in another?
     return (
         <>
-            <div className="comment-section" key="1">
-                <h4 key="2">Posts</h4>
-                <div className="comment-container" key="3">
-                    {comments.map((item) => {
+            <div className="comment-section" key="100">
+                <h4 key="200">Posts</h4>
+                <div className="comment-container" key="300">
+                    {comments.map((item, currIndex) => {
                         return (
-                            <div
-                                className="comments"
-                                key={item.commentId + "x"}
-                            >
+                            <div className="comments" key={currIndex + "div"}>
+                                {/* <div className="profile-image">
+                                    <img
+                                        className="profile-pic"
+                                        src={image9}
+                                        alt=""
+                                    />
+                                    <span>{item.author}</span>
+                                    <span>{item.text}</span>
+                                    <span>{item.datetime}</span>
+                                </div> */}
                                 <Comment
-                                    key={item.commentId}
+                                    key={currIndex}
                                     author={item.author}
                                     content={item.text}
                                     avatar={
@@ -62,11 +93,11 @@ function CommentSection() {
                                             style={{ backgroundColor: "green" }}
                                         ></Avatar>
                                     }
-                                    datetime={"25-04-2022 11:09AM"}
+                                    datetime={item.datetime}
                                     actions={[
                                         <Tooltip
                                             title="Like"
-                                            key={item.commentId + "y"}
+                                            key={item.commentId + "like"}
                                         >
                                             <span
                                                 onClick={() => {
@@ -85,7 +116,7 @@ function CommentSection() {
                                         </Tooltip>,
                                         <Tooltip
                                             title="Dislike"
-                                            key={item.commentId + "z"}
+                                            key={item.commentId + "dislike"}
                                         >
                                             <span
                                                 onClick={() => {

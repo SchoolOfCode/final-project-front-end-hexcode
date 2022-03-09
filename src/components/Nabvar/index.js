@@ -9,13 +9,6 @@ import { API_URL } from "../../config/index.js";
 function Navbar(props) {
     // props - warning - not necessarily filled on first render, so beware in fetch requests
     const loggedInUserId = props.loggedInUserId; //coming from App/index.js, via <Event>, <HomePage> or <CreateEvent>
-    // const [localLoggedInUserIdState, setLocalLoggedInUserIdState] =
-    //     useState(loggedInUserId);
-
-    // console.log(
-    //     `/src/components/Nabvar/index.js - props - loggedInUserId= ${loggedInUserId}`
-    // ); //07Mar SC: this prints out as 3, which is correct (logged in as akiko)
-    // console.log(`/src/components/Nabvar/index.js - API_URL = ${API_URL}`);
 
     // States
     const [sidebar, setSidebar] = useState(false);
@@ -23,45 +16,26 @@ function Navbar(props) {
 
     // UseEffect fetch request to get events based on userId
     useEffect(() => {
-        console.log(
-            `src/components/Navbar/index.js - useEffect START. loggedInUserId= ${loggedInUserId}`
-        );
-
-        async function getEvent() {
-            console.log(
-                `src/components/Navbar/index.js - getEvent START. loggedInUserId= ${loggedInUserId}`
-            );
-
+        async function getAllEventsforUser() {
             const response = await fetch(
-                // `${API_URL}/events`
                 `${API_URL}/appusers/${loggedInUserId}/events`
             );
-
-            // console.log(
-            //     `src/components/Navbar/index.js - END POINT USED IS = ${API_URL}/events`
-            // );
-            // console.log(
-            //     `src/components/Navbar/index.js - END POINT WE SHOULD USE IS = ${API_URL}/appusers/${loggedInUserId}/events`
-            // );
-            // console.log(
-            //     `/src/components/Nabvar/index.js - props - loggedInUserId (should be same)= ${loggedInUserId}`
-            // ); //07Mar SC: but this prints out as empty string, which is weird
-            // console.log(
-            //     `/src/components/Nabvar/index.js - lets test saving loggedInUserId in localLoggedInUserIdState= ${localLoggedInUserIdState}`
-            // );
-            // const response = await fetch(
-            //     `${API_URL}/appusers/${loggedInUserId}/events`
-            // );
+            //TODO: check http status code returned - response.ok could be true or false
+            if (!response.ok) {
+                //TODO: alert usre of error
+            }
+            //TODO: otherwise, only if no error, carry on and attempt to set userEvents array.
             const data = await response.json();
             setUserEvents(data.payload);
-
-            // console.log(
-            //     `src/components/Navbar/index.js - useEffect: UserEvents state afterfetch and update:`
-            // );
-            // console.log(userEvents);
         }
-        //only do the fetch if the loggedInUserId has already been filled in the props:
-        if (!(loggedInUserId === "")) getEvent();
+        //NB: ONLY attempt to fetch all events for a given user id IF that user id is a number (and not undefined or null)
+        console.log(
+            `src/components/Nabvar/index.js: typeof loggedInUserId= |${typeof loggedInUserId}| `
+        );
+
+        if (typeof loggedInUserId === "number") {
+            getAllEventsforUser();
+        }
     }, [loggedInUserId, sidebar]);
     // }, [sidebar]);
     //and now run useEffect when either the loggedInUserId is (finally) filled, or when the sidebar is shown again (in case a new event has been added in the meantime)
@@ -123,4 +97,4 @@ function Navbar(props) {
 
 export default Navbar;
 
-console.log("Hello");
+//console.log("Hello");
