@@ -175,7 +175,9 @@ function App() {
 
                     <Route
                         path="/CreatePollPage"
-                        element={<CreatePollPage />}
+                        element={
+                            <CreatePollPage loggedInUserId={loggedInUserId} />
+                        }
                     />
                     <Route
                         path="/createEvent"
