@@ -10,6 +10,7 @@ import { FaCheck } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import { CgNotes } from "react-icons/cg";
 import photos from "../../libs/data";
+import { Link } from "react-router-dom";
 
 import TestPoll from "../TestPoll/index.js"; // SINEAD TEMP CODE TESTING POLL
 
@@ -99,12 +100,25 @@ function EventInformationSection({
                 </div>
 
                 <div className={!collapse ? "testPoll" : "hide"}>
+                    <div className="people-title-container ">
+                        <h3 className="peopleTitle">Polls:</h3>
+                        <Link to="/CreatePollPage">
+                            <button className="add-attendees-btn">
+                                <AiFillPlusCircle />
+                            </button>
+                        </Link>
+                    </div>
                     <TestPoll />
                 </div>
             </div>
+
+            <br />
             {/* arrow button */}
             <div className="collapseSection">
-                <button className="arrow-btn" onClick={collapseInfo}>
+                <button
+                    onClick={collapseInfo}
+                    className={!collapse ? "arrow-btn" : "arrow-btn-down"}
+                >
                     <AiOutlineArrowUp />
                 </button>
             </div>

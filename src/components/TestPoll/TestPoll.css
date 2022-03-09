@@ -211,3 +211,7 @@ progress::-webkit-progress-bar {
 progress {
     width: 100%;
 }
+
+.pollList {
+    margin: 0;
+}

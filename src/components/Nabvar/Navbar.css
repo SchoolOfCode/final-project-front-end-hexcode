@@ -51,14 +51,14 @@
 }
 
 .menu-bars:hover {
-    color: #b6eac5;
+    color: #ec9c24;
 }
 
 .addEventButton a {
     display: flex;
-    color: #8432d6;
+    /* color: #8432d6; */
     background-color: #ffff;
-    border: solid 2px #8432d6;
+    /* border: solid 2px #8432d6; */
     border-radius: 5px;
     margin: 0.2rem;
 }

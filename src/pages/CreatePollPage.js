@@ -80,6 +80,7 @@ function CreatePollPage() {
                     type="text"
                 />
             </div>
+
             <Button className="createPollButton">Create Poll</Button>
         </form>
     );
