@@ -53,14 +53,14 @@ function TestPoll() {
     // BEFORE the logged-in user has voted, render the button options so they can vote
     if (!hasVoted) {
         return (
-            <div className="pollQuestionsBox">
-                <ul className="pollList" id="pollListQuestions">
+            <div className="pollQuestionsBox" key="100">
+                <ul className="pollList" id="pollListQuestions" key="50">
                     <li className="pollVoteItem" key="1">
-                        <p className="pollQuestion">
+                        <p className="pollQuestion" key="1a">
                             Poll: What dates suit people best?
                         </p>
                     </li>
-                    <li className="pollVoteItem" key="1">
+                    <li className="pollVoteItem" key="2">
                         <Button
                             className="pollVoteButton"
                             id="voteButton1"
@@ -71,7 +71,7 @@ function TestPoll() {
                         </Button>
                     </li>
 
-                    <li className="pollVoteItem" key="2">
+                    <li className="pollVoteItem" key="3">
                         <Button
                             className="pollVoteButton"
                             id="voteButton2"
@@ -82,7 +82,7 @@ function TestPoll() {
                         </Button>
                     </li>
 
-                    <li className="pollVoteItem" key="3">
+                    <li className="pollVoteItem" key="4">
                         <Button
                             className="pollVoteButton"
                             id="voteButton3"
@@ -100,9 +100,9 @@ function TestPoll() {
     } else {
         //VERSION 3 - trying to get a heading in, on top, in line - commited before trying this!
         return (
-            <ul className="pollList" id="pollListQuestions">
-                <li className="pollVoteItem" key="1">
-                    <p className="pollQuestion">
+            <ul className="pollList" id="pollListQuestions" key="99">
+                <li className="pollVoteItem" key="99a">
+                    <p className="pollQuestion" key="9a">
                         Poll: What dates suit people best?
                     </p>
                 </li>

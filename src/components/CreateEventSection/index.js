@@ -16,10 +16,12 @@ import "./CreateEvent.css";
 import moment from "moment";
 import "moment/locale/zh-cn";
 
-//hexcode-safety-net-server.herokuapp.com"
+import { API_URL } from "../../config/index.js";
+const API_END_POINT = "/events";
 
-//07Mar SC: adding comment to force prettier to update
-function CreateEventSection() {
+function CreateEventSection(props) {
+    const loggedInUserId = props.loggedInUserId; //coming from App/index.js via CreateEvent page
+
     // States
     const [event, setEvent] = useState({
         eventTitle: "",
@@ -27,14 +29,16 @@ function CreateEventSection() {
         eventLocation: "",
         eventDescription: "",
     });
-    const [eventDate, setEventDate] = useState("date pending");
+    // const [eventDate, setEventDate] = useState("date pending");
+    const [eventDate, setEventDate] = useState(null); // because the date feidl ins
     const [eventTime, setEventTime] = useState("");
     const [personMenu, setPersonMenu] = useState([]);
 
     function postData() {
         async function createEvent() {
+            //07Mar - updating the POST to set the OrganiserID to the loggedInUserId
             const newEvent = {
-                organiserUserId: 2,
+                organiserUserId: loggedInUserId,
                 eventTitle: event.eventTitle,
                 eventDescription: event.eventDescription,
                 eventLocation: event.eventLocation,
@@ -43,10 +47,18 @@ function CreateEventSection() {
                 eventRequirements: "Booze",
                 eventCategory: "Drinks",
             };
+            console.log(
+                "src/components/CreateEventSection/index.js: new event="
+            );
             console.log(newEvent);
+
+            // POST (Insert) the newly created event to the database and return with the eventId for the newly created Event.
+            //07Mar - updating the POST to use the URL constants
             const response = await fetch(
                 // "https://hexcode-safety-net-server.herokuapp.com/events/",
-                `https://hexcode-arrange-group-event.herokuapp.com/events/`,
+                // `https://hexcode-arrange-group-event.herokuapp.com/events/`,
+                // `${API_URL}/events`,
+                `${API_URL}${API_END_POINT}`,
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
@@ -62,6 +74,9 @@ function CreateEventSection() {
             );
 
             console.log({ data });
+
+            //new event id comes back as part of 'data'
+            //TODO: redirect to event/id page for the newly created event
         }
         createEvent();
     }
@@ -86,6 +101,7 @@ function CreateEventSection() {
         setEvent({ ...event, [e.target.name]: value });
     }
 
+    // TODO: STEP 2 (HARDER) - change this handleMenuClick to add the new invitee's user id to the list of users
     function handleMenuClick(e) {
         const selectedUser = e.key;
 
@@ -103,15 +119,17 @@ function CreateEventSection() {
 
     // Ant components stuff
     const { TextArea } = Input;
+
+    // TODO: STEP 1 - change this menu to a FETCH of contacts based on the loggedInUserId
     const menu = (
         <Menu onClick={handleMenuClick}>
             <Menu.Item key="Belinda" icon={<UserOutlined />}>
                 Belinda
             </Menu.Item>
-            <Menu.Item key="Luke" icon={<UserOutlined />}>
+            <Menu.Item key="Luke" id="Luke" icon={<UserOutlined />}>
                 Luke
             </Menu.Item>
-            <Menu.Item key="James" icon={<UserOutlined />}>
+            <Menu.Item id="James" key="James" icon={<UserOutlined />}>
                 James
             </Menu.Item>
         </Menu>
@@ -125,6 +143,7 @@ function CreateEventSection() {
                     <h3 className="inputTitle">Title</h3>
                     <label>
                         <Input
+                            id="title"
                             maxLength={30}
                             placeholder="Set a title for your event"
                             name="eventTitle"
@@ -135,6 +154,7 @@ function CreateEventSection() {
                     <h3 className="inputTitle">Location</h3>
                     <label>
                         <Input
+                            id="location"
                             maxLength={40}
                             className="titleInput"
                             placeholder="Set a location for your event"
@@ -144,24 +164,27 @@ function CreateEventSection() {
                         />
                     </label>
                     <h3 className="inputTitle">People</h3>
-                    <Space className="dropdownPeople" wrap>
-                        <Input
-                            className="inputedpeople"
-                            prefix={<UserOutlined />}
-                            value={personMenu}
-                        />
-                        <Dropdown.Button
-                            className="addingpeople"
-                            overlay={menu}
-                            placement="bottomCenter"
-                            icon={<UserOutlined />}
-                        >
-                            Add people
-                        </Dropdown.Button>
-                    </Space>
+                    <div className="createPeople">
+                        <Space className="dropdownPeople" wrap>
+                            <Input
+                                className="inputedpeople"
+                                prefix={<UserOutlined />}
+                                value={personMenu}
+                            />
+                            <Dropdown.Button
+                                className="addingpeople"
+                                overlay={menu}
+                                placement="bottomCenter"
+                                icon={<UserOutlined id="dropdown" />}
+                            >
+                                Add people
+                            </Dropdown.Button>
+                        </Space>
+                    </div>
                     <h3 className="inputTitle">Date</h3>
                     <label>
                         <DatePicker
+                            id="date"
                             format="YYYY-MM-DD"
                             className="datePicker"
                             name="date"
@@ -171,6 +194,7 @@ function CreateEventSection() {
                     <h3 className="inputTitle">Time</h3>
                     <label>
                         <DatePicker
+                            id="time"
                             className="timePicker"
                             picker="time"
                             name="time"
@@ -189,6 +213,7 @@ function CreateEventSection() {
                     <h3 className="inputTitle">Description</h3>
                     <label>
                         <TextArea
+                            id="description"
                             maxLength={255}
                             className="descriptionInput"
                             placeholder="Add a description for your event.."

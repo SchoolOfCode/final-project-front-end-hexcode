@@ -1,23 +1,43 @@
 export const userComment = [
     {
         author: "Mary",
+        authorUserId: 7,
         text: "Hello, I'll be there, I can't wait!",
+        commentId: 1,
+        key: 1,
+        datetime: "25-02-2022 11:09AM",
     },
     {
         author: "Luke",
+        authorUserId: 5,
         text: "What's the parking like there?",
+        commentId: 2,
+        key: 2,
+        datetime: "03-03-2022 08:10AM",
     },
     {
-        author: "James",
+        author: "Mike",
+        authorUserId: 8,
         text: "Sorry everyone, I'm running 10 mins late",
+        commentId: 3,
+        key: 3,
+        datetime: "05-03-2022 05:35PM",
     },
     {
-        author: "Bob",
+        author: "Akiko",
+        authorUserId: 3,
         text: "Can't wait to see everyone!",
+        commentId: 4,
+        key: 4,
+        datetime: "07-03-2022 03:26PM",
     },
     {
-        author: "Jenny",
+        author: "Katie",
+        authorUserId: 9,
         text: "Anyone fancy a coffee after?",
+        commentId: 5,
+        key: 5,
+        datetime: "08-03-2022 06:45PM",
     },
 ];
 

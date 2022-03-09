@@ -3,31 +3,42 @@ import { FaBars } from "react-icons/fa";
 import { AiOutlineClose, AiFillPlusCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-const API_URL = "https://hexcode-safety-net-server.herokuapp.com";
 
-//07Mar SC: adding comment to force prettier to update
-function Navbar() {
+import { API_URL } from "../../config/index.js";
+
+function Navbar(props) {
+    // props - warning - not necessarily filled on first render, so beware in fetch requests
+    const loggedInUserId = props.loggedInUserId; //coming from App/index.js, via <Event>, <HomePage> or <CreateEvent>
+
     // States
     const [sidebar, setSidebar] = useState(false);
     const [userEvents, setUserEvents] = useState(false);
 
     // UseEffect fetch request to get events based on userId
     useEffect(() => {
-        async function getEvent() {
+        async function getAllEventsforUser() {
             const response = await fetch(
-                // "https://hexcode-safety-net-server.herokuapp.com/events"
-                `https://hexcode-arrange-group-event.herokuapp.com/events`
+                `${API_URL}/appusers/${loggedInUserId}/events`
             );
+            //TODO: check http status code returned - response.ok could be true or false
+            if (!response.ok) {
+                //TODO: alert usre of error
+            }
+            //TODO: otherwise, only if no error, carry on and attempt to set userEvents array.
             const data = await response.json();
             setUserEvents(data.payload);
-
-            console.log(
-                `src/components/Navbar/index.js - useEffect: UserEvents state afterfetch and update:`
-            );
-            console.log(userEvents);
         }
-        getEvent();
-    }, [sidebar]);
+        //NB: ONLY attempt to fetch all events for a given user id IF that user id is a number (and not undefined or null)
+        console.log(
+            `src/components/Nabvar/index.js: typeof loggedInUserId= |${typeof loggedInUserId}| `
+        );
+
+        if (typeof loggedInUserId === "number") {
+            getAllEventsforUser();
+        }
+    }, [loggedInUserId, sidebar]);
+    // }, [sidebar]);
+    //and now run useEffect when either the loggedInUserId is (finally) filled, or when the sidebar is shown again (in case a new event has been added in the meantime)
 
     function showSidebar(e) {
         setSidebar(!sidebar);
@@ -37,7 +48,7 @@ function Navbar() {
         <div>
             <div className="navbar">
                 <Link to="#" className="menu-bars">
-                    <FaBars onClick={showSidebar} />
+                    <FaBars className="hamburgerMenu" onClick={showSidebar} />
                 </Link>
             </div>
             <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
@@ -53,7 +64,9 @@ function Navbar() {
                             <AiFillPlusCircle className="addButton" />
                         </Link>
                     </li>
-                    <h4 key="H-your-events">Your Events</h4>
+                    <h4 key="H-your-events" className="yourEventsTitle">
+                        YOUR EVENTS
+                    </h4>
                     {!userEvents ? (
                         <div key="no-events">No user events</div>
                     ) : (
@@ -63,9 +76,12 @@ function Navbar() {
                                 <div key={item.eventId} className="userEvents">
                                     <Link
                                         to={`/Event/${item.eventId}`}
-                                        key="x-Link"
+                                        key={item.eventId + "link"}
                                     >
-                                        <p key={item.eventTitle}>
+                                        <p
+                                            className="userEventsTitles"
+                                            key={item.eventTitle}
+                                        >
                                             {item.eventTitle}
                                         </p>
                                     </Link>
@@ -80,3 +96,5 @@ function Navbar() {
 }
 
 export default Navbar;
+
+//console.log("Hello");

@@ -114,7 +114,7 @@
 
 .pollVoteButton {
     color: white;
-    background-color: rgb(211, 148, 248);
+    background-color: #faad14;
     margin-bottom: 0.2em;
     border-radius: 5px;
     box-sizing: border-box;
@@ -172,9 +172,9 @@
 }
 
 .tempStyle-to-test-out-colours {
-    background-color: #6a1b9a;
-    background-color: #f780ed;
-    background-color: #5557da;
+    background-color: #ffcb36;
+    background-color: #c63b5b;
+    background-color: #314799;
     background-color: #e0e0de;
 }
 .stylesTestC {
@@ -210,4 +210,8 @@ progress::-webkit-progress-bar {
 
 progress {
     width: 100%;
+}
+
+.pollList {
+    margin: 0;
 }

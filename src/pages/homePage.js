@@ -1,28 +1,24 @@
 import React from "react";
 import Navbar from "../components/Nabvar";
-import RADUNO from "../images/RADUNO.png";
+import havingfun from "../images/havingfun.png";
+import radunoTitle from "../images/radunoTitle.png";
 
-function HomePage() {
+function HomePage(props) {
+    const loggedInUserId = props.loggedInUserId; //coming from App/index.js
+
     return (
         <div>
-            <Navbar />
-            <div
-                style={{
-                    objectFit: "contain",
-                    marginTop: 200,
-                    marginLeft: 0,
-                }}
-            >
-                <img src={RADUNO} alt="background" />
-                {/* <img src={eventbackground} alt='background' /> */}
-            </div>
+            <Navbar loggedInUserId={loggedInUserId} />
 
-            {/* <div
-                style={{ backgroundImage: `url(${eventbackground})` }}
-                alt='backgroundImage'
-            >
-                An image should be here
-            </div> */}
+            <img src={radunoTitle} alt="background" className="logo" />
+
+            <section>
+                <p>raduno</p>
+                <p>noun</p>
+                <p>assembly, gathering, rally</p>
+            </section>
+
+            <img src={havingfun} alt="background" className="havingfun" />
         </div>
     );
 }
