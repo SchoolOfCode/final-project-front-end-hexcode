@@ -13,3 +13,48 @@ img.havingfun {
     height: 200px;
     width: 350px;
 }
+
+.definition {
+    margin-left: 20px;
+}
+
+.titleandSpeaker {
+    display: inline-flex;
+}
+
+.radunoTitle {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+}
+
+.speaker {
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.radunoNoun {
+    font-style: italic;
+}
+
+.italianDef {
+    color: #735ca3;
+    font-weight: bold;
+}
+
+.engDef {
+    color: #1890ff;
+    font-weight: 500;
+}
+
+img.havingfun {
+    width: 250px;
+    margin-left: 50px;
+}
+
+.aboutApp {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: smaller;
+    color: #4a3774;
+}
