@@ -152,6 +152,10 @@ function App() {
         console.log(
             `src/components/App/index.js: ERROR SECTION - NO USER FOUND - TO DO - REDIRECT TO LOGIN `
         ); // need to make sure this doesn't just render when there's a delay filling user
+
+        // redirect to login here
+
+        //else do this
     }
     return (
         <div className="App">

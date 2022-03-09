@@ -74,6 +74,9 @@ function CreateEventSection(props) {
             );
 
             console.log({ data });
+
+            //new event id comes back as part of 'data'
+            //TODO: redirect to event/id page for the newly created event
         }
         createEvent();
     }

@@ -9,12 +9,12 @@ import {
     DislikeOutlined,
     LikeFilled,
 } from "@ant-design/icons";
-import ProfileImage from "../ProfileImage";
+import ProfileImage from "../ProfileImage/index.js";
 import "./CommentSection.css";
 import { BiSend } from "react-icons/bi";
 //08Mar SC: temp:
 //import { getImagefromUserId } from "../../libs/getImageFromUserId.js";
-import image9 from "../../images/9.png";
+// import image9 from "../../images/9.png";
 
 function CommentSection() {
     // States
@@ -66,6 +66,7 @@ function CommentSection() {
     //08Mar - added datetime into libs/data/userComment object, and now sending into <Comment> components, instead of sending in hard-coded datetime
     //from datetime={"25-04-2022 11:09AM"}  to datetime={item.datetime}
     //TODO: Ask Dan: in code below, why is it React.createElement in one place but just createElement in another?
+    // <Avatar style={{ backgroundColor: "green" }}></Avatar>;
     return (
         <>
             <div className="comment-section" key="100">
@@ -80,6 +81,7 @@ function CommentSection() {
                                         src={image9}
                                         alt=""
                                     />
+                                    <ProfileImage  add in comment's author's user id>
                                     <span>{item.author}</span>
                                     <span>{item.text}</span>
                                     <span>{item.datetime}</span>
@@ -89,51 +91,11 @@ function CommentSection() {
                                     author={item.author}
                                     content={item.text}
                                     avatar={
-                                        <Avatar
-                                            style={{ backgroundColor: "green" }}
-                                        ></Avatar>
+                                        <ProfileImage
+                                            imageFileNumber={item.authorUserId}
+                                        />
                                     }
                                     datetime={item.datetime}
-                                    actions={[
-                                        <Tooltip
-                                            title="Like"
-                                            key={item.commentId + "like"}
-                                        >
-                                            <span
-                                                onClick={() => {
-                                                    setLikesCount(1);
-                                                    setDislikesCount(0);
-                                                    setAction("liked");
-                                                }}
-                                            >
-                                                {createElement(
-                                                    action === "liked"
-                                                        ? LikeFilled
-                                                        : LikeOutlined
-                                                )}
-                                                {likesCount}
-                                            </span>
-                                        </Tooltip>,
-                                        <Tooltip
-                                            title="Dislike"
-                                            key={item.commentId + "dislike"}
-                                        >
-                                            <span
-                                                onClick={() => {
-                                                    setLikesCount(0);
-                                                    setDislikesCount(1);
-                                                    setAction("disliked");
-                                                }}
-                                            >
-                                                {React.createElement(
-                                                    action === "disliked"
-                                                        ? DislikeFilled
-                                                        : DislikeOutlined
-                                                )}
-                                                {dislikesCount}
-                                            </span>
-                                        </Tooltip>,
-                                    ]}
                                 />
                             </div>
                         );
@@ -160,3 +122,44 @@ function CommentSection() {
 }
 
 export default CommentSection;
+
+// actions={[
+//     <Tooltip
+//         title="Like"
+//         key={item.commentId + "like"}
+//     >
+//         <span
+//             onClick={() => {
+//                 setLikesCount(1);
+//                 setDislikesCount(0);
+//                 setAction("liked");
+//             }}
+//         >
+//             {createElement(
+//                 action === "liked"
+//                     ? LikeFilled
+//                     : LikeOutlined
+//             )}
+//             {likesCount}
+//         </span>
+//     </Tooltip>,
+//     <Tooltip
+//         title="Dislike"
+//         key={item.commentId + "dislike"}
+//     >
+//         <span
+//             onClick={() => {
+//                 setLikesCount(0);
+//                 setDislikesCount(1);
+//                 setAction("disliked");
+//             }}
+//         >
+//             {React.createElement(
+//                 action === "disliked"
+//                     ? DislikeFilled
+//                     : DislikeOutlined
+//             )}
+//             {dislikesCount}
+//         </span>
+//     </Tooltip>,
+// ]}
