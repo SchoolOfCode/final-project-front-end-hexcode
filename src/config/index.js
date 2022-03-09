@@ -3,6 +3,9 @@
 //           and hardcoding temporarily while we get it tested across all pages and componenets
 // export const API_URL = process.env.REACT_APP_API_URL;
 
+// DEVELOPMENET/LOCAL VERSION OF BACK END SERVER
+//export const API_URL = "http://localhost:5000";
+
 // SAFETY-NET (STAGING) VERSION OF BACK END SERVER
 export const API_URL = "https://hexcode-safety-net-server.herokuapp.com";
 
