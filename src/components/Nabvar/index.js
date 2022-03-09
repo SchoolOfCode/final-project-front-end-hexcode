@@ -59,9 +59,12 @@ function Navbar(props) {
                             <AiOutlineClose />
                         </Link>
                     </li>
-                    <div className="navbar-pic">
+                    <div className="navbar-pic-section">
                     <Link to={"/homepage"}>
-                    <ProfileImage imageFileNumber={loggedInUserId} />
+                    <ProfileImage 
+                    imageFileNumber={loggedInUserId} 
+                    className="profile-pic"
+                    />
                     </Link>
                     </div>
                     <div className="new-event-button">
