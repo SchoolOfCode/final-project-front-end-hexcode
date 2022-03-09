@@ -52,21 +52,21 @@ function CreatePollPage() {
                 <h2 className="Title">Create a poll</h2>
                 <input
                     placeholder="Set a question for your poll"
-                    name="pollTitle"
+                    className="pollTitle"
                     value={question}
                     onChange={handleQuestionChange}
                     type="text"
                 />
                 <input
                     placeholder="Option"
-                    name="pollOption1"
+                    className="pollOption1"
                     value={option1}
                     onChange={handleOptionChange}
                     type="text"
                 />
                 <input
                     placeholder="Option"
-                    name="pollOption2"
+                    className="pollOption2"
                     value={option2}
                     onChange={handleOptionChange2}
                     type="text"
@@ -74,7 +74,7 @@ function CreatePollPage() {
 
                 <input
                     placeholder="Option"
-                    name="pollOption3"
+                    className="pollOption3"
                     value={option3}
                     onChange={handleOptionChange3}
                     type="text"
