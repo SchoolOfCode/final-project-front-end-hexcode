@@ -55,7 +55,7 @@ function Navbar(props) {
                 <ul className="nav-menu-items" onClick={showSidebar}>
                     <li className="navbar-toggle" key="1">
                         <Link to="#" className="menu-bars" key="1-Link">
-                            <AiOutlineClose />
+                            <AiOutlineClose className="close" />
                         </Link>
                     </li>
 

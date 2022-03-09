@@ -70,7 +70,9 @@ function CommentSection() {
     return (
         <>
             <div className="comment-section" key="100">
-                <h4 key="200">Posts</h4>
+                <h4 className="postsTitle" key="200">
+                    Posts
+                </h4>
                 <div className="comment-container" key="300">
                     {comments.map((item, currIndex) => {
                         return (

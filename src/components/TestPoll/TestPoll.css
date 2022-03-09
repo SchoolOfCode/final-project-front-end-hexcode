@@ -114,12 +114,17 @@
 
 .pollVoteButton {
     color: white;
-    background-color: #faad14;
+    background-color: #7f67b6;
     margin-bottom: 0.2em;
     border-radius: 5px;
     box-sizing: border-box;
     padding: 5px;
     width: 18em;
+}
+
+.pollVoteButton:hover {
+    border: solid 2px #7f67b6;
+    color: #4a3774;
 }
 
 .pollList {
@@ -172,7 +177,7 @@
 }
 
 .tempStyle-to-test-out-colours {
-    background-color: #ffcb36;
+    background-color: #7f67b6;
     background-color: #c63b5b;
     background-color: #314799;
     background-color: #e0e0de;
@@ -192,7 +197,7 @@ progress {
 }
 
 progress::-webkit-progress-bar {
-    background-color: orange;
+    background-color: #7f67b6;
 }
 
 .progress-bar span {
