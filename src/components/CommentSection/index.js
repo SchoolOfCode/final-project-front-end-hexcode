@@ -1,17 +1,19 @@
-// import React from "react";
-import React, { createElement, useState, useEffect } from "react";
-import { userComment } from "../../libs/data";
-import { Comment, Avatar, Tooltip, Input, Button } from "antd";
-import "antd/dist/antd.css";
-import {
-    LikeOutlined,
-    DislikeFilled,
-    DislikeOutlined,
-    LikeFilled,
-} from "@ant-design/icons";
+// import React, { createElement, useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
+// import { BiLeftTopArrowCircle, BiSend } from "react-icons/bi";
+import { BiSend } from "react-icons/bi";
+// import { Comment, Avatar, Tooltip, Input, Button } from "antd";
+import { Comment } from "antd";
+// import {
+//     LikeOutlined,
+//     DislikeFilled,
+//     DislikeOutlined,
+//     LikeFilled,
+// } from "@ant-design/icons";
 import ProfileImage from "../ProfileImage/index.js";
 import "./CommentSection.css";
-import { BiLeftTopArrowCircle, BiSend } from "react-icons/bi";
+import "antd/dist/antd.css";
+import { userComment } from "../../libs/data";
 import { API_URL } from "../../config/index.js";
 //08Mar SC: temp:
 //import { getImagefromUserId } from "../../libs/getImageFromUserId.js";
@@ -27,7 +29,8 @@ function CommentSection({ loggedInUserId, eventId }) {
     const [commentsDb, setCommentsDb] = useState(null);
     const [errorHappened, setErrorHappened] = useState(false);
 
-    const [inputValue, setInputValue] = useState("");
+    // const [inputValue, setInputValue] = useState("");
+    let inputRef = useRef(""); // 09Mar - with Jordan - replacing state with useRef - no re-rendering, and fixed our clear input button issue
     // const [likesCount, setLikesCount] = useState(0);
     // const [dislikesCount, setDislikesCount] = useState(0);
     // const [action, setAction] = useState(null);
@@ -39,41 +42,32 @@ function CommentSection({ loggedInUserId, eventId }) {
     // console.log(`src/components/CommentSection/ comments[] state object is:`);
     // console.log({ comments });
 
-    // TODO:Use effect here to fetch all Db comments for the event.
-
+    // DONE - Use effect here to fetch all Db comments for the event.
     useEffect(() => {
         async function getAllCommentsforEvent() {
             const response = await fetch(
                 `${API_URL}/events/${eventId}/comments`
             );
-            //TODO: check http status code returned - response.ok could be true or false
+            // check http status code returned - response.ok could be true or false
             if (!response.ok) {
-                //TODO: alert usre of error
-
+                //TODO: alert user of error - and maybe redirect to login etc?
                 console.log(
-                    `CommentSection-USE-EFFECT: fetch returned response.ok = false - Error.`
+                    `CommentSection-USE-EFFECT: fetch returned response.ok = false - ERROR.`
                 );
                 setErrorHappened(true);
             }
-            //TODO: otherwise, only if no error, carry on and attempt to set commentsDb array.
+            //otherwise, only if no error, carry on and attempt to set commentsDb array.
             const data = await response.json();
             console.log(
                 `CommentSection-USE-EFFECT: : after fetch, data retrieved is: `
             );
             console.log(data);
-
             const commentsArrayFromDatabase = data.payload;
-            //TODO: think about if we need to check for a blank comments object. Epmty comments object IS NOT an error BUT we might want to set a flag for the render. Or on the render just check if (!commentsObjectFromDatabase) - commentsObjectFromDatabase woiuld need to be declared outside of useEffect if we were to use it elswhere.
-            // UPDATE - NO NEED - would just check the state variable, commentsDb intead:
-            //   if (!commentsDb) {
-            //       do stuff here for case where there are no comments
-            // } else {
-            //      go ahead and render the comments
-            // }
             console.log(
                 `CommentSection-USE-EFFECT: : just before setting commentsDb state, commentsObjectFromDatabase=`
             );
             console.log({ commentsArrayFromDatabase });
+            //TODO: think about if we need to check for a blank comments object. Epmty comments object IS NOT an error BUT we might want to do something else on render
             setCommentsDb(commentsArrayFromDatabase);
         }
         //NB: ONLY attempt to fetch all comments for a given event IF that event id is a number (and not undefined or null)
@@ -86,23 +80,24 @@ function CommentSection({ loggedInUserId, eventId }) {
     }, [eventId, countNewComments]);
     // ie want to trigger useEffect on change of eventID OR a new comment being posted
 
+    // 09Mar - with Jordan - replacing state with useRef - no re-rendering, and fixed our clear input button issue - so the handleChange() is no longer needed!!!
     // Event Functions
-    function handleChange(e) {
-        setInputValue(e.target.value);
-    }
+    // function handleChange(e) {
+    //     setInputValue(e.target.value);
+    // }
 
     //function getImagePath(userId) {}
-    //  TODO: will have to write a new version of handleclick - ie handleDbclick. To post new comments to the Db.
-
+    //  DONE will have to write a new version of handleclick - ie handleDbclick. To post new comments to the Db.
     function handleClick(e) {
         e.preventDefault();
+
         if (USE_DB_COMMENTS) {
-            // TODO: call post-comments to post to database
+            // DONE - call post-comments to post the new comment to database
             async function postCommenttoDb() {
                 const newComment = {
                     eventId: eventId,
                     authorUserId: loggedInUserId,
-                    commentText: inputValue,
+                    commentText: inputRef.current.value,
                 };
                 console.log(
                     "******** COMMENTS SECTION - handleClick - postCommenttoDb: newComment = ***********"
@@ -126,8 +121,7 @@ function CommentSection({ loggedInUserId, eventId }) {
 
                 //trigger the useEffect to re-fetch all the comments from the database - doing this because the fetch gets lots of extra fields for author etc
                 //NB: this
-
-                setCountNewComments((countNewComments += 1));
+                setCountNewComments(countNewComments + 1);
                 // Yes - we understand that this will print the old countNewComments
                 console.log(
                     `COMMENTS SECTION - handleClick - countNewComments = ${countNewComments}`
@@ -135,7 +129,8 @@ function CommentSection({ loggedInUserId, eventId }) {
             }
 
             postCommenttoDb();
-            setInputValue("");
+            //setInputValue("");
+            inputRef.current.value = ""; // 09Mar - with Jordan - replacing state with useRef - no re-rendering, and fixed our clear input button issue
 
             // TODO: update state with the new comment as well (OR re-fetch)
             // const [commentsDb, setCommentsDb] - need to add object to array.
@@ -145,7 +140,7 @@ function CommentSection({ loggedInUserId, eventId }) {
                 ...comments,
                 {
                     ...comments,
-                    text: inputValue,
+                    text: inputRef.current.value, // 09Mar - with Jordan - replacing state with useRef - no re-rendering, and fixed our clear input button issue
                     author: "Dan",
                     //08Mar SC: will need to add something for the new fields
                     datetime: commentDateTime,
@@ -154,7 +149,7 @@ function CommentSection({ loggedInUserId, eventId }) {
                 },
             ];
             setComments(updateComment);
-            setInputValue("");
+            //setInputValue("");
         }
     }
 
@@ -171,6 +166,9 @@ function CommentSection({ loggedInUserId, eventId }) {
         //     `src/components/CommentSection/index.js: just before render, commentsDb state is: ${commentsDb} `
         // );
         // console.log({ commentsDb });
+
+        // 09Mar - with Jordan - replacing state with useRef - no re-rendering, and fixed our clear input button issue
+        //         using "ref={inputRef}" in  the input field below instead of inputValue
         return (
             <>
                 <div className="comment-section" key="100">
@@ -178,7 +176,7 @@ function CommentSection({ loggedInUserId, eventId }) {
                     <div className="comment-container" key="300">
                         {!commentsDb ? (
                             <div>
-                                Comments still being retrieved or not found...
+                                Comments still being retrieved or none found...
                             </div>
                         ) : (
                             commentsDb.map((commentsDb, currIndex) => {
@@ -212,7 +210,7 @@ function CommentSection({ loggedInUserId, eventId }) {
                     <input
                         className="enter-comment"
                         type="text"
-                        onChange={handleChange}
+                        ref={inputRef}
                     />
                     <button
                         className="send-Btn"
@@ -261,7 +259,7 @@ function CommentSection({ loggedInUserId, eventId }) {
                     <input
                         className="enter-comment"
                         type="text"
-                        onChange={handleChange}
+                        ref={inputRef}
                     />
                     <button
                         className="send-Btn"
