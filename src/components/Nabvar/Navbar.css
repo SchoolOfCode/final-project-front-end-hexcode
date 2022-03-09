@@ -114,11 +114,17 @@
 .addButton {
     color: #ffff;
     opacity: 80%;
-    font-size: 60px;
+    font-size: 20px;
     display: flex;
     justify-content: flex-start;
+    margin-top: 31px;
+    margin-left: 5px;
 }
 
 .addbutton:hover {
     color: #b6eac5;
+}
+
+.new-event-button{
+    display: inline-flex;
 }
