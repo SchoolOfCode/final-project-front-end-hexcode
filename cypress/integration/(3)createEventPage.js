@@ -1,6 +1,6 @@
 describe("renders the Create Event page", () => {
     it("renders the form", () => {
-        cy.visit("/createEvent");
+        // cy.visit("/createEvent");
 
         cy.get(".inputTitle").should("exist").contains("Title");
         cy.get("#title").should("exist");
@@ -28,12 +28,12 @@ describe("renders the Create Event page", () => {
     it("Populates the form and creates an event", () => {
         // Input a title
         cy.get("#title")
-            .type("Catch up over brunch", { delay: 200 })
+            .type("Catch up over brunch")
             .should("have.value", "Catch up over brunch");
 
         // Add a location
         cy.get("#location")
-            .type("Cafe Yolk", { delay: 200 })
+            .type("Cafe Yolk")
             .should("have.value", "Cafe Yolk");
 
         // Select users to add
@@ -44,7 +44,7 @@ describe("renders the Create Event page", () => {
 
         // Select a date
         cy.get("#date").click();
-        cy.contains(25).click();
+        cy.contains(24).click();
 
         //Select a time
         // cy.get("#time").click();
@@ -61,13 +61,13 @@ describe("renders the Create Event page", () => {
             );
         cy.get(".createEventButton").contains("Create Event").click();
     });
-    it("redirects to Homepage", () => {
-        cy.url().should("be.equal", "http://localhost:3000/homepage");
-    });
+    // it("redirects to Homepage", () => {
+    //     cy.url().should("be.equal", "http://localhost:3000/homepage");
+    // });
 });
 
 describe("Navigate to the newly created event", () => {
-    it("clicks on the newly created ecent", () => {
+    it("clicks on the newly created event", () => {
         cy.get(".hamburgerMenu").click();
         cy.get(".userEvents")
             .eq(0)
