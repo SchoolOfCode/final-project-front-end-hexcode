@@ -63,7 +63,7 @@ function Navbar(props) {
                     <Link to={"/homepage"}>
                     <ProfileImage 
                     imageFileNumber={loggedInUserId} 
-                    className="profile-pic"
+                    id="profilePic"
                     />
                     </Link>
                     </div>
