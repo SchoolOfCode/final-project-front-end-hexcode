@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose, AiFillPlusCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import ProfileImage from "../ProfileImage";
 import "./Navbar.css";
 
 import { API_URL } from "../../config/index.js";
@@ -58,15 +59,24 @@ function Navbar(props) {
                             <AiOutlineClose className="close" />
                         </Link>
                     </li>
-
+                    <div className="navbar-pic-section">
+                    <Link to={"/homepage"}>
+                    <ProfileImage 
+                    imageFileNumber={loggedInUserId} 
+                    id="profilePic"
+                    />
+                    </Link>
+                    </div>
+                    <div className="new-event-button">
+                    <h4 key="H-your-events" className="yourEventsTitle">
+                        YOUR EVENTS
+                    </h4>
                     <li className="addEventbtn" key="2">
                         <Link to={"/createEvent"} key="2-Link">
                             <AiFillPlusCircle className="addButton" />
                         </Link>
                     </li>
-                    <h4 key="H-your-events" className="yourEventsTitle">
-                        YOUR EVENTS
-                    </h4>
+                    </div>
                     {!userEvents ? (
                         <div key="no-events">No user events</div>
                     ) : (
