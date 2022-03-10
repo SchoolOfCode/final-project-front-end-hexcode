@@ -145,3 +145,7 @@
     font-size: 33px;
     color: #ffffff;
 }
+
+.homeIcon:hover{
+    color: #ec9c24;
+}
