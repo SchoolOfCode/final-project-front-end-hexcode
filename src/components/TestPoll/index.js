@@ -22,7 +22,7 @@ function TestPoll() {
     const pollResultsData = [
         {
             pollResultId: 1,
-            bgColor: "#6a1b9a",
+            bgColor: "#C63B5B",
             percentComplete: 70,
             pollResultText: "Sat 25th.  2 votes",
             pollQuestion: "Sat 25th",
@@ -30,7 +30,7 @@ function TestPoll() {
         },
         {
             pollResultId: 2,
-            bgColor: "#f780ed",
+            bgColor: "#ffcb36",
             percentComplete: 55,
             pollResultText: "Sun 26th.  3 votes",
             pollQuestion: "Sun 26th",
@@ -38,7 +38,7 @@ function TestPoll() {
         },
         {
             pollResultId: 3,
-            bgColor: "#8432d6",
+            bgColor: "#314799",
             percentComplete: 90,
             pollResultText: "Fri 12th.  1 vote",
             pollQuestion: "Fri 12th",

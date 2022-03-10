@@ -153,7 +153,8 @@ function CommentSection({ loggedInUserId, eventId }) {
         }
     }
 
-    //TODO: create new version to return which will map over the new commentsDb state and will pass into the Comment component.
+
+    //DONE: create new version to return which will map over the new commentsDb state and will pass into the Comment component.
     //  commentsDb.commentText
     // commentsDb.commentDateTimePosted
     // commentsDb.authorName
@@ -172,11 +173,14 @@ function CommentSection({ loggedInUserId, eventId }) {
         return (
             <>
                 <div className="comment-section" key="100">
-                    <h4 key="200">Posts</h4>
+                   <h4 className="postsTitle" key="200">
+                    Posts
+                </h4>
                     <div className="comment-container" key="300">
                         {!commentsDb ? (
                             <div>
                                 Comments still being retrieved or none found...
+
                             </div>
                         ) : (
                             commentsDb.map((commentsDb, currIndex) => {
@@ -229,7 +233,9 @@ function CommentSection({ loggedInUserId, eventId }) {
         return (
             <>
                 <div className="comment-section" key="100">
-                    <h4 key="200">Posts</h4>
+                    <h4 className="postsTitle" key="200">
+                    Posts
+                </h4>
                     <div className="comment-container" key="300">
                         {comments.map((item, currIndex) => {
                             return (
