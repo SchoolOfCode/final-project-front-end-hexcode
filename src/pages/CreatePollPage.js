@@ -1,9 +1,16 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 import { Button } from "antd";
 import "antd/dist/antd.css";
 import "./CreatePollPage.css";
+import { Link } from "react-router-dom";
+import Navbar from "../components/Nabvar";
 
-function CreatePollPage() {
+function CreatePollPage(props) {
+    const loggedInUserId = props.loggedInUserId;
+    const { id } = useParams();
+    const eventId = id; //re-assigning to a declarative name
+
     const [question, setQuestion] = useState("");
     const [option1, setOption1] = useState("");
     const [option2, setOption2] = useState("");
@@ -47,12 +54,14 @@ function CreatePollPage() {
     }
 
     return (
+<div>
         <form onSubmit={handleSubmit}>
             <div className="createpollpage-container">
                 <h2 className="Title">Create a poll</h2>
                 <input
                     placeholder="Set a question for your poll"
                     name="pollTitle"
+                    className="pollTitle"
                     value={question}
                     onChange={handleQuestionChange}
                     type="text"
@@ -60,6 +69,7 @@ function CreatePollPage() {
                 <input
                     placeholder="Option"
                     name="pollOption1"
+                    className="pollOption1"
                     value={option1}
                     onChange={handleOptionChange}
                     type="text"
@@ -67,6 +77,7 @@ function CreatePollPage() {
                 <input
                     placeholder="Option"
                     name="pollOption2"
+                    className="pollOption2"
                     value={option2}
                     onChange={handleOptionChange2}
                     type="text"
@@ -75,15 +86,21 @@ function CreatePollPage() {
                 <input
                     placeholder="Option"
                     name="pollOption3"
+                    className="pollOption3"
                     value={option3}
                     onChange={handleOptionChange3}
                     type="text"
                 />
             </div>
-
-            <Button className="createPollButton">Create Poll</Button>
-        </form>
+                   
+                <Link to={`/Event/${eventId}`}>
+                    <Button className="createPollButton">Create Poll</Button>
+                </Link>
+            </form>
+        </div>
     );
 }
 
 export default CreatePollPage;
+
+//<Link to={"/createEvent"} key="2-Link"></Link>

@@ -30,7 +30,7 @@ function Navbar(props) {
         }
         //NB: ONLY attempt to fetch all events for a given user id IF that user id is a number (and not undefined or null)
         console.log(
-            `src/components/Nabvar/index.js: typeof loggedInUserId= |${typeof loggedInUserId}| `
+            `src/components/Nabvar/index.js: typeof loggedInUserId= |${typeof loggedInUserId}| and loggedInUserId= |${loggedInUserId}| `
         );
 
         if (typeof loggedInUserId === "number") {

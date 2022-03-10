@@ -16,6 +16,7 @@ import TestPoll from "../TestPoll/index.js"; // SINEAD TEMP CODE TESTING POLL
 
 //07Mar SC: adding comment to force prettier to update
 function EventInformationSection({
+    eventId,
     eventTitle,
     eventDescription,
     eventLocation,
@@ -24,6 +25,7 @@ function EventInformationSection({
     organiserName,
     organiserProfilePicLink,
     organiserUserId,
+    loggedInUserId,
 }) {
     const [collapse, setCollapse] = useState(false);
 
@@ -101,9 +103,14 @@ function EventInformationSection({
 
                 <div className={!collapse ? "testPoll" : "hide"}>
                     <div className="people-title-container ">
-                        <h3 className="peopleTitle">Polls:</h3>
+                        <h3 className="peopleTitle" id="poll">
+                            Polls:
+                        </h3>
                         <Link to="/CreatePollPage">
-                            <button className="add-attendees-btn">
+                            <button
+                                id="createPoll"
+                                className="add-attendees-btn"
+                            >
                                 <AiFillPlusCircle />
                             </button>
                         </Link>
@@ -112,7 +119,10 @@ function EventInformationSection({
                 </div>
             </div>
 
-            <br />
+            <br className={!collapse ? "" : "hide"}></br>
+            <br className={!collapse ? "" : "hide"}></br>
+            <br className={!collapse ? "" : "hide"}></br>
+
             {/* arrow button */}
             <div className="collapseSection">
                 <button
@@ -125,7 +135,10 @@ function EventInformationSection({
 
             <div className="pollSection"></div>
             <div className="commentSection">
-                <CommentSection />
+                <CommentSection
+                    loggedInUserId={loggedInUserId}
+                    eventId={eventId}
+                />
             </div>
         </div>
     );
