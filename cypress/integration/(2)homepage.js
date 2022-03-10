@@ -10,7 +10,7 @@ describe("navigates hamburger menu to create an event", () => {
     it('opens the menu and creates a new event', ()=> {
         cy.get('.hamburgerMenu').click()
         cy.get('.yourEventsTitle').contains('YOUR EVENTS')
-        cy.get('.addEventbtn').click()
+        cy.get('.addButton').click()
     })
     // it("redirects to createEventPage", () => {
         
