@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect, useContext } from "react"; //useContext
+import { Link, useNavigate } from "react-router-dom";
 import {
     DatePicker,
     Input,
@@ -15,11 +15,15 @@ import "antd/dist/antd.css";
 import "./CreateEvent.css";
 import moment from "moment";
 import "moment/locale/zh-cn";
+import { PageWrapper } from "../App/index.js"; //useContext
 
 import { API_URL } from "../../config/index.js";
 const API_END_POINT = "/events";
 
 function CreateEventSection(props) {
+    let { pageState, setPageState } = useContext(PageWrapper); //useContext
+    console.log("*********************************", pageState); //useContext
+
     const loggedInUserId = props.loggedInUserId; //coming from App/index.js via CreateEvent page
 
     // States
@@ -33,6 +37,8 @@ function CreateEventSection(props) {
     const [eventDate, setEventDate] = useState(null); // because the date feidl ins
     const [eventTime, setEventTime] = useState("");
     const [personMenu, setPersonMenu] = useState([]);
+
+    const navigate = useNavigate();
 
     function postData() {
         async function createEvent() {
@@ -54,17 +60,11 @@ function CreateEventSection(props) {
 
             // POST (Insert) the newly created event to the database and return with the eventId for the newly created Event.
             //07Mar - updating the POST to use the URL constants
-            const response = await fetch(
-                // "https://hexcode-safety-net-server.herokuapp.com/events/",
-                // `https://hexcode-arrange-group-event.herokuapp.com/events/`,
-                // `${API_URL}/events`,
-                `${API_URL}${API_END_POINT}`,
-                {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(newEvent),
-                }
-            );
+            const response = await fetch(`${API_URL}${API_END_POINT}`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(newEvent),
+            });
 
             //TODO: capture the new eventId returned and update the Event object in state with it.
             // consider moving state up a level so that the new event can be passed into Display Event without re-fetching
@@ -75,8 +75,15 @@ function CreateEventSection(props) {
 
             console.log({ data });
 
+            // DONE: get real new Event id from data
+            let newEventId = data.eventId;
+            //TODO: add error-checking - if eventId is empty/null/undefined/not an number - DO SOMETHING
+
             //new event id comes back as part of 'data'
-            //TODO: redirect to event/id page for the newly created event
+            setPageState({ ...pageState, eventId: newEventId });
+
+            //DONE: edirect to event/id page for the newly created event
+            navigate(`/Event/${newEventId}`);
         }
         createEvent();
     }
@@ -210,15 +217,6 @@ function CreateEventSection(props) {
                             onChange={onChangeTime}
                         />
                     </label>
-                    <p className="disclaimer">
-                        <i>
-                            {" "}
-                            If you havent decided on a date or location dont
-                            worry, you can decide this later by adding a poll on
-                            the event and editing the event details once
-                            decided.
-                        </i>
-                    </p>
                     <h3 className="inputTitle">Description</h3>
                     <label>
                         <TextArea
@@ -242,6 +240,15 @@ function CreateEventSection(props) {
                             Create Event
                         </Button>
                     </Link>
+
+                    <p className="disclaimer">
+                        <i>
+                            If you havent decided on a date or location dont
+                            worry, you can decide this later by adding a poll on
+                            the event and editing the event details once
+                            decided.
+                        </i>
+                    </p>
                 </form>
             </div>
         </div>

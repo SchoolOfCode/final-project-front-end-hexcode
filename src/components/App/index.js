@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react"; //useContext
 
 //import Navbar from '../Nabvar';
 import CreateEvent from "../../pages/CreateEvent";
@@ -12,6 +12,14 @@ import CreatePollPage from "../../pages/CreatePollPage";
 
 import { API_URL } from "../../config/index.js"; //the fetch will need the URL for the back end
 const API_END_POINT = "/appusers/search?email="; //must fetch from this exact endpoint, plus email address to retrieve the logged-in-users details including the user ID.
+
+//TODO: context stuff
+// create context - once in app
+// provide context - once in app
+// (in destinations - consume context - once per every Component
+
+//useContext: created PageWrapper variable - export so other pages lower down can import it.
+export let PageWrapper = React.createContext();
 
 //07Mar SC: adding comment to force prettier to update
 function App() {
@@ -26,10 +34,11 @@ function App() {
         useState("");
     const [errorHappened, setErrorHappened] = useState(false);
 
-    //TODO: context stuff
-    // create context - once in app
-    // provide context - once in app
-    // (in destinations - consume context - once per every Component
+    //useContext: created a state for context - will be the whole global state
+    const [pageState, setPageState] = useState({
+        loggedInUserId: 0,
+        eventId: 0,
+    }); //useContext: END
 
     // DONE step 1 - can just be to get it to print out a console.log message - to make sure login page is triggering it correctly
     // DONE step 0 - take in the API-URL
@@ -138,15 +147,6 @@ function App() {
 
     //      -  DONE - pass to HomePage, - not currently needed - but might be if we decide to show data specific to loggedin user eg manage profile, manage contacts etc
 
-    // KEEP THESE JUST TO MAKE IT FASTER TO ADD THEM AS PROPS BELOW IF NEEDED:
-    // loggedInUserId = {loggedInUserId}
-    // loggedInUserEmailLoggedInUserEmail = {loggedInUserEmailLoggedInUserEmail}
-    // loggedInUserHasAccountLoggedInUserHasAccount  = {loggedInUserHasAccountLoggedInUserHasAccount}
-    // loggedInUserFirstNameLoggedInUserFirstName  = {loggedInUserFirstNameLoggedInUserFirstName}
-    // loggedInUserLastNameLoggedInUserLastName = {loggedInUserLastNameLoggedInUserLastName}
-    // loggedInUserNameLoggedInUserName = {loggedInUserNameLoggedInUserName}
-    // loggedInUserProfilePicLink = {loggedInUserProfilePicLink}
-
     //TODO: wrap retrun in if state - check if has error - then render something else, eg redirect to login page
     if (errorHappened) {
         console.log(
@@ -157,40 +157,50 @@ function App() {
 
         //else do this
     }
+
+    //useContext: added PageWrapper tags - and links pageState, setPageState to that PageWrapper.
     return (
         <div className="App">
-            <div className="nav-container"></div>
-            <Router>
-                <Routes>
-                    <Route
-                        path="/"
-                        element={
-                            <LoginPage handleLoginClick={handleLoginClick} />
-                        }
-                    />
-                    <Route
-                        path="/homepage"
-                        element={<HomePage loggedInUserId={loggedInUserId} />}
-                    />
+            <PageWrapper.Provider value={{ pageState, setPageState }}>
+                <div className="nav-container"></div>
+                <Router>
+                    <Routes>
+                        <Route
+                            path="/"
+                            element={
+                                <LoginPage
+                                    handleLoginClick={handleLoginClick}
+                                />
+                            }
+                        />
+                        <Route
+                            path="/homepage"
+                            element={
+                                <HomePage loggedInUserId={loggedInUserId} />
+                            }
+                        />
 
-                    <Route
-                        path="/CreatePollPage"
-                        element={
-                            <CreatePollPage loggedInUserId={loggedInUserId} />
-                        }
-                    />
-                    <Route
-                        path="/createEvent"
-                        element={
-                            <CreateEvent loggedInUserId={loggedInUserId} />
-                        }
-                    />
-                    <Route
-                        path="/event/:id"
-                        element={<Event loggedInUserId={loggedInUserId} />}
-                    />
-                </Routes>
-            </Router>
+                        <Route
+                            path="/CreatePollPage"
+                            element={
+                                <CreatePollPage
+                                    loggedInUserId={loggedInUserId}
+                                />
+                            }
+                        />
+                        <Route
+                            path="/createEvent"
+                            element={
+                                <CreateEvent loggedInUserId={loggedInUserId} />
+                            }
+                        />
+                        <Route
+                            path="/event/:id"
+                            element={<Event loggedInUserId={loggedInUserId} />}
+                        />
+                    </Routes>
+                </Router>
+            </PageWrapper.Provider>
         </div>
     );
 }
