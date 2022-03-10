@@ -132,10 +132,16 @@
 }
 
 .close {
-    margin-left: 120px;
+    margin-left: 90px;
     margin-top: 15px;
 }
 
 .new-event-button{
     display: inline-flex;
+}
+
+.homeIcon{
+    margin-top: 16px;
+    font-size: 33px;
+    color: #ffffff;
 }
