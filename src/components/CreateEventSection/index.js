@@ -210,6 +210,15 @@ function CreateEventSection(props) {
                             onChange={onChangeTime}
                         />
                     </label>
+                    <p className="disclaimer">
+                        <i>
+                            {" "}
+                            If you havent decided on a date or location dont
+                            worry, you can decide this later by adding a poll on
+                            the event and editing the event details once
+                            decided.
+                        </i>
+                    </p>
                     <h3 className="inputTitle">Description</h3>
                     <label>
                         <TextArea
@@ -233,13 +242,6 @@ function CreateEventSection(props) {
                             Create Event
                         </Button>
                     </Link>
-                    <p className="disclaimer">
-                        <i>
-                            If you havent decided on a date or location 
-                            you can decide this later by adding a poll on
-                            your event page.
-                        </i>
-                    </p>
                 </form>
             </div>
         </div>
