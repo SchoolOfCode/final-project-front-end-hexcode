@@ -1,17 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"); */
 
 .createpollpage-container {
     padding-top: 30%;
 }
 
-.Title {
+h2.Title {
     color: #4a3774;
     text-align: center;
     justify-content: center;
     padding: 30px;
     font-size: 35px;
-    font-family: Montserrat;
-    font-weight: 600;
+    font-weight: bolder;
 }
 
 input {
@@ -30,7 +29,6 @@ input {
     color: white;
     display: flex;
     display: block;
-
     margin: auto;
     width: 30%;
     border-radius: 10px;
@@ -40,6 +38,8 @@ input {
     transition: ease 0.3s;
     outline: none;
     border: none;
+    height: 30px;
+    font-weight: 600;
 }
 
 .createPollButton:hover {
