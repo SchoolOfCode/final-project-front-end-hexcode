@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Nabvar";
 import havingfun from "../images/havingfun.png";
+import radunoL from "../images/radunoL.png";
 import "./homePage.css";
 import { FcSpeaker } from "react-icons/fc";
 // import radunoTitle from "../images/radunoTitle.png";
@@ -17,6 +18,7 @@ function HomePage(props) {
         <div>
             <Navbar loggedInUserId={loggedInUserId} />
             {/* <img src={radunoTitle} alt="background" className="logo" /> */}
+
             <div className="definition">
                 <div className="titleandSpeaker">
                     <h2 className="radunoTitle">raduno</h2>
