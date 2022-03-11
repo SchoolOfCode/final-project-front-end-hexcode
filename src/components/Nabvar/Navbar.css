@@ -78,7 +78,7 @@
 
 .userEvents a {
     background-color: #ffff;
-    font-size: 10px;
+    font-size: 12px;
     border: none;
     border-radius: 5px;
     margin: 0.2rem;
@@ -108,6 +108,9 @@
     margin-right: 0.5rem;
     margin-top: 0.3rem;
     margin-bottom: 0.2rem;
+    font-family: -apple-system, BlinkMacSystemFont, ‘Segoe UI’, Roboto, ‘Helvetica Neue’, Arial, ‘Noto Sans’, sans-serif, ‘Apple Color Emoji’, ‘Segoe UI Emoji’, ‘Segoe UI Symbol’, ‘Noto Color Emoji’;
+
+
 }
 
 .nav-menu-items {
@@ -129,10 +132,20 @@
 }
 
 .close {
-    margin-left: 120px;
+    margin-left: 90px;
     margin-top: 15px;
 }
 
 .new-event-button{
     display: inline-flex;
+}
+
+.homeIcon{
+    margin-top: 16px;
+    font-size: 33px;
+    color: #ffffff;
+}
+
+.homeIcon:hover{
+    color: #ec9c24;
 }

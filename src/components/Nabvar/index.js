@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
-import { AiOutlineClose, AiFillPlusCircle } from "react-icons/ai";
+import { AiOutlineClose, AiFillPlusCircle, AiOutlineHome } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import ProfileImage from "../ProfileImage";
 import "./Navbar.css";
+
 
 import { API_URL } from "../../config/index.js";
 
@@ -55,17 +56,20 @@ function Navbar(props) {
             <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
                 <ul className="nav-menu-items" onClick={showSidebar}>
                     <li className="navbar-toggle" key="1">
+                    <Link to={"/homepage"}>
+                    <AiOutlineHome className="homeIcon"/>
+                    </Link>
                         <Link to="#" className="menu-bars" key="1-Link">
                             <AiOutlineClose className="close" />
                         </Link>
                     </li>
                     <div className="navbar-pic-section">
-                        <Link to={"/homepage"}>
-                            <ProfileImage
-                                imageFileNumber={loggedInUserId}
-                                id="profilePic"
-                            />
-                        </Link>
+
+                    <ProfileImage 
+                    imageFileNumber={loggedInUserId} 
+                    id="profilePic"
+                    />
+                        
                     </div>
                     <div className="new-event-button">
                         <h4 key="H-your-events" className="yourEventsTitle">

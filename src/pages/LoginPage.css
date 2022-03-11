@@ -63,6 +63,7 @@ input:hover {
     transition: ease 0.3s;
     outline: none;
     border: none;
+    font-size: 12px;
 }
 
 .loginbutton:hover {
@@ -84,6 +85,7 @@ input:hover {
     transition: ease 0.3s;
     outline: none;
     border: none;
+    font-size: 12px;
 }
 
 .signupbutton:hover {
