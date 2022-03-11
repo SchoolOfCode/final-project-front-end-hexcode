@@ -132,6 +132,15 @@ function CreateEventSection(props) {
             <Menu.Item id="James" key="James" icon={<UserOutlined />}>
                 James
             </Menu.Item>
+            <Menu.Item key="Dave" id="Dave" icon={<UserOutlined />}>
+                Dave
+            </Menu.Item>
+            <Menu.Item key="Akito" id="Akito" icon={<UserOutlined />}>
+                Akito
+            </Menu.Item>
+            <Menu.Item key="Maria" id="Maria" icon={<UserOutlined />}>
+                Maria
+            </Menu.Item>
         </Menu>
     );
 
@@ -166,7 +175,7 @@ function CreateEventSection(props) {
                     <h3 className="inputTitle">People</h3>
                     <div className="createPeople">
                         <Space className="dropdownPeople" wrap>
-                            <Input
+                            <TextArea
                                 className="inputedpeople"
                                 prefix={<UserOutlined />}
                                 value={personMenu}

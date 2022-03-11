@@ -29,12 +29,12 @@ label,
 }
 
 input[type="text"] {
-    border: solid 2px #b6eac5;
+    border: solid 2px #ec9c24;
     border-radius: 9px;
 }
 
 .descriptionInput {
-    border: solid 2px #b6eac5;
+    border: solid 2px #ec9c24;
     border-radius: 9px;
 }
 
@@ -63,12 +63,12 @@ input[type="text"] {
     margin-left: 100px;
 }
 .inputedpeople {
-    border: solid 2px #b6eac5;
+    border: solid 2px #ec9c24;
     border-radius: 9px;
 }
 
 .addingpeople {
-    border: solid 2px #b6eac5;
+    border: solid 2px #ec9c24;
     border-radius: 6px;
     margin-bottom: 20px;
     box-shadow: none;
@@ -79,12 +79,12 @@ input[type="text"] {
     text-align: center;
 }
 .datePicker {
-    border: solid 2px #b6eac5;
+    border: solid 2px #ec9c24;
     border-radius: 10px;
 }
 
 .timePicker {
-    border: solid 2px #b6eac5;
+    border: solid 2px #ec9c24;
     border-radius: 10px;
 }
 .dropdownPeople {
