@@ -1,5 +1,8 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+// import { useState, useContext } from "react"; //useContext
+// import { PageWrapper } from "../App/index.js"; //useContext
+
+import { Link, useNavigate } from "react-router-dom"; //useNavigate
 import {
     DatePicker,
     Input,
@@ -20,6 +23,9 @@ import { API_URL } from "../../config/index.js";
 const API_END_POINT = "/events";
 
 function CreateEventSection(props) {
+    // let { pageState, setPageState } = useContext(PageWrapper); //useContext
+    // console.log("************* CreateEventSection - pageState:", pageState); //useContext
+
     const loggedInUserId = props.loggedInUserId; //coming from App/index.js via CreateEvent page
 
     // States
@@ -33,6 +39,11 @@ function CreateEventSection(props) {
     const [eventDate, setEventDate] = useState(null); // because the date feidl ins
     const [eventTime, setEventTime] = useState("");
     const [personMenu, setPersonMenu] = useState([]);
+
+    const navigate = useNavigate(); //useNavigate - must set in top level in a component
+
+    let newEventId = 0; 
+    //moving outside of async function so that link in return statement can access newEventId
 
     function postData() {
         async function createEvent() {
@@ -54,17 +65,11 @@ function CreateEventSection(props) {
 
             // POST (Insert) the newly created event to the database and return with the eventId for the newly created Event.
             //07Mar - updating the POST to use the URL constants
-            const response = await fetch(
-                // "https://hexcode-safety-net-server.herokuapp.com/events/",
-                // `https://hexcode-arrange-group-event.herokuapp.com/events/`,
-                // `${API_URL}/events`,
-                `${API_URL}${API_END_POINT}`,
-                {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(newEvent),
-                }
-            );
+            const response = await fetch(`${API_URL}${API_END_POINT}`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(newEvent),
+            });
 
             //TODO: capture the new eventId returned and update the Event object in state with it.
             // consider moving state up a level so that the new event can be passed into Display Event without re-fetching
@@ -75,8 +80,14 @@ function CreateEventSection(props) {
 
             console.log({ data });
 
-            //new event id comes back as part of 'data'
-            //TODO: redirect to event/id page for the newly created event
+            // DONE: get real new Event id from data
+            // let newEventId = data.eventId;
+            newEventId = data.eventId;
+            //TODO: add error-checking - if eventId is empty/null/undefined/not an number - DO SOMETHING
+
+            //DONE: jordan: redirect to event/id page for the newly created event
+            //useNavigate
+            navigate(`/Event/${newEventId}`);
         }
         createEvent();
     }
@@ -210,15 +221,7 @@ function CreateEventSection(props) {
                             onChange={onChangeTime}
                         />
                     </label>
-                    <p className="disclaimer">
-                        <i>
-                            {" "}
-                            If you havent decided on a date or location dont
-                            worry, you can decide this later by adding a poll on
-                            the event and editing the event details once
-                            decided.
-                        </i>
-                    </p>
+
                     <h3 className="inputTitle">Description</h3>
                     <label>
                         <TextArea
@@ -233,15 +236,23 @@ function CreateEventSection(props) {
                         />
                         <div style={{ margin: "24px 0" }} />
                     </label>
-                    <Link to="/homepage">
-                        <Button
+                    <Link to={`/Event/${newEventId}`}>
+                           <button
                             className="createEventButton"
                             type="primary"
                             onClick={handleClick}
                         >
                             Create Event
-                        </Button>
-                    </Link>
+                        </button>
+                        </Link>
+                    <p className="disclaimer">
+                        <i>
+                          
+                      If you can't decide on a single date, you can add a
+                            poll later to make things easier!
+
+                        </i>
+                    </p>
                 </form>
             </div>
         </div>

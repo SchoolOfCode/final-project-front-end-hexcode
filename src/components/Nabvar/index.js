@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
-import { AiOutlineClose, AiFillPlusCircle } from "react-icons/ai";
+import { AiOutlineClose, AiFillPlusCircle, AiOutlineHome } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import ProfileImage from "../ProfileImage";
 import "./Navbar.css";
 
+
 import { API_URL } from "../../config/index.js";
 
 function Navbar(props) {
-    // props - warning - not necessarily filled on first render, so beware in fetch requests
+    // PROPS  - warning - not necessarily filled on first render, so beware in fetch requests
     const loggedInUserId = props.loggedInUserId; //coming from App/index.js, via <Event>, <HomePage> or <CreateEvent>
 
-    // States
+    // STATES
     const [sidebar, setSidebar] = useState(false);
     const [userEvents, setUserEvents] = useState(false);
 
@@ -55,27 +56,30 @@ function Navbar(props) {
             <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
                 <ul className="nav-menu-items" onClick={showSidebar}>
                     <li className="navbar-toggle" key="1">
+                    <Link to={"/homepage"}>
+                    <AiOutlineHome className="homeIcon"/>
+                    </Link>
                         <Link to="#" className="menu-bars" key="1-Link">
                             <AiOutlineClose className="close" />
                         </Link>
                     </li>
                     <div className="navbar-pic-section">
-                    <Link to={"/homepage"}>
+
                     <ProfileImage 
                     imageFileNumber={loggedInUserId} 
                     id="profilePic"
                     />
-                    </Link>
+                        
                     </div>
                     <div className="new-event-button">
-                    <h4 key="H-your-events" className="yourEventsTitle">
-                        YOUR EVENTS
-                    </h4>
-                    <li className="addEventbtn" key="2">
-                        <Link to={"/createEvent"} key="2-Link">
-                            <AiFillPlusCircle className="addButton" />
-                        </Link>
-                    </li>
+                        <h4 key="H-your-events" className="yourEventsTitle">
+                            YOUR EVENTS
+                        </h4>
+                        <li className="addEventbtn" key="2">
+                            <Link to={"/createEvent"} key="2-Link">
+                                <AiFillPlusCircle className="addButton" />
+                            </Link>
+                        </li>
                     </div>
                     {!userEvents ? (
                         <div key="no-events">No user events</div>

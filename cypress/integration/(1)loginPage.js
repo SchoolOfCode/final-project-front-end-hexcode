@@ -5,7 +5,10 @@ describe("renders the homepage", () => {
         cy.get("#password-field").should("exist")
         cy.get(".loginbutton").should("exist")
         cy.get(".signupbutton").should("exist")
-        cy.get(".Title").should("exist").contains("Raduno!")
+        
+        cy.get(".radunoLogo")
+            .find("img")
+            .should("exist", "have.attr", "src", "radunoL");
     })
 })
 

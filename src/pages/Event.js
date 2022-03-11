@@ -1,6 +1,8 @@
 import React from "react";
 import EventInformationSection from "../components/EventInformationSection";
-import { useEffect, useState } from "react";
+import { useState, useEffect, useContext } from "react"; //useContext
+import { PageWrapper } from "../components/App/index.js"; //useContext
+
 // import useFetch from "../CustomHooks/customHooks";
 import { useParams } from "react-router-dom";
 
@@ -9,13 +11,28 @@ import Navbar from "../components/Nabvar";
 import { API_URL } from "../config/index.js";
 
 function Event(props) {
+    //STATE - N/A
+    //CONTEXT
+    let { pageState, setPageState } = useContext(PageWrapper); //useContext
+    // so now we can access pageState.loggedInUserId and pageState.eventId //useContext
+    console.log("******************** Event.js - pageState: ", pageState); //useContext
+
     //PROPS - coming from App/index.js
     const loggedInUserId = props.loggedInUserId;
 
     //PARAMS - from URL
     const { id } = useParams();
+
+    //jordan: new event id comes back as part of 'data' - useContext
+    if (pageState.eventId != id) {
+        setPageState({ ...pageState, eventId: id });
+    }
     let eventId = 0;
     eventId = id; //re-assigning to a declarative name
+    // const eventId = pageState.eventId; //useContext
+    console.log(
+        `££££££££££££ Event.js pageState.eventId = ${pageState.eventId}`
+    );
 
     console.log(`src/pages/Event.js: TOP OF PAGE id param= |${id}| `);
     console.log(`src/pages/Event.js: TOP OF PAGE eventId= |${eventId}| `);
