@@ -1,5 +1,8 @@
-import { useState, useEffect, useContext } from "react"; //useContext
-import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+// import { useState, useContext } from "react"; //useContext
+// import { PageWrapper } from "../App/index.js"; //useContext
+
+import { Link, useNavigate } from "react-router-dom"; //useNavigate
 import {
     DatePicker,
     Input,
@@ -15,14 +18,13 @@ import "antd/dist/antd.css";
 import "./CreateEvent.css";
 import moment from "moment";
 import "moment/locale/zh-cn";
-import { PageWrapper } from "../App/index.js"; //useContext
 
 import { API_URL } from "../../config/index.js";
 const API_END_POINT = "/events";
 
 function CreateEventSection(props) {
-    let { pageState, setPageState } = useContext(PageWrapper); //useContext
-    console.log("*********************************", pageState); //useContext
+    // let { pageState, setPageState } = useContext(PageWrapper); //useContext
+    // console.log("************* CreateEventSection - pageState:", pageState); //useContext
 
     const loggedInUserId = props.loggedInUserId; //coming from App/index.js via CreateEvent page
 
@@ -38,7 +40,7 @@ function CreateEventSection(props) {
     const [eventTime, setEventTime] = useState("");
     const [personMenu, setPersonMenu] = useState([]);
 
-    const navigate = useNavigate();
+    const navigate = useNavigate(); //useNavigate - must set in top level in a component
 
     function postData() {
         async function createEvent() {
@@ -79,10 +81,8 @@ function CreateEventSection(props) {
             let newEventId = data.eventId;
             //TODO: add error-checking - if eventId is empty/null/undefined/not an number - DO SOMETHING
 
-            //new event id comes back as part of 'data'
-            setPageState({ ...pageState, eventId: newEventId });
-
-            //DONE: edirect to event/id page for the newly created event
+            //DONE: jordan: redirect to event/id page for the newly created event
+            //useNavigate
             navigate(`/Event/${newEventId}`);
         }
         createEvent();
@@ -231,22 +231,21 @@ function CreateEventSection(props) {
                         />
                         <div style={{ margin: "24px 0" }} />
                     </label>
-                    <Link to="/homepage">
-                        <Button
-                            className="createEventButton"
-                            type="primary"
-                            onClick={handleClick}
-                        >
-                            Create Event
-                        </Button>
-                    </Link>
+                    {/* <Link to="/homepage"> */}
+                    <Button
+                        className="createEventButton"
+                        type="primary"
+                        onClick={handleClick}
+                    >
+                        Create Event
+                    </Button>
+                    {/* </Link> */}
 
                     <p className="disclaimer">
                         <i>
-                            If you havent decided on a date or location dont
-                            worry, you can decide this later by adding a poll on
-                            the event and editing the event details once
-                            decided.
+                            If you haven't yet decided on a date or location,
+                            you can do this later by adding a poll on your
+                            event's page.
                         </i>
                     </p>
                 </form>

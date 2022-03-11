@@ -1,12 +1,21 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
+import React, { useState, useContext } from "react"; //useContext
+import { PageWrapper } from "../components/App/index.js"; //useContext
+
 import { useParams } from "react-router-dom";
 import { Button } from "antd";
 import "antd/dist/antd.css";
 import "./CreatePollPage.css";
 import { Link } from "react-router-dom";
+// import { Link, useNavigate } from "react-router-dom"; //useNavigate
 import Navbar from "../components/Nabvar";
 
 function CreatePollPage(props) {
+    let { pageState, setPageState } = useContext(PageWrapper); //useContext
+    // so now we can access pageState.loggedInUserId and pageState.eventId //useContext
+
+    console.log("************* CreatePollPage - pageState:", pageState); //useContext
+
     const loggedInUserId = props.loggedInUserId;
     const { id } = useParams();
     const eventId = id; //re-assigning to a declarative name
@@ -16,7 +25,13 @@ function CreatePollPage(props) {
     const [option2, setOption2] = useState("");
     const [option3, setOption3] = useState("");
 
-    const url = " ";
+    // const navigate = useNavigate(); //useNavigate - must set in top level in a component
+
+    //let existingEventId = 8;
+    //DONE - instead of hard-coding above, take in eventId and pass it on
+    //  once finished creating poll
+    //redirect to event/id page for the same event
+    //const url = " ";
 
     function handleQuestionChange(e) {
         setQuestion(e.target.value);
@@ -41,17 +56,24 @@ function CreatePollPage(props) {
     // NOT IN USE ATM
     function handleSubmit(e) {
         e.preventDefault();
-        const poll = { question, option1, option2 };
-        const newPoll = {
-            method: "POST",
-            body: JSON.stringify(poll),
-            headers: { "Content-Type": "application/json" },
-        };
 
-        fetch(url, newPoll)
-            .then((res) => res.json())
-            .then((res) => console.log(res));
-        console.log(poll);
+        console.log(
+            "+++++++++++++++  In Create Poll - about to return to Display Event"
+        );
+        //useNavigate
+        //navigate(`/Event/${existingEventId}`);
+
+        // const poll = { question, option1, option2 };
+        // const newPoll = {
+        //     method: "POST",
+        //     body: JSON.stringify(poll),
+        //     headers: { "Content-Type": "application/json" },
+        // };
+
+        // fetch(url, newPoll)
+        //     .then((res) => res.json())
+        //     .then((res) => console.log(res));
+        // console.log(poll);
     }
 
     return (
@@ -95,7 +117,7 @@ function CreatePollPage(props) {
                     />
                 </div>
 
-                <Link to={`/Event/${eventId}`}>
+                <Link to={`/Event/${pageState.eventId}`}>
                     <Button className="createPollButton">Create Poll</Button>
                 </Link>
             </form>
@@ -106,3 +128,7 @@ function CreatePollPage(props) {
 export default CreatePollPage;
 
 //<Link to={"/createEvent"} key="2-Link"></Link>
+
+// <Link to={`/Event/${eventId}`}>
+//     <Button className="createPollButton">Create Poll</Button>
+// </Link>;

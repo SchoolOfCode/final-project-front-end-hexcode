@@ -19,7 +19,7 @@ const API_END_POINT = "/appusers/search?email="; //must fetch from this exact en
 // (in destinations - consume context - once per every Component
 
 //useContext: created PageWrapper variable - export so other pages lower down can import it.
-export let PageWrapper = React.createContext();
+export let PageWrapper = React.createContext(); //useContext
 
 //07Mar SC: adding comment to force prettier to update
 function App() {
@@ -159,6 +159,8 @@ function App() {
     }
 
     //useContext: added PageWrapper tags - and links pageState, setPageState to that PageWrapper.
+    //TODO: could we set the globla
+    //setPageState({ ...pageState, eventId: :id });
     return (
         <div className="App">
             <PageWrapper.Provider value={{ pageState, setPageState }}>

@@ -8,10 +8,10 @@ import "./Navbar.css";
 import { API_URL } from "../../config/index.js";
 
 function Navbar(props) {
-    // props - warning - not necessarily filled on first render, so beware in fetch requests
+    // PROPS  - warning - not necessarily filled on first render, so beware in fetch requests
     const loggedInUserId = props.loggedInUserId; //coming from App/index.js, via <Event>, <HomePage> or <CreateEvent>
 
-    // States
+    // STATES
     const [sidebar, setSidebar] = useState(false);
     const [userEvents, setUserEvents] = useState(false);
 
