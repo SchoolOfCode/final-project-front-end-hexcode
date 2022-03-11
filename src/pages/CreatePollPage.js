@@ -78,6 +78,7 @@ function CreatePollPage(props) {
 
     return (
         <div>
+
             <Navbar loggedInUserId={loggedInUserId} />
             <form onSubmit={handleSubmit}>
                 <div className="createpollpage-container">
@@ -117,8 +118,9 @@ function CreatePollPage(props) {
                     />
                 </div>
 
+
                 <Link to={`/Event/${pageState.eventId}`}>
-                    <Button className="createPollButton">Create Poll</Button>
+                    <button className="createPollButton">Create Poll</button>
                 </Link>
             </form>
         </div>

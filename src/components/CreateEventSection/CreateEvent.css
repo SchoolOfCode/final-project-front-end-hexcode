@@ -9,14 +9,121 @@
 .createEventTitle {
     display: flex;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 20px;
     color: #4a3774;
-    margin-top: 10px;
+    margin-top: 15px;
+    font-weight: bolder;
 }
 
 .formContainer {
     z-index: 1;
     display: flex;
+}
+
+input[type="text"] {
+    border: solid 2px #4a3774;
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type="text"]:hover {
+    border: solid 2px #ec9c24;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border: solid 2px #ec9c24;
+}
+
+.descriptionInput {
+    border: solid 2px #4a3774;
+    border-radius: 5px;
+}
+
+.descriptionInput:hover {
+    border: solid 2px #ec9c24;
+}
+
+.createEventButton {
+    background-color: #4a3774;
+    color: white;
+    display: flex;
+    display: block;
+    margin: auto;
+    width: 30%;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #ec9c24;
+    transition: ease 0.3s;
+    outline: none;
+    border: none;
+    justify-content: center;
+}
+
+.createEventButton:hover {
+    box-shadow: inset 140px 0 0 0 #ec9c24;
+    color: white;
+}
+
+.inputedpeople {
+    border: solid 2px #4a3774;
+    border-radius: 5px;
+    outline: none;
+}
+
+.inputedpeople:hover {
+    border: solid 2px #ec9c24;
+    border-radius: 5px;
+    outline: none;
+}
+
+.addingpeople {
+    border: solid 2px #4a3774;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: none;
+    border-color: none;
+    outline: none;
+}
+
+.addingpeople:hover {
+    border: solid 2px #ec9c24;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: none;
+    border-color: none;
+    outline: none;
+}
+
+.datetext {
+    text-align: center;
+}
+
+.datePicker {
+    border: solid 2px #4a3774;
+    border-radius: 5px;
+    height: 35px;
+    outline: none;
+}
+
+.datePicker:hover {
+    border: solid 2px #ec9c24;
+    outline: none;
+}
+
+.timePicker {
+    border: solid 2px #4a3774;
+    border-radius: 5px;
+    height: 35px;
+    outline: none;
+}
+.timePicker:hover {
+    border: solid 2px #ec9c24;
+    outline: none;
 }
 
 label,
@@ -28,85 +135,39 @@ label,
     color: gray;
 }
 
-input[type="text"] {
-    border: solid 2px #ec9c24;
-    border-radius: 9px;
-}
-
-.descriptionInput {
-    border: solid 2px #ec9c24;
-    border-radius: 9px;
-}
-
-.createEventButton {
-    background-color: #4a3774;
-    color: white;
-    display: flex;
-    display: block;
-    margin: auto;
-    width: 30%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    box-shadow: inset 0 0 0 0 #ec9c24;
-    transition: ease 0.3s;
-    outline: none;
-    border: none;
-}
-
-.createEventButton:hover {
-    box-shadow: inset 140px 0 0 0 #ec9c24;
-}
 .dropdownPeople {
     display: flex;
     align-items: center;
-    margin-left: 100px;
-}
-.inputedpeople {
-    border: solid 2px #ec9c24;
-    border-radius: 9px;
-}
-
-.addingpeople {
-    border: solid 2px #ec9c24;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    box-shadow: none;
-    border-color: none;
-}
-
-.datetext {
-    text-align: center;
-}
-.datePicker {
-    border: solid 2px #ec9c24;
-    border-radius: 10px;
-}
-
-.timePicker {
-    border: solid 2px #ec9c24;
-    border-radius: 10px;
-}
-.dropdownPeople {
-    margin-left: 88px;
+    margin-left: 87px;
 }
 
 .ant-btn {
-    border: none;
+    border: #4a3774;
 }
 
-/* .ant-space-item {
+.ant-space-item {
     margin-right: 100px;
-} */
-
-/* .createPeople {
-    margin: 0px;
-} */
+}
 
 .addButton:hover {
     color: #ec9c24;
 }
 
 .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+    color: #ec9c24;
+}
+
+#dropdown:hover {
+    color: #ec9c24;
+}
+.ant-btn:hover {
+    color: #ec9c24;
+}
+
+.ant-picker-now-btn {
+    color: #4a3774;
+}
+
+.ant-picker-now-btn:hover {
     color: #ec9c24;
 }

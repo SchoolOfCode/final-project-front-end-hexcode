@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./CreatePollPage";
 import loginimage from "../images/loginimage.png";
+import radunoL from "../images/radunoL.png";
 import "./LoginPage.css";
 import { Button } from "antd";
 import "antd/dist/antd.css";
@@ -36,10 +37,12 @@ function LoginPage({ handleLoginClick }) {
     console.log(`src/pages/LoginPage.js: EMAIL  : ${email}`);
     return (
         <div className="loginpage-container">
-            <h2 className="Title">Raduno!</h2>
+            <div className="radunoLogo">
+                <img className="raduno-logo" src={radunoL} alt="Logo" />
+            </div>
             <h3 className="tagLine">Catch up without the fuss</h3>
             <div className="titlepic">
-                <img src={loginimage} alt="people" />
+                <img className="groupPic" src={loginimage} alt="people" />
             </div>
             <div className="formcontainer">
                 <form className="form">

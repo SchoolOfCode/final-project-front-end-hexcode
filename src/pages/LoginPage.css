@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
 
 .loginpage-container {
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .Title {
@@ -15,6 +15,7 @@
 }
 .tagLine {
     text-align: center;
+    margin-top: 8px;
 }
 img {
     height: 250px;
@@ -36,10 +37,14 @@ input {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 2px solid #ec9c24;
+    border: 2px solid #4a3774;
     border-radius: 4px;
     box-sizing: border-box;
     margin-left: 10%;
+}
+
+input:hover {
+    border: 2px solid #ec9c24;
 }
 
 .loginbutton {
@@ -50,7 +55,7 @@ input {
     margin: auto;
     width: 30%;
     border-radius: 10px;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 10px;
     font-weight: 600;
     cursor: pointer;
@@ -84,4 +89,18 @@ input {
 .signupbutton:hover {
     box-shadow: inset 140px 0 0 0 #ec9c24;
     color: #ffff;
+}
+
+.raduno-logo {
+    margin-left: 75px;
+    height: 180px;
+    width: 200px;
+}
+
+.form {
+    margin-left: 10px;
+}
+
+div.groupPic {
+    margin-right: 80px;
 }

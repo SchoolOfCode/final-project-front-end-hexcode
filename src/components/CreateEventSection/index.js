@@ -217,6 +217,7 @@ function CreateEventSection(props) {
                             onChange={onChangeTime}
                         />
                     </label>
+
                     <h3 className="inputTitle">Description</h3>
                     <label>
                         <TextArea
@@ -231,21 +232,20 @@ function CreateEventSection(props) {
                         />
                         <div style={{ margin: "24px 0" }} />
                     </label>
-                    {/* <Link to="/homepage"> */}
-                    <Button
-                        className="createEventButton"
-                        type="primary"
-                        onClick={handleClick}
-                    >
-                        Create Event
-                    </Button>
-                    {/* </Link> */}
 
+                           <button
+                            className="createEventButton"
+                            type="primary"
+                            onClick={handleClick}
+                        >
+                            Create Event
+                        </button>
                     <p className="disclaimer">
                         <i>
-                            If you haven't yet decided on a date or location,
-                            you can do this later by adding a poll on your
-                            event's page.
+                          
+                      If you can't decide on a single date, you can add a
+                            poll later to make things easier!
+
                         </i>
                     </p>
                 </form>
