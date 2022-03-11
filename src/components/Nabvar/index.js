@@ -8,10 +8,10 @@ import "./Navbar.css";
 import { API_URL } from "../../config/index.js";
 
 function Navbar(props) {
-    // props - warning - not necessarily filled on first render, so beware in fetch requests
+    // PROPS  - warning - not necessarily filled on first render, so beware in fetch requests
     const loggedInUserId = props.loggedInUserId; //coming from App/index.js, via <Event>, <HomePage> or <CreateEvent>
 
-    // States
+    // STATES
     const [sidebar, setSidebar] = useState(false);
     const [userEvents, setUserEvents] = useState(false);
 
@@ -60,22 +60,22 @@ function Navbar(props) {
                         </Link>
                     </li>
                     <div className="navbar-pic-section">
-                    <Link to={"/homepage"}>
-                    <ProfileImage 
-                    imageFileNumber={loggedInUserId} 
-                    id="profilePic"
-                    />
-                    </Link>
+                        <Link to={"/homepage"}>
+                            <ProfileImage
+                                imageFileNumber={loggedInUserId}
+                                id="profilePic"
+                            />
+                        </Link>
                     </div>
                     <div className="new-event-button">
-                    <h4 key="H-your-events" className="yourEventsTitle">
-                        YOUR EVENTS
-                    </h4>
-                    <li className="addEventbtn" key="2">
-                        <Link to={"/createEvent"} key="2-Link">
-                            <AiFillPlusCircle className="addButton" />
-                        </Link>
-                    </li>
+                        <h4 key="H-your-events" className="yourEventsTitle">
+                            YOUR EVENTS
+                        </h4>
+                        <li className="addEventbtn" key="2">
+                            <Link to={"/createEvent"} key="2-Link">
+                                <AiFillPlusCircle className="addButton" />
+                            </Link>
+                        </li>
                     </div>
                     {!userEvents ? (
                         <div key="no-events">No user events</div>
