@@ -42,6 +42,9 @@ function CreateEventSection(props) {
 
     const navigate = useNavigate(); //useNavigate - must set in top level in a component
 
+    let newEventId = 0; 
+    //moving outside of async function so that link in return statement can access newEventId
+
     function postData() {
         async function createEvent() {
             //07Mar - updating the POST to set the OrganiserID to the loggedInUserId
@@ -78,7 +81,8 @@ function CreateEventSection(props) {
             console.log({ data });
 
             // DONE: get real new Event id from data
-            let newEventId = data.eventId;
+            // let newEventId = data.eventId;
+            newEventId = data.eventId;
             //TODO: add error-checking - if eventId is empty/null/undefined/not an number - DO SOMETHING
 
             //DONE: jordan: redirect to event/id page for the newly created event
@@ -232,7 +236,7 @@ function CreateEventSection(props) {
                         />
                         <div style={{ margin: "24px 0" }} />
                     </label>
-
+                    <Link to={`/Event/${newEventId}`}>
                            <button
                             className="createEventButton"
                             type="primary"
@@ -240,6 +244,7 @@ function CreateEventSection(props) {
                         >
                             Create Event
                         </button>
+                        </Link>
                     <p className="disclaimer">
                         <i>
                           
