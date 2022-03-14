@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="yxrgfrVKO03SnxysbyA-" name="user-journeys">
-        <mxGraphModel dx="3921" dy="2489" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
+        <mxGraphModel dx="4891" dy="3712" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -1014,7 +1014,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="kBCRnSeuQY0a1D-L97OS" name="light background">
-        <mxGraphModel dx="1984" dy="2324" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="1214" dy="2123" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="#ffffff" math="0" shadow="0">
             <root>
                 <mxCell id="KyXqy6-xk4ee2ETGPhYy-0"/>
                 <mxCell id="KyXqy6-xk4ee2ETGPhYy-1" parent="KyXqy6-xk4ee2ETGPhYy-0"/>
