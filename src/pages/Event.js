@@ -3,7 +3,7 @@ import EventInformationSection from "../components/EventInformationSection";
 import { useState, useEffect, useContext } from "react"; //useContext
 import { PageWrapper } from "../components/App/index.js"; //useContext
 
-// import useFetch from "../CustomHooks/customHooks";
+// import useFetch from "../CustomHooks/customHooks"; // not used.
 import { useParams } from "react-router-dom";
 
 import Navbar from "../components/Nabvar";
@@ -11,108 +11,72 @@ import Navbar from "../components/Nabvar";
 import { API_URL } from "../config/index.js";
 
 function Event(props) {
-    //STATE - N/A
-    //CONTEXT
-    let { pageState, setPageState } = useContext(PageWrapper); //useContext
-    // so now we can access pageState.loggedInUserId and pageState.eventId //useContext
-    console.log("******************** Event.js - pageState: ", pageState); //useContext
-
-    //PROPS - coming from App/index.js
-    const loggedInUserId = props.loggedInUserId;
-
-    //PARAMS - from URL
-    const { id } = useParams();
-
-    //jordan: new event id comes back as part of 'data' - useContext
-    if (pageState.eventId != id) {
-        setPageState({ ...pageState, eventId: id });
-    }
-    let eventId = 0;
-    eventId = id; //re-assigning to a declarative name
-    // const eventId = pageState.eventId; //useContext
-    console.log(
-        `££££££££££££ Event.js pageState.eventId = ${pageState.eventId}`
-    );
-
-    console.log(`src/pages/Event.js: TOP OF PAGE id param= |${id}| `);
-    console.log(`src/pages/Event.js: TOP OF PAGE eventId= |${eventId}| `);
-
-    //STATES
+    // *** STATE  ***
     const [eventObject, setEventObject] = useState(false);
     const [errorHappened, setErrorHappened] = useState(false);
 
-    //When the Event ID changes, go to database and fetch the event details for the given EventId
+    // *** CONTEXT set up ***
+    let { pageState, setPageState } = useContext(PageWrapper); //useContext - so now we can access pageState.loggedInUserId and pageState.eventId
+
+    // *** PROPS - passed in from App/index.js  ***
+    const loggedInUserId = props.loggedInUserId;
+
+    // *** PARAMS - get from URL  ***
+    const { id } = useParams();
+
+    // useContext - IMPORTANT - only call setPageState if the eventId is different from that in the pageState - otherwise it gets into a loop with the useEffect below.
+    if (pageState.eventId != id) {
+        setPageState({ ...pageState, eventId: id }); // useContext
+    }
+    let eventId = 0;
+    eventId = id; //re-assigning the incoming param, id, to a more declarative name, eventId
+
+    //Whenever the Event ID changes, go to database and fetch the event details for that Event ID
     useEffect(() => {
-        console.log(`src/pages/Event.js - useEffect START. `);
         async function getEvent() {
             const response = await fetch(`${API_URL}/events/${eventId}`);
-            //TODO: check http status code returned - response.ok could be true or false
+
+            // Error-checking: check response.ok - it will be false if HTTP Status code is 400, 401, 500 etc
             if (!response.ok) {
                 console.log(
-                    `src/pages/Event.js: fetch returned response.ok = false - Error.`
+                    `src/pages/Event.js - getEvent: ERROR returned from GET Event`
                 );
                 setErrorHappened(true);
-                //TODO: alert user of error
+                //TODO: alert user of error and, return out from here instead of carrying on
             }
-            //TODO: otherwise, only if no error, carry on and attempt to set userEvents array.
+
+            // otherwise, carry on and attempt to set the event object TODO: only if response from fetch was okay
             const data = await response.json();
-            console.log(`src/pages/Event.js: after fetch, data retrieved is: `);
-            console.log(data);
             const eventObjectFromDatabase = data.payload;
 
+            // Error-checking: make sure an event object was retrieved (sinead: i think it should be - i updated server code - so response.ok would be false if there was no event object retrieved
             if (!eventObjectFromDatabase) {
                 console.log(
-                    `src/pages/Event.js: eventObject was expected to be filled, but it is not: `
+                    `src/pages/Event.js - get Event: ERROR - empty eventObject`
                 );
-                console.log(eventObjectFromDatabase);
-                // DONE - set a state to say error occurred
+
+                // set a state to say error occurred, and return without attempting to set the event object state
                 setErrorHappened(true);
                 return;
             }
-            //otherwise all good
-            setEventObject(eventObjectFromDatabase); //this is a SINGLE event object
-            console.log(`src/pages/Event.js: inside getEvent. eventObject retrieved and state set, so the following variables should have values: eventId = ${eventObjectFromDatabase.eventId} organiserName= ${eventObjectFromDatabase.organiserName}
-            organiserProfilePicLink=${eventObjectFromDatabase.organiserProfilePicLink}
-            organiserUserId=${eventObjectFromDatabase.organiserUserId}`);
-        }
-        //Only attempt to fetch the event if the eventId is not an empty string
-        console.log(
-            `src/pages/Event.js: Inside useEffect typeof eventId= |${typeof eventId}| `
-        );
-        console.log(
-            `src/pages/Event.js: Inside useEffect eventId= |${eventId}| `
-        );
 
+            // otherwise all good
+            setEventObject(eventObjectFromDatabase); // FYI - this is now a SINGLE event object, not an array of objects, nor an array of a single object
+        }
+
+        // Only attempt to fetch the event if the eventId is not an empty string
         if (!(eventId === "")) {
-            console.log(
-                `src/pages/Event.js - useEffect - going to call getEvent. `
-            );
-
             getEvent();
-        } else {
-            console.log(
-                `src/pages/Event.js - useEffect - FAILING to call getEvent. eventId=|${eventId}|`
-            );
         }
-        // WARNING typeof eventId = string.  Could check that it was not NAN?
-        // if (typeof eventId === "number") {
-        //     getEvent();
-        // }
     }, [eventId]);
 
-    //TODO: wrap return in if state - check if has error - then render something else
+    //TODO: wrap the return(jsx) inside this "if error has happened, then render something else, else render the usual"
     if (errorHappened) {
         console.log(
             `src/pages/Event.js: ERROR SECTION - NO EVENT FOUND - TODO: ALERT USER `
-        ); // need to make sure this doesn't just render when there's a delay filling the event
+        ); // TODO: need to make sure this doesn't only render when there's a delay filling the event
     }
-    //When the EventObject has been retrieved, then render the EventInformationSection component with it
-    //New code - have (hopefully) error checked above for blank objects
-    // also added in organiser info - to display in Event Info section
-    console.log(`src/pages/Event.js: rendering - organiserName=${eventObject.organiserName}
-    organiserProfilePicLink=${eventObject.organiserProfilePicLink}
-    organiserUserId=${eventObject.organiserUserId}`);
-
+    //When the EventObject has been retrieved, then render the EventInformationSection component with it - TODO: put this inside the 'else if error has not happened'
     return (
         <div>
             <Navbar loggedInUserId={loggedInUserId} />
@@ -140,60 +104,6 @@ function Event(props) {
             </div>
         </div>
     );
-    // old code - before event was returned as just an object, not an array of one item
-    // return (
-    //     <div>
-    //         <Navbar loggedInUserId={loggedInUserId} />
-    //         <div>
-    //             {!eventObject ? (
-    //                 <div>Event still being retrieved or not found...</div>
-    //             ) : (
-    //                 eventObject.map((currItem) => {
-    //                     return (
-    //                         <EventInformationSection
-    //                             key={currItem.eventId}
-    //                             eventTitle={currItem.eventTitle}
-    //                             eventDescription={currItem.eventDescription}
-    //                             eventLocation={currItem.eventLocation}
-    //                             eventTime={currItem.eventTime}
-    //                             eventDate={currItem.eventDate}
-    //                         />
-    //                     );
-    //                 })
-    //             )}
-    //         </div>
-    //     </div>
-    // );
 }
 
 export default Event;
-
-// const [event, setEvent] = useState([
-//   {
-//     title: "",
-//     description: "",
-//     location: "",
-//     time: "",
-//     date: "",
-//   },
-// ]);
-
-// console.log(data[0]);
-
-// setEvent({
-//   title: data[0].event_title,
-//   description: data[0].event_description,
-//   location: data.event_location,
-//   time: data.event_time,
-//   date: data.event_date,
-// });
-
-// return (
-//   <EventInformationSection
-//     eventTitle={event.title}
-//     eventDescription={event.description}
-//     // eventLocation={event.location}
-//     // eventTime={event.time}
-//     // eventDate={event.date}
-//   />
-// );

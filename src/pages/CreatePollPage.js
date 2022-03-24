@@ -1,4 +1,3 @@
-// import React, { useState } from "react";
 import React, { useState, useContext } from "react"; //useContext
 import { PageWrapper } from "../components/App/index.js"; //useContext
 
@@ -7,78 +6,57 @@ import { Button } from "antd";
 import "antd/dist/antd.css";
 import "./CreatePollPage.css";
 import { Link } from "react-router-dom";
-// import { Link, useNavigate } from "react-router-dom"; //useNavigate
+// import { Link, useNavigate } from "react-router-dom"; //useNavigate - commented out because we returned to using just Link at the last minute because, when we siwtched from using Ant Design <Button> to a standard html <button>, the useNavigate didn't work well with it.
 import Navbar from "../components/Nabvar";
 
 function CreatePollPage(props) {
-    let { pageState, setPageState } = useContext(PageWrapper); //useContext
-    // so now we can access pageState.loggedInUserId and pageState.eventId //useContext
-
-    console.log("************* CreatePollPage - pageState:", pageState); //useContext
+    let { pageState, setPageState } = useContext(PageWrapper); //useContext  - so now we can access pageState.loggedInUserId and pageState.eventId
 
     const loggedInUserId = props.loggedInUserId;
+
+    // Take in (event) id and, once new poll is saved, use to redirect back to event/id page for the same event
     const { id } = useParams();
-    const eventId = id; //re-assigning to a declarative name
+    const eventId = id; // FYI: re-assigning the incoming param, id, to a more declarative name, eventId
 
     const [question, setQuestion] = useState("");
     const [option1, setOption1] = useState("");
     const [option2, setOption2] = useState("");
     const [option3, setOption3] = useState("");
 
-    // const navigate = useNavigate(); //useNavigate - must set in top level in a component
+    // const navigate = useNavigate(); //useNavigate - must set in top level in a component - commented out when we changed from <Button> to <button>
 
-    //let existingEventId = 8;
-    //DONE - instead of hard-coding above, take in eventId and pass it on
-    //  once finished creating poll
-    //redirect to event/id page for the same event
-    //const url = " ";
-
+    //TODO: refactor  - replace handleChange events with useRef - cleaner.
     function handleQuestionChange(e) {
         setQuestion(e.target.value);
-        console.log(question);
+        //console.log(question);
     }
 
     function handleOptionChange(e) {
         setOption1(e.target.value);
-        console.log(option1);
+        //console.log(option1);
     }
 
     function handleOptionChange2(e) {
         setOption2(e.target.value);
-        console.log(option2);
+        //console.log(option2);
     }
 
     function handleOptionChange3(e) {
         setOption3(e.target.value);
-        console.log(option3);
+        //console.log(option3);
     }
 
-    // NOT IN USE ATM
     function handleSubmit(e) {
         e.preventDefault();
+        console.log("In Create Poll - about to return to Display Event");
+        // navigate(`/Event/${existingEventId}`); //useNavigate - commented out when we changed from <Button> to <button>
 
-        console.log(
-            "+++++++++++++++  In Create Poll - about to return to Display Event"
-        );
-        //useNavigate
-        //navigate(`/Event/${existingEventId}`);
-
-        // const poll = { question, option1, option2 };
-        // const newPoll = {
-        //     method: "POST",
-        //     body: JSON.stringify(poll),
-        //     headers: { "Content-Type": "application/json" },
-        // };
-
-        // fetch(url, newPoll)
-        //     .then((res) => res.json())
-        //     .then((res) => console.log(res));
-        // console.log(poll);
+        //TODO: create newPoll object from the state constants, and POST to the database
     }
 
+    // useNavigate - removed and returned to using <Link> instead when we changed from <Button> to <button>
     return (
         <div>
-
             <Navbar loggedInUserId={loggedInUserId} />
             <form onSubmit={handleSubmit}>
                 <div className="createpollpage-container">
@@ -118,7 +96,6 @@ function CreatePollPage(props) {
                     />
                 </div>
 
-
                 <Link to={`/Event/${pageState.eventId}`}>
                     <button className="createPollButton">Create Poll</button>
                 </Link>
@@ -128,9 +105,3 @@ function CreatePollPage(props) {
 }
 
 export default CreatePollPage;
-
-//<Link to={"/createEvent"} key="2-Link"></Link>
-
-// <Link to={`/Event/${eventId}`}>
-//     <Button className="createPollButton">Create Poll</Button>
-// </Link>;

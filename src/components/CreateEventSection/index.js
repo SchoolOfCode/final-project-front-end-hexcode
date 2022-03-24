@@ -1,7 +1,6 @@
 import { useState } from "react";
 // import { useState, useContext } from "react"; //useContext
 // import { PageWrapper } from "../App/index.js"; //useContext
-
 import { Link, useNavigate } from "react-router-dom"; //useNavigate
 import {
     DatePicker,
@@ -24,30 +23,25 @@ const API_END_POINT = "/events";
 
 function CreateEventSection(props) {
     // let { pageState, setPageState } = useContext(PageWrapper); //useContext
-    // console.log("************* CreateEventSection - pageState:", pageState); //useContext
-
     const loggedInUserId = props.loggedInUserId; //coming from App/index.js via CreateEvent page
 
-    // States
+    // *** Use States ***
     const [event, setEvent] = useState({
         eventTitle: "",
         people: [],
         eventLocation: "",
         eventDescription: "",
     });
-    // const [eventDate, setEventDate] = useState("date pending");
-    const [eventDate, setEventDate] = useState(null); // because the date feidl ins
+    const [eventDate, setEventDate] = useState(null); // FYI - must set initial date to null, not to a string like 'date pending' because it is of type date, not string, in the database
     const [eventTime, setEventTime] = useState("");
     const [personMenu, setPersonMenu] = useState([]);
 
     const navigate = useNavigate(); //useNavigate - must set in top level in a component
 
-    let newEventId = 0; 
-    //moving outside of async function so that link in return statement can access newEventId
+    let newEventId = 0; // FYI - moving this outside of async function so that link in return statement can access newEventId
 
     function postData() {
         async function createEvent() {
-            //07Mar - updating the POST to set the OrganiserID to the loggedInUserId
             const newEvent = {
                 organiserUserId: loggedInUserId,
                 eventTitle: event.eventTitle,
@@ -58,36 +52,22 @@ function CreateEventSection(props) {
                 eventRequirements: "Booze",
                 eventCategory: "Drinks",
             };
-            console.log(
-                "src/components/CreateEventSection/index.js: new event="
-            );
-            console.log(newEvent);
 
             // POST (Insert) the newly created event to the database and return with the eventId for the newly created Event.
-            //07Mar - updating the POST to use the URL constants
             const response = await fetch(`${API_URL}${API_END_POINT}`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(newEvent),
             });
 
-            //TODO: capture the new eventId returned and update the Event object in state with it.
-            // consider moving state up a level so that the new event can be passed into Display Event without re-fetching
+            // TODO: consider moving state up a level so that the new event can be passed into Display Event without re-fetching - would then update the Event object in state with the new event ID
             const data = await response.json();
-            console.log(
-                `src/components/CreateEventSection/index.js - postData - createEvent: data=`
-            );
 
-            console.log({ data });
-
-            // DONE: get real new Event id from data
-            // let newEventId = data.eventId;
+            // extract the REAL new Event id from data
             newEventId = data.eventId;
             //TODO: add error-checking - if eventId is empty/null/undefined/not an number - DO SOMETHING
 
-            //DONE: jordan: redirect to event/id page for the newly created event
-            //useNavigate
-            navigate(`/Event/${newEventId}`);
+            navigate(`/Event/${newEventId}`); //useNavigate - redirect to event/id page for the newly created event
         }
         createEvent();
     }
@@ -237,20 +217,18 @@ function CreateEventSection(props) {
                         <div style={{ margin: "24px 0" }} />
                     </label>
                     <Link to={`/Event/${newEventId}`}>
-                           <button
+                        <button
                             className="createEventButton"
                             type="primary"
                             onClick={handleClick}
                         >
                             Create Event
                         </button>
-                        </Link>
+                    </Link>
                     <p className="disclaimer">
                         <i>
-                          
-                      If you can't decide on a single date, you can add a
+                            If you can't decide on a single date, you can add a
                             poll later to make things easier!
-
                         </i>
                     </p>
                 </form>

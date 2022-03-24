@@ -10,18 +10,12 @@ import "antd/dist/antd.css";
 function LoginPage({ handleLoginClick }) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    // let loggedInUserId = 0; //TEMP - this will become a state variable, probably up in App/index.js
-
-    //07Mar SC:
-    // DONE - accept the handleLoginClick function as a prop.
-    // DONE - add it to the onclick for login button', passing in the TEMP_EMAIL
-    //- TODO: later update to pass in the email from state (email) - this is a bit more hassle for testing purposes as you have to type it correctly into the login each time.
-    const TEMP_EMAIL = "belinda@belinda.com"; //TEMP - hardcoding correct email as first test
 
     function handleSubmit(e) {
         e.preventdefault();
     }
 
+    // TODO: refactor  - replace handleChange events with useRef - cleaner.
     function handleChangeEmail(e) {
         setEmail(e.target.value);
     }
@@ -30,11 +24,6 @@ function LoginPage({ handleLoginClick }) {
         setPassword(e.target.value);
     }
 
-    //  FYI ONLY -LONGER BUT CLEARER VERSION
-    // function handleLocalLoginClick(){
-    //     handleLoginClick(email);
-    // }
-    console.log(`src/pages/LoginPage.js: EMAIL  : ${email}`);
     return (
         <div className="loginpage-container">
             <div className="radunoLogo">
@@ -46,8 +35,6 @@ function LoginPage({ handleLoginClick }) {
             </div>
             <div className="formcontainer">
                 <form className="form">
-                    {/* pass in appUserEmail to the API tbc, Get back appUserId - HandleClick for login*/}
-
                     <input
                         id="email-field"
                         type="email"
@@ -70,10 +57,6 @@ function LoginPage({ handleLoginClick }) {
             <Link to="/homepage">
                 <Button
                     className="loginbutton"
-                    // FYI ONLY -LONGER BUT CLEARER VERSION
-                    // onClick={handleLocalLoginClick}
-                    // but we are using more succinct fat-arrow version instead
-                    // onClick={() => handleLoginClick(TEMP_EMAIL)}
                     onClick={() => handleLoginClick(email)}
                 >
                     Login
@@ -84,5 +67,6 @@ function LoginPage({ handleLoginClick }) {
         </div>
     );
 }
+// TODO: Currently the sign up button doesn't do anything.
 
 export default LoginPage;
