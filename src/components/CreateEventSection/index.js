@@ -1,6 +1,6 @@
 import { useState } from "react";
-// import { useState, useContext } from "react"; //useContext
-// import { PageWrapper } from "../App/index.js"; //useContext
+// import { useState, useContext } from "react"; //useContext - commented out for now
+// import { PageWrapper } from "../App/index.js"; //useContext - commented out for now
 import { Link, useNavigate } from "react-router-dom"; //useNavigate
 import {
     DatePicker,
@@ -22,7 +22,10 @@ import { API_URL } from "../../config/index.js";
 const API_END_POINT = "/events";
 
 function CreateEventSection(props) {
-    // let { pageState, setPageState } = useContext(PageWrapper); //useContext
+    // *** Use Context ***
+    // let { pageState, setPageState } = useContext(PageWrapper); //useContext - commented out for now
+
+    // *** Props ***
     const loggedInUserId = props.loggedInUserId; //coming from App/index.js via CreateEvent page
 
     // *** Use States ***
@@ -36,46 +39,46 @@ function CreateEventSection(props) {
     const [eventTime, setEventTime] = useState("");
     const [personMenu, setPersonMenu] = useState([]);
 
+    // *** use Navigate ***
     const navigate = useNavigate(); //useNavigate - must set in top level in a component
-
     let newEventId = 0; // FYI - moving this outside of async function so that link in return statement can access newEventId
 
-    function postData() {
-        async function createEvent() {
-            const newEvent = {
-                organiserUserId: loggedInUserId,
-                eventTitle: event.eventTitle,
-                eventDescription: event.eventDescription,
-                eventLocation: event.eventLocation,
-                eventDate: eventDate,
-                eventTime: eventTime,
-                eventRequirements: "Booze",
-                eventCategory: "Drinks",
-            };
+    // function postData() {
+    // async function createEvent() {
+    async function handleCreateEventClick() {
+        const newEvent = {
+            organiserUserId: loggedInUserId,
+            eventTitle: event.eventTitle,
+            eventDescription: event.eventDescription,
+            eventLocation: event.eventLocation,
+            eventDate: eventDate,
+            eventTime: eventTime,
+            eventRequirements: "Booze",
+            eventCategory: "Drinks",
+        };
 
-            // POST (Insert) the newly created event to the database and return with the eventId for the newly created Event.
-            const response = await fetch(`${API_URL}${API_END_POINT}`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(newEvent),
-            });
+        // POST (Insert) the newly created event to the database and return with the eventId for the newly created Event.
+        const response = await fetch(`${API_URL}${API_END_POINT}`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(newEvent),
+        });
+        //TODO: add error-checking - if eventId is empty/null/undefined/not an number - DO SOMETHING
 
-            // TODO: consider moving state up a level so that the new event can be passed into Display Event without re-fetching - would then update the Event object in state with the new event ID
-            const data = await response.json();
+        // TODO: consider moving state up a level so that the new event can be passed into Display Event without re-fetching - would then update the Event object in state with the new event ID
+        const data = await response.json();
 
-            // extract the REAL new Event id from data
-            newEventId = data.eventId;
-            //TODO: add error-checking - if eventId is empty/null/undefined/not an number - DO SOMETHING
-
-            navigate(`/Event/${newEventId}`); //useNavigate - redirect to event/id page for the newly created event
-        }
-        createEvent();
+        // extract the REAL new Event id from data so we can navigate to the correct event page
+        newEventId = data.eventId;
+        navigate(`/Event/${newEventId}`); //useNavigate - redirect to event/id page for the newly created event
     }
+    //     createEvent();
+    // }
 
-    //SC: when create event button is clicked, it calles handleClick(), which calls postData(), which calls internal ASYNC function createEvent(), which calls fetch() to post the data, and receive back the new event id
-    function handleClick() {
-        postData();
-    }
+    // function handleCreateEventClick() {
+    //     // postData();
+    //     createEvent();
+    // }
 
     // Handle change function for input fields on form
     function onChange(date, dateString) {
@@ -88,20 +91,15 @@ function CreateEventSection(props) {
 
     function handleChange(e) {
         const value = e.target.value;
-        //const selected = e.target.selected;
         setEvent({ ...event, [e.target.name]: value });
     }
 
-    // TODO: STEP 2 (HARDER) - change this handleMenuClick to add the new invitee's user id to the list of users
+    // TODO: update to use contacts from database instead of hardcoded: STEP 2 - change this handleMenuClick to add the new invitee's user id to the list of users to be invited
     function handleMenuClick(e) {
         const selectedUser = e.key;
-
         const addUser = [...personMenu, selectedUser];
-
         setPersonMenu(addUser);
     }
-    console.log(`src/components/CreateEventSection/index.js: personMenu=`);
-    console.log(personMenu);
 
     // OnClick function to create Event
     // function handleClick(e) {
@@ -111,7 +109,7 @@ function CreateEventSection(props) {
     // Ant components stuff
     const { TextArea } = Input;
 
-    // TODO: STEP 1 - change this menu to a FETCH of contacts based on the loggedInUserId
+    // TODO: update to use contacts from database instead of hardcoded: STEP 1 - change this menu to (a) FETCH contacts based on the loggedInUserId, and (b) map through the fetched contacts, adding them to this menu one by one and (c) if we need to display correct Profile Pics, use <ProfileImage> component.
     const menu = (
         <Menu onClick={handleMenuClick}>
             <Menu.Item key="Belinda" icon={<UserOutlined />}>
@@ -220,7 +218,8 @@ function CreateEventSection(props) {
                         <button
                             className="createEventButton"
                             type="primary"
-                            onClick={handleClick}
+                            // onClick={handleClick}
+                            onClick={handleCreateEventClick}
                         >
                             Create Event
                         </button>

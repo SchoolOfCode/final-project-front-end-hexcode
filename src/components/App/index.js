@@ -17,6 +17,7 @@ export let PageWrapper = React.createContext(); //useContext - created PageWrapp
 
 function App() {
     const [loggedInUserId, setLoggedInUserId] = useState("");
+    // SC: plan is to save the following addii
     const [loggedInUserEmail, setLoggedInUserEmail] = useState("");
     const [loggedInUserHasAccount, setLoggedInUserHasAccount] = useState("");
     const [loggedInUserFirstName, setLoggedInUserFirstName] = useState("");
@@ -55,7 +56,7 @@ function App() {
         }
         const data = await response.json(response);
 
-        // response.ok was true, so we know payload has a user object - no need for optional chaining, data.payload?.[0], plus we've got rid of the array.
+        // FYI - response.ok was true, so we know payload has a user object - no need for optional chaining, e.g. data.payload?.[0], plus we've got rid of the array.
         const loggedInUserObject = data.payload;
 
         //ERROR CHECKING:
