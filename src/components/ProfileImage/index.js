@@ -11,12 +11,9 @@ import image8 from "../../images/8.png";
 import image9 from "../../images/9.png";
 
 function ProfileImage({ imageFileNumber }) {
-    //06Mar SC: temp way of getting pictures printing until we can figure out correct way:
+    console.log(`components/ProfileImage/index.js: START`);
+    //06Mar SC: quick temporary hack to get pictures printing out until we can figure out correct way:
     //          yes, i tried concatenating "image" + image to create imageFileName and assigning src to that, but i couldn't get it to work
-    // const imageFileName = "image" + imageFileNumber;
-    // console.log(
-    //     `src/components/ProfileImage/index.js: imageFileName= ${imageFileName}`
-    // );
 
     switch (imageFileNumber) {
         case 1:
@@ -80,12 +77,6 @@ function ProfileImage({ imageFileNumber }) {
                 </div>
             );
     }
-
-    // return (
-    //     <div className="profile-image">
-    //         <img className="profile-pic" src={image} alt="" />
-    //     </div>
-    // );
 }
 
 export default ProfileImage;

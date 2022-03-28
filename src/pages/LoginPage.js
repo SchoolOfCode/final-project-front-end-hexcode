@@ -8,6 +8,8 @@ import { Button } from "antd";
 import "antd/dist/antd.css";
 
 function LoginPage({ handleLoginClick }) {
+    console.log(`pages/LoginPage.js: START`);
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 

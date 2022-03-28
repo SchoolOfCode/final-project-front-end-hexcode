@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Nabvar";
 
 function CreatePollPage(props) {
+    console.log(`pages/CreatePollPage.js: START`);
     let { pageState, setPageState } = useContext(PageWrapper); //useContext  - so now we can access pageState.loggedInUserId and pageState.eventId
 
     const loggedInUserId = props.loggedInUserId;

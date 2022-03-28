@@ -27,11 +27,13 @@ function EventInformationSection({
     organiserUserId,
     loggedInUserId,
 }) {
+    console.log(`components/EventInformationSection/index.js: START`);
+
     const [collapse, setCollapse] = useState(false);
 
-    console.log(`src/components/EventInfoSection: incoming props.organiserName=${organiserName}
-    organiserProfilePicLink=${organiserProfilePicLink}
-    organiserUserId=${organiserUserId}`);
+    // console.log(`components/EventInfoSection: incoming props.organiserName=${organiserName}
+    // organiserProfilePicLink=${organiserProfilePicLink}
+    // organiserUserId=${organiserUserId}`);
 
     function collapseInfo(e) {
         setCollapse(!collapse);
@@ -86,7 +88,7 @@ function EventInformationSection({
                     </button>
                 </div>
                 <div className={!collapse ? "people-container" : "hide"}>
-                    {/* 06 Mar SC: just a quick hack to get the different images showing, until we retrieve real invitee user ids from the database - changing item.imag to index + 1 (so we pass in the number 1 through 9) */}
+                    {/* TODO: 06 Mar SC: just a quick hack to get the different images showing for EventInvitees, until we retrieve real invitee user ids from the database - changing item.imag to index + 1 (so we pass in the number 1 through 9) */}
                     {photos.map((item, index) => {
                         return (
                             <ProfileImage

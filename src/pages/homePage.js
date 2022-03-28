@@ -5,6 +5,7 @@ import "./homePage.css";
 import { FcSpeaker } from "react-icons/fc";
 
 function HomePage(props) {
+    console.log(`pages/homePage.js: START`);
     const loggedInUserId = props.loggedInUserId; //coming from App/index.js
 
     return (

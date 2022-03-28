@@ -1,5 +1,4 @@
-// NB I HAVE ADDED A TestPoll Component TO THE HOMEPAGE SO I CAN RENDER IT WITHOUT MESSING UP STUFF
-
+// *** NB - this whole component is very poor quality code - just hacked something together very quickly so we could display a poll proof of concent.
 import React, { useState } from "react";
 import "./TestPoll.css";
 import { Button } from "antd"; //sinead - just going to compare this to standard buttons
@@ -7,7 +6,8 @@ import TestPollResultsBar from "../TestPollResultsBar/index.js";
 
 // function TestPoll({ hasVoted = false }) {
 function TestPoll() {
-    console.log(`src/components/TestPoll/index.js - component start`);
+    console.log(`components/TestPoll/index.js: START`);
+
     //TODO: obviously replace this hardcoded value with a value that can change and persist
     const [hasVoted, setHasVoted] = useState(false);
 

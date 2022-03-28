@@ -9,10 +9,12 @@ import "./Navbar.css";
 import { API_URL } from "../../config/index.js";
 
 function Navbar(props) {
-    // PROPS  - warning - not necessarily filled on first render, so beware in fetch requests
+    console.log(`components/Nabvar/index.js: START`);
+
+    // *** PROPS ***  - warning - not necessarily filled on first render, so beware in fetch requests
     const loggedInUserId = props.loggedInUserId; //coming from App/index.js, via <Event>, <HomePage> or <CreateEvent>
 
-    // STATES
+    // *** STATES ***
     const [sidebar, setSidebar] = useState(false);
     const [userEvents, setUserEvents] = useState(false);
 
@@ -24,7 +26,7 @@ function Navbar(props) {
             );
             //TODO: check http status code returned - response.ok could be true or false
             if (!response.ok) {
-                //TODO: alert usre of error
+                //TODO: alert user of error
             }
             //TODO: otherwise, only if no error, carry on and attempt to set userEvents array.
             const data = await response.json();

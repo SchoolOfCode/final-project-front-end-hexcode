@@ -3,6 +3,7 @@ import CreateEventSection from "../components/CreateEventSection";
 import Navbar from "../components/Nabvar";
 
 function CreateEvent(props) {
+    console.log(`pages/CreateEvent.js: START`);
     const loggedInUserId = props.loggedInUserId; //coming from App/index.js
 
     return (
