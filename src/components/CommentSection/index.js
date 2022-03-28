@@ -8,6 +8,8 @@ import "antd/dist/antd.css";
 import { API_URL } from "../../config/index.js";
 
 function CommentSection({ loggedInUserId, eventId }) {
+    console.log(`components/CommentSection/index.js: START`);
+
     // *** USE STATES ***
     //const [comments, setComments] = useState(userComment); // NO LONGER NEEDED
     const [commentsDb, setCommentsDb] = useState(null); // setting new state to capture current event comments from database - so as to leave the hard coded comments functionality unchanged.
@@ -27,7 +29,7 @@ function CommentSection({ loggedInUserId, eventId }) {
             if (!response.ok) {
                 //TODO: alert user of error - and maybe redirect to login etc?
                 console.log(
-                    `CommentSection-USE-EFFECT: ERROR response.ok = false`
+                    `components/CommentSection/index.js: ERROR fetch GET response.ok = false`
                 );
                 setErrorHappened(true);
             }
@@ -59,7 +61,14 @@ function CommentSection({ loggedInUserId, eventId }) {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(newComment),
             });
-            //TODO: add error checking to check the POST results
+
+            // ERROR CHECKING: response.ok will be false if an http status code of 400, 401, 500 etc returned
+            if (!response.ok) {
+                console.log(
+                    `components/CommentSection/index.js: ERROR fetch POST response.ok = false`
+                );
+                setErrorHappened(true);
+            }
             const data = await response.json();
 
             // trigger the useEffect to re-fetch all the comments from the database - doing this because the fetch gets lots of extra fields for author etc TODO: this may change when we implement socket.io to proactively display comments from other users as they are posted
@@ -67,6 +76,14 @@ function CommentSection({ loggedInUserId, eventId }) {
         }
         postCommenttoDb();
         inputRef.current.value = ""; // useRef - to fix our "clear input field" on click button issue
+    }
+
+    if (errorHappened) {
+        console.log(
+            `components/CommentSection/index.js: ERROR errorHappened = true. TODO: TBC`
+        );
+        setErrorHappened(false);
+        //TODO: Do something here - probably return different JSX?
     }
 
     // useRef - using "ref={inputRef}" in  the input field below instead of inputValue
