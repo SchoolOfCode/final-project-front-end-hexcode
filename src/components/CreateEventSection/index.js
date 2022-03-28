@@ -22,6 +22,8 @@ import { API_URL } from "../../config/index.js";
 const API_END_POINT = "/events";
 
 function CreateEventSection(props) {
+    console.log(`components/CreateEventSection/index.js: START`);
+
     // *** Use Context ***
     // let { pageState, setPageState } = useContext(PageWrapper); //useContext - commented out for now
 
@@ -53,8 +55,8 @@ function CreateEventSection(props) {
             eventLocation: event.eventLocation,
             eventDate: eventDate,
             eventTime: eventTime,
-            eventRequirements: "Booze",
-            eventCategory: "Drinks",
+            eventRequirements: "TBC",
+            eventCategory: "TBC",
         };
 
         // POST (Insert) the newly created event to the database and return with the eventId for the newly created Event.
@@ -65,7 +67,7 @@ function CreateEventSection(props) {
         });
         //TODO: add error-checking - if eventId is empty/null/undefined/not an number - DO SOMETHING
 
-        // TODO: consider moving state up a level so that the new event can be passed into Display Event without re-fetching - would then update the Event object in state with the new event ID
+        // TODO: consider moving event, eventDate, eventTime states up a level so that the new event can be passed into Display Event without re-fetching. Then here, would update the Event object in state with the new event ID
         const data = await response.json();
 
         // extract the REAL new Event id from data so we can navigate to the correct event page
