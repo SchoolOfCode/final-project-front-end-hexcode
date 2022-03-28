@@ -16,8 +16,10 @@ const API_END_POINT = "/appusers/search?email="; // FYI: must fetch from this ex
 export let PageWrapper = React.createContext(); //useContext - created PageWrapper variable - export so other pages lower down can import it.
 
 function App() {
+    console.log(`components/App/index.js: START`);
+
     const [loggedInUserId, setLoggedInUserId] = useState("");
-    // SC: plan is to save the following addii
+    // SC: plan is to save the following additional attributes for the logged in user, into the userContect, and then access them as needed throughout the component tree
     const [loggedInUserEmail, setLoggedInUserEmail] = useState("");
     const [loggedInUserHasAccount, setLoggedInUserHasAccount] = useState("");
     const [loggedInUserFirstName, setLoggedInUserFirstName] = useState("");
@@ -42,7 +44,7 @@ function App() {
         // ERROR -CHECKING: check response.ok = true or false
         if (!response.ok) {
             console.log(
-                `src/components/App/index.js: fetch returned response.ok = false - Error.`
+                `components/App/index.js: ERROR fetch response.ok = false`
             );
             setErrorHappened(true);
             //TODO: send appropriate message to user:
@@ -62,7 +64,7 @@ function App() {
         //ERROR CHECKING:
         if (!loggedInUserObject) {
             console.log(
-                `src/components/App/index.js: loggedInUserObject was expected to be filled, but weirdly is not: `
+                `components/App/index.js: ERROR loggedInUserObject was expected to be filled, but is not: `
             );
             console.log(loggedInUserObject);
             setErrorHappened(true);
@@ -82,9 +84,10 @@ function App() {
 
     if (errorHappened) {
         console.log(
-            `src/components/App/index.js: ERROR SECTION - NO USER FOUND - TO DO - REDIRECT TO LOGIN `
+            `components/App/index.js: ERROR errorHappened = true. TODO: REDIRECT TO LOGIN `
         ); // TODO: need to make sure this doesn't just render when there's a delay filling user
         // TODO: at this point, redirect back to login page - so that the return(jsx) below only occurs if there has been NO error retrieving the logged-in-user details
+        setErrorHappened(false);
     }
 
     //useContext: added PageWrapper tags, and links pageState, setPageState to that PageWrapper.
